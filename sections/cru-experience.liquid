@@ -1,0 +1,91 @@
+{%  for block in section.blocks %}
+    <div class="cta-grid-container experience-loop">
+        {% for article in blogs['Experience'].articles %}
+            {% if article.metafields.custom.top_front_end_position and block.settings.position == "top" %}
+                <div class="cta_content experience-content">
+                    <div class="cta_image_container">
+                        <div class="cta_image_content" style="background-image: url({{ article.metafields.custom.background_image | img_url: 'large' }});">
+                        </div>
+                        
+                    </div>
+                    <div class="cta_txt_content">
+                        <h1 class="cta_heading">{{ article.title }}</h1>
+                        <div class="cta_text">
+                            {{ article.content }}
+                            <span class="booking_price">{{ article.metafields.custom.subtitle_or_price }}</span>
+                        </div>
+                        {% if article.metafields.custom.booking_button_label != "" and article.metafields.custom.booking_button_link != "" %}
+                            <a href="{{ article.metafields.custom.booking_button_link }}" class="general_btn wht_btn">{{ article.metafields.custom.booking_button_label }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if article.metafields.custom.top_front_end_position == false and block.settings.position == "bottom" %}
+                <div class="cta_content experience-content">
+                    <div class="cta_image_container">
+                        <div class="cta_image_content" style="background-image: url({{ article.metafields.custom.background_image | img_url: 'large' }});">
+                        </div>
+                        
+                    </div>
+                    <div class="cta_txt_content">
+                        <h1 class="cta_heading">{{ article.title }}</h1>
+                        <div class="cta_text">
+                            {{ article.content }}
+                            <span class="booking_price">{{ article.metafields.custom.subtitle_or_price }}</span>
+                        </div>
+                        {% if article.metafields.custom.booking_button_label != "" and article.metafields.custom.booking_button_link != "" %}
+                            <a href="{{ article.metafields.custom.booking_button_link }}" class="general_btn wht_btn">{{ article.metafields.custom.booking_button_label }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endfor %}
+{% schema  %} 
+{
+  "name": "Cru Experience",
+  "settings": [
+    {
+      "type": "text",
+      "id": "id",
+      "label": "ID"
+    },
+    {
+      "type": "text",
+      "id": "class",
+      "label": "Class"
+    },
+    
+  ],
+  "blocks": [
+    {
+      "name": "Experience Block",
+      "type": "block",
+      "settings": [
+        {
+            "type": "select",
+            "id": "position",
+            "label": "Position",
+            "options": [
+                {
+                "value": "top",
+                "label": "Top"
+                },
+                {
+                "value": "bottom",
+                "label": "Bottom"
+                }
+            ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CRU Experience",
+      "category": "CRU"
+    }
+  ]
+}
+{% endschema %}

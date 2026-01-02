@@ -1,0 +1,342 @@
+<style>
+  #{{section.id }}_product.product-page {
+    {% if section.settings.container_width %}
+      max-width: {{ section.settings.container_width | default: 1200 }}{{ section.settings.container_width_unit | default: 'px' }};
+    {% endif %}
+    margin: 0 auto;
+  }
+  #{{section.id }}_product .product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  #{{section.id }}_product .product-details h1 {
+    font-size: {{ section.settings.product_title_size | default: 24 }}px;
+    color: {{ section.settings.product_title_color | default: '#000000' }};
+    margin-bottom: 10px;
+  }
+  #{{section.id }}_product .product-price {
+    font-size: {{ section.settings.product_price_size | default: 20 }}px;
+    color: {{ section.settings.product_price_color | default: '#000000' }};
+  }
+  #{{section.id }}_product .product-description p, #{{section.id }}_product .product-price span {
+    color: {{ section.settings.product_description_color | default: '#000000' }};
+    font-size: {{ section.settings.product_description_size | default: 16 }}px;
+  }
+  #{{section.id }}_product .add-to-cart, #{{section.id }}_product .continue-shopping {
+    border: 1px solid {{ section.settings.border_color | default: '#000000' }};
+    background-color: {{ section.settings.button_color | default: '#000000' }};
+    color: {{ section.settings.button_text_color | default: '#ffffff' }};
+  }
+  #{{section.id }}_product .add-to-cart:hover, #{{section.id }}_product .continue-shopping:hover {
+    border: 1px solid {{ section.settings.border_hover | default: '#000000' }};
+    background-color: {{ section.settings.add_to_cart_hover | default: '#000000' }};
+    color: {{ section.settings.add_to_cart_text_hover | default: '#ffffff' }};
+  }
+</style>
+<section id="{{section.id }}_product" class="product-page">
+  <div class="product-wrapper">
+    <div class="product-image">
+        {% assign points = product.metafields.custom.award_points %}
+          {% assign badges = product.metafields.custom.award_badge %}
+          {%  assign index = 0 %}
+          {% if points != blank or badges != blank %}
+            <div class="product_awards">
+              {% if points != blank %}
+                {% for award in points.value %}
+                  <p class="award award_accolade" style="z-index: {{ index }};"><span class="points">{{ award }}</span><span class="type">PTS</span></p>
+                  {% assign index = index | plus: 1 %}
+                {% endfor %}
+              {% endif %}
+              {% for badge in badges.value %}
+                <img src="{{ badge | img_url: 'large' }}" alt="Award Badge" class="badge award_accolade" style="z-index: {{ index }};">
+                {% assign index = index | plus: 1 %}
+              {% endfor %}
+            </div>
+            {% endif %}
+      <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}">
+    </div>
+
+    <div class="product-details">
+      <h1>{{ product.title }}</h1>
+      <p class="product-price"><span>RRP:</span> {{ product.price | money }}</p>
+      <div class="product-description">
+        {{ product.description }}
+      </div>
+
+        <form method="post" action="/cart/add" class="product-form">
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+            <div class="quantity-wrapper">
+                <button type="button" class="qty-btn minus">−</button>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+                <button type="button" class="qty-btn plus">+</button>
+            </div>
+
+            <button type="submit" class="add-to-cart">{{ section.settings.button_text | default: 'Add to Cart' }}</button>
+            {% if section.settings.show_continue_shopping %}
+              <a href="/collections/all" class="continue-shopping">{{ section.settings.continue_shopping_text | default: 'Continue Shopping' }}</a>
+            {% endif %}
+        </form>
+        {% if product.metafields.custom.region or product.metafields.custom.winemaking or product.metafields.custom.winemaker or product.metafields.custom.history or product.metafields.custom.production or product.metafields.custom.grape_variety or
+    product.metafields.custom.aroma or product.metafields.custom.wine_vintage or product.metafields.custom.palate or product.metafields.custom.best_drinking or product.metafields.custom.colour or product.metafields.custom.alcohol %}
+        <div class="after_meta_links">
+		    <a class="anchor_link" targets="product-specifications" href="#"><i class="fa-solid fa-arrow-right-long"></i> Specifications</a>
+        {% if product.metafields.custom.video_tasting_note != blank %}
+          <a data-fancybox data-src="#tasting_note_video" href="javascript:;"><i class="fa-solid fa-arrow-right-long"></i> Video</a>
+        {% endif %}
+		</div>
+    {% endif %}
+    </div>
+  </div>
+</section>
+{% if product.metafields.custom.lifestyle_image %}
+    <div class="lifestyle-image" style="background-image: url('{{ product.metafields.custom.lifestyle_image | img_url: 'original' }}');">
+    </div>
+{% endif %}
+{% if product.metafields.custom.region or product.metafields.custom.winemaking or product.metafields.custom.winemaker or product.metafields.custom.history or product.metafields.custom.production or product.metafields.custom.grape_variety or
+    product.metafields.custom.aroma or product.metafields.custom.wine_vintage or product.metafields.custom.palate or product.metafields.custom.best_drinking or product.metafields.custom.colour or product.metafields.custom.alcohol %}
+    <div id="product-specifications">
+        <div class="product-specifications-inner">
+          <h3 class="specs_header">Specifications</h3>
+            {% if product.metafields.custom.region %}
+
+              <a href="#" class="collapse_specs" target="region">Region</a>
+                <div id="region" class="meta-item">
+                    <p class="specs_title">Region</p> <p class="specs_details">{{ product.metafields.custom.region }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.winemaking %}
+                <a href="#" class="collapse_specs" target="winemaking">Winemaking</a>
+                <div id="winemaking" class="meta-item">
+                    <p class="specs_title">Winemaking</p> <p class="specs_details">{{ product.metafields.custom.winemaking }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.winemaker %}
+                <a href="#" class="collapse_specs" target="winemaker">Winemaker</a>
+                <div id="winemaker" class="meta-item">
+                    <p class="specs_title">Winemaker</p> <p class="specs_details">{{ product.metafields.custom.winemaker }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.history %}
+                <a href="#" class="collapse_specs" target="history">History</a>
+                <div id="history" class="meta-item">
+                    <p class="specs_title">History</p> <p class="specs_details">{{ product.metafields.custom.history }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.production %}
+                <a href="#" class="collapse_specs" target="production">Production</a>
+                <div id="production" class="meta-item">
+                    <p class="specs_title">Production</p> <p class="specs_details">{{ product.metafields.custom.production }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.grape_variety %}
+                <a href="#" class="collapse_specs" target="grape_variety">Grape Variety</a>
+                <div id="grape_variety" class="meta-item">
+                    <p class="specs_title">Grape Variety</p> <p class="specs_details">{{ product.metafields.custom.grape_variety }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.aroma %}
+                <a href="#" class="collapse_specs" target="aroma">Aroma</a>
+                <div id="aroma" class="meta-item">
+                    <p class="specs_title">Aroma</p> <p class="specs_details">{{ product.metafields.custom.aroma }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.wine_vintage %}
+                <a href="#" class="collapse_specs" target="wine_vintage">Wine Vintage</a>
+                <div id="wine_vintage" class="meta-item">
+                    <p class="specs_title">Wine Vintage</p> <p class="specs_details">{{ product.metafields.custom.wine_vintage }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.palate %}
+                <a href="#" class="collapse_specs" target="palate">Palate</a>
+                <div id="palate" class="meta-item">
+                    <p class="specs_title">Palate</p> <p class="specs_details">{{ product.metafields.custom.palate }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.best_drinking %}
+                <a href="#" class="collapse_specs" target="best_drinking">Best Drinking</a>
+                <div id="best_drinking" class="meta-item">
+                    <p class="specs_title">Best Drinking</p> <p class="specs_details">{{ product.metafields.custom.best_drinking }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.colour %}
+                <a href="#" class="collapse_specs" target="colour">Colour</a>
+                <div id="colour" class="meta-item">
+                    <p class="specs_title">Colour</p> <p class="specs_details">{{ product.metafields.custom.colour }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.alcohol %}
+                <a href="#" class="collapse_specs" target="alcohol">Alcohol</a>
+                <div id="alcohol" class="meta-item">
+                    <p class="specs_title">Alcohol</p> <p class="specs_details">{{ product.metafields.custom.alcohol }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+{% if product.metafields.custom.product_big_image %}
+    <div class="big-image" style="background-image: url('{{ product.metafields.custom.product_big_image | img_url: 'original' }}');">
+    </div>
+{% endif %}
+
+{% if product.metafields.custom.video_tasting_note != blank %}
+<div id="tasting_note_video" style="display: none;">
+  <div class='embed-container'>
+    <iframe src="{{ product.metafields.custom.video_tasting_note }}" frameborder='0' allowfullscreen></iframe>
+  </div>
+</div>
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const qtyWrappers = document.querySelectorAll('.quantity-wrapper');
+
+    qtyWrappers.forEach(wrapper => {
+      const input = wrapper.querySelector('input[type="number"]');
+      const minus = wrapper.querySelector('.qty-btn.minus');
+      const plus = wrapper.querySelector('.qty-btn.plus');
+
+      minus.addEventListener('click', () => {
+        let val = parseInt(input.value, 10);
+        if (val > 1) input.value = val - 1;
+      });
+
+      plus.addEventListener('click', () => {
+        input.value = parseInt(input.value, 10) + 1;
+      });
+    });
+  });
+</script>
+
+{% schema  %}
+{
+  "name": "Cru Single Product",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Page Settings"
+    },
+    {
+      "type": "number",
+      "id": "container_width",
+      "label": "Container Width"
+    },
+    {
+      "type": "select",
+      "id": "container_width_unit",
+      "label": "Container Width Unit",
+      "options": [
+        {
+          "value": "px",
+          "label": "Pixels (px)"
+        },
+        {
+          "value": "%",
+          "label": "Percentage (%)"
+        }
+      ],
+      "default": "px"
+    },
+    {
+      "type": "number",
+      "id": "product_title_size",
+      "label": "Product Title Font Size (px)",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "product_title_color",
+      "label": "Product Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "id": "product_price_size",
+      "label": "Product Price Font Size (px)",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "product_price_color",
+      "label": "Product Price Color",
+      "default": "#000000"
+    },
+    {
+      "type": "number",
+      "id": "product_description_size",
+      "label": "Product Description Font Size (px)",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "product_description_color",
+      "label": "Product Description Color",
+      "default": "#000000"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_continue_shopping",
+      "label": "Show 'Continue Shopping' Link",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Add to Cart Button Text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "text",
+      "id": "continue_shopping_text",
+      "label": "Continue Shopping Button Text",
+      "default": "Continue Shopping"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Add to Cart Button Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Add to Cart Button Border Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Add to Cart Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_hover",
+      "label": "Add to Cart Button Hover Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_hover",
+      "label": "Add to Cart Button Border Hover Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_text_hover",
+      "label": "Add to Cart Button Text Hover Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cru Single Product",
+      "category": "CRU"
+    }
+  ]
+}
+{% endschema %}

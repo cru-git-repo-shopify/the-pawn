@@ -1,0 +1,56 @@
+<div class="page-subheading {{ section.settings.section_class }}" id="{{ section.settings.section_id }}">
+    <div class="wp-block-column">
+        <p class="page_title_text">{{ section.settings.subheading }}</p>
+    </div>
+    {% if section.settings.has_button %}
+        <div class="wp-block-column btn_col">
+            <a class="button" href="{{ section.settings.button_link }}" rel="">{{ section.settings.button_text }}</a>
+        </div>
+    {% endif %}
+</div>
+
+{%  schema  %}  {
+  "name": "CRU Page Subheading",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Your Subheading"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID"
+    },
+    {
+      "type": "text",
+      "id": "section_class",
+      "label": "Section Class"
+    },
+    {
+      "type": "checkbox",
+      "id": "has_button",
+      "label": "Has Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/"
+    }
+  ],
+  "blocks": [],
+    "presets": [
+        {
+        "name": "CRU Page Subheading",
+        "category": "CRU"
+        }
+    ]
+}  {% endschema %}

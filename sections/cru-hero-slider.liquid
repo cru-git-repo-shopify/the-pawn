@@ -1,0 +1,323 @@
+<style>
+    a.hero_slider_prev:before {
+        content: "";
+        background: url('{{"arrow-right.png" |  file_url }}');
+        height: 28px;
+        width: 42px;
+        display: inline-block;
+        margin-right: 29px;
+        vertical-align: middle;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+        transform: rotate(180deg);
+    }
+    a.hero_slider_next:before {
+        content: "";
+        background: url('{{"arrow-right.png" |  file_url }}');
+        height: 28px;
+        width: 42px;
+        display: inline-block;
+        margin-right: 29px;
+        vertical-align: middle;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="hero_main_container">
+    {%  assign counter = 0 %}
+    {%  for block in section.blocks %}
+        {%  case block.type %} 
+            {%  when "slide" %}
+                {%  if block.settings.allow_overlay %}
+                    {% assign hex = block.settings.overlay_color | remove: "#" %}
+                    {% assign r = hex | slice: 0, 2 %}
+                    {% assign g = hex | slice: 2, 2 %}
+                    {% assign b = hex | slice: 4, 2 %}
+                    {% assign overlay_percent = block.settings.overlay_opacity %}
+                    {% assign r = r | upcase | prepend: "0x" | plus: 0 %}
+                    {% assign g = g | upcase | prepend: "0x" | plus: 0 %}
+                    {% assign b = b | upcase | prepend: "0x" | plus: 0 %}
+                    {% assign opacity = overlay_percent |  divided_by: 100.0 %}
+                {% endif %}
+
+                    {% assign top = ' ' | append: block.settings.y_alignment  %}
+                    {% if top == ' custom' %}                  
+                        {%assign top = ' ' | append: block.settings.custom_y_alignment | append: '%' %}
+                    {% endif %}
+                    {% assign bottom = block.settings.x_alignment  %}
+                    {% if bottom == 'custom' %}
+                        {%assign bottom = block.settings.custom_x_alignment | append: '%' %}
+                    {% endif %}
+                    {% assign position = bottom | append: top %}
+
+                    {% assign mob_top = ' ' | append: block.settings.mobile_y_alignment  %}
+                    {% if mob_top == 'custom' %}
+                        {%assign mob_top = ' ' | append: block.settings.mobile_custom_y_alignment | append: '%' %}
+                    {% endif %}
+                    {% assign mob_bottom = block.settings.mobile_x_alignment  %}
+                    {% if mob_bottom == 'custom' %}
+                        {%assign mob_bottom = block.settings.mobile_custom_x_alignment | append: '%' %}
+                    {% endif %}
+                    {% assign mobile_position = mob_bottom | append: mob_top %}
+
+                    {% if block.settings.allow_overlay %}
+                        <div class="hero_content has_overlay" header-type="{{ block.settings.header_type }}" style="background-image: url('{{ block.settings.bg_image | image_url }}'); background-position: {{position}};">
+                    {% else %}
+                        <div class="hero_content" header-type="{{ block.settings.header_type }}" style="background-image: url('{{ block.settings.bg_image | image_url }}'); background-position: {{position}};">
+                    {% endif %}
+                        {% if block.settings.allow_overlay %}
+                            <div class="hero_txt_content slide_{{counter}}" style='background: rgba({{ r }}, {{ g }}, {{ b }}, {{ opacity }}); padding: 20px;'>
+                        {% else %}
+                            <div class="hero_txt_content slide_{{counter}}">
+                        {% endif %}
+                            {% if block.settings.hero_heading != "" %}
+                                <h1 class="hero_heading" style="color: {{ block.settings.heading_color }};">{{ block.settings.hero_heading | raw }}</h1>
+                            {% endif %}
+                            {% if block.settings.hero_subheading != "" %}
+                                <p class="hero_sub_heading">{{ block.settings.hero_subheading }}</p>
+                            {% endif %}
+                            {% if block.settings.hero_button != "" %}
+                                <a href="{{ block.settings.hero_btn_link }}" class="general_btn wht_btn">{{ block.settings.hero_button }}</a>
+                            {% endif %}
+                            </div>
+                            {% if block.settings.mobile_bg_image %}
+                                <div class="mobile_background slide_{{counter}}" style="background-image: url('{{ block.settings.mobile_bg_image | image_url }}'); background-position: {{mobile_position}}!important;"></div>
+                            {% else %}
+                                 <div class="mobile_background slide_{{counter}}" style="background-image: url('{{ block.settings.bg_image | image_url }}'); background-position: {{mobile_position}}!important;"></div>
+                            {% endif %}
+                        <div class="hero_txt_content_mobile" style="display: none;">
+                            {% if block.settings.hero_heading != "" %}
+                                <h1 class="hero_heading">{{ block.settings.hero_heading }}</h1>
+                            {% endif %}
+                            {% if block.settings.hero_subheading != "" %}
+                                <p class="hero_sub_heading">{{ block.settings.hero_subheading }}</p>
+                            {% endif %}
+                            {% if block.settings.hero_button != "" %}
+                                <a href="{{ block.settings.hero_btn_link }}" class="general_btn wht_btn">{{ block.settings.hero_button }}</a>
+                            {% endif %}
+                        </div>
+                        {% if block.settings.has_nxt_btn %}
+                            <a href="#" class="hero_slider_next">{{ block.settings.nxt_btn_txt }}</a>
+                        {% endif %}
+                        {% if block.settings.has_prev_btn %}
+                            <a href="#" class="hero_slider_prev">{{ block.settings.prev_btn_txt }}</a>
+                        {% endif %}
+                    </div>
+                    {% assign counter = counter |  plus: 1 %}
+        {% endcase %}
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+    "name":"CRU Hero Slider",
+    "class":"cru_hero_slider",
+    "tag": "div",
+    "settings":[],
+    "presets":[{"name": "CRU Hero Slider", "category": "CRU"}], 
+    "blocks": [
+        {
+            "name": "Slide",
+            "type": "slide",
+            "settings": [{
+                "type": "image_picker",
+                "id": "bg_image",
+                "label": "Slider Image"
+            },
+            {
+                "type": "select",
+                "id": "y_alignment",
+                "label": "Y-axis Alignment",
+                "options": [{
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "top",
+                    "label": "Top"
+                },
+                {
+                    "value": "bottom",
+                    "label": "Bottom"
+                },
+                {
+                    "value": "custom",
+                    "label": "Custom"
+                }],
+                "default": "center"
+            },
+            {
+                "type": "number",
+                "id": "custom_y_alignment",
+                "label": "Custom Y alignment (percent)"
+            },
+            {
+                "type": "select",
+                "id": "x_alignment",
+                "label": "X-axis Alignment",
+                "options": [{
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "top",
+                    "label": "Top"
+                },
+                {
+                    "value": "bottom",
+                    "label": "Bottom"
+                },
+                {
+                    "value": "custom",
+                    "label": "Custom"
+                }],
+                "default": "center"
+            },
+            {
+                "type": "number",
+                "id": "custom_x_alignment",
+                "label": "Custom Y alignment (percent)"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile_bg_image",
+                "label": "Mobile Background Image"
+            },
+            {
+                "type": "select",
+                "id": "mobile_y_alignment",
+                "label": "Mobile Y-axis Alignment",
+                "options": [{
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "top",
+                    "label": "Top"
+                },
+                {
+                    "value": "bottom",
+                    "label": "Bottom"
+                },
+                {
+                    "value": "custom",
+                    "label": "Custom"
+                }],
+                "default": "center"
+            },
+            {
+                "type": "number",
+                "id": "mobile_custom_y_alignment",
+                "label": "Mobile Custom Y alignment (percent)"
+            },
+            {
+                "type": "select",
+                "id": "mobile_x_alignment",
+                "label": "Mobile X-axis Alignment",
+                "options": [{
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "top",
+                    "label": "Top"
+                },
+                {
+                    "value": "bottom",
+                    "label": "Bottom"
+                },
+                {
+                    "value": "custom",
+                    "label": "Custom"
+                }],
+                "default": "center"
+            },
+            {
+                "type": "number",
+                "id": "mobile_custom_x_alignment",
+                "label": "Mobile Custom X alignment (percent)"
+            },
+            {
+                "type": "checkbox",
+                "id": "allow_overlay",
+                "label": "Add Overlay to Text"
+            },
+            {
+                "type": "color",
+                "id": "overlay_color",
+                "label": "Overlay Color"
+            },
+            {
+                "type": "number",
+                "id": "overlay_opacity",
+                "label": "Overlay Opacity (percent)"
+            },
+            {
+                "type": "richtext",
+                "id": "hero_heading",
+                "label": "Hero Heading"
+            },
+            {
+                "type": "color",
+                "id": "heading_color",
+                "label": "Heading Color"
+            },
+            {
+                "type": "textarea",
+                "id": "hero_subheading",
+                "label": "Hero Sub-Heading"
+            },
+            {
+                "type": "text",
+                "id": "hero_button",
+                "label": "Hero Button"
+            },
+            {
+                "type": "text",
+                "id": "hero_btn_link",
+                "label": "Hero Button Link"
+            },
+            {
+                "type": "checkbox",
+                "id": "has_nxt_btn",
+                "label": "Has next Button"
+            },
+            {
+                "type": "text",
+                "id": "nxt_btn_txt",
+                "label": "Next Button Text"
+            },
+            {
+                "type": "checkbox",
+                "id": "has_prev_btn",
+                "label": "Has previous Button"
+            },
+            {
+                "type": "text",
+                "id": "prev_btn_txt",
+                "label": "Previous Button Text"
+            },
+            {
+                "type": "select",
+                "id": "header_type",
+                "label": "Header Type",
+                "options": [
+                    {
+                    "value": "light",
+                    "label": "Light"
+                    },
+                    {
+                        "value": "dark",
+                        "label": "Dark"
+                    }
+                ]
+            }
+        ]
+        }
+    ]
+
+}
+{% endschema %}

@@ -1,0 +1,180 @@
+<div id="{{ section.settings.section_id }}" class="{{ section.settings.section_class }} cru-contact-section {% if section.settings.right_background_image != blank %} with-image{% endif %}">
+    <div class="form_column">
+        {% if section.settings.heading != blank and section.settings.description != blank %}
+            <div class="newsletter-heading-content">
+                {% if section.settings.heading != blank %}
+                    <h2 class="section-header">{{ section.settings.heading }}</h2>
+                {% endif %}
+                {% if section.settings.description != blank %}
+                    <p class="content-txt">{{ section.settings.description }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+        {% form 'contact' %}
+            {% if section.settings.show_first_name %}
+                <div class="first-name">
+                {% if section.settings.show_first_name_label %}
+                    <label for="first-name">First name</label>
+                {% endif %}
+                <input type="text" name="contact[first_name]" id="first-name" placeholder="{{ section.settings.first_name_placeholder }}" />
+                </div>
+            {% endif %}
+
+            {% if section.settings.show_last_name %}
+                <div class="last-name">
+                {% if section.settings.show_last_name_label %}
+                    <label for="last-name">Last name</label>
+                {% endif %}
+                <input type="text" name="contact[last_name]" id="last-name" placeholder="{{ section.settings.last_name_placeholder }}" />
+                </div>
+            {% endif %}
+
+            {% if section.settings.show_email %}
+                <div class="email">
+                {% if section.settings.show_email_label %}
+                    <label for="email">Email</label>
+                {% endif %}
+                <input type="email" name="contact[email]" id="email" placeholder="{{ section.settings.email_placeholder }}" />
+                </div>
+            {% endif %}
+            {% if section.settings.show_phone %}
+                <div class="phone">
+                {% if section.settings.show_phone_label %}
+                    <label for="phone">Phone</label>
+                {% endif %}
+                <input type="tel" name="contact[phone]" id="phone" placeholder="{{ section.settings.phone_placeholder }}" />
+                </div>
+            {% endif %}
+            {% if section.settings.show_message %}
+                <div class="message">
+                {% if section.settings.show_message_label %}
+                    <label for="message">Message</label>
+                {% endif %}
+                <textarea name="contact[body]" id="message" placeholder="{{ section.settings.message_placeholder }}"></textarea>
+                </div>
+            {% endif %}
+
+            <div class="submit">
+                <input type="submit" value="{{ section.settings.submit_button_text }}" />
+            </div>
+        {% endform %}
+    </div>
+    {% if section.settings.right_background_image != blank %}
+      <div class="image_column" style="background: url('{{ section.settings.right_background_image | img_url: 'original' }}') no-repeat center center; background-size: cover;">
+      </div>
+    {% endif %}
+</div>
+
+{%  schema  %}  {
+  "name": "CRU Contact Section",
+  "blocks": [],
+  "presets": [
+    {
+      "name": "CRU Contact Section",
+      "category": "CRU"
+    }
+  ],
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "right_background_image",
+        "label": "Right Background Image",
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Get in Touch"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "We would love to hear from you!"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "default": "contact-section"
+    },
+    {
+      "type": "text",
+      "id": "section_class",
+      "label": "Section Class",
+      "default": "cru-contact-col"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_first_name",
+      "label": "Show First Name Field",
+      "default": true
+    },
+    {
+        "type": "text",
+        "id": "first_name_placeholder",
+        "label": "First Name Placeholder",
+        "default": "Enter your first name"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_last_name",
+        "label": "Show Last Name Field",
+        "default": true
+    },
+    {
+        "type": "text",
+        "id": "last_name_placeholder",
+        "label": "Last Name Placeholder",
+        "default": "Enter your last name"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_email",
+      "label": "Show Email Field",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_phone",
+      "label": "Show Phone Field",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "phone_placeholder",
+      "label": "Phone Placeholder",
+      "default": "Enter your phone number"
+    },
+    {
+        "type": "text",
+        "id": "email_placeholder",
+        "label": "Email Placeholder",
+        "default": "Enter your email"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_message",
+      "label": "Show Message Field",
+      "default": true
+    },
+    {
+        "type": "text",
+        "id": "message_placeholder",
+        "label": "Message Placeholder",
+        "default": "Enter your message"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_submit_button",
+      "label": "Show Submit Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "submit_button_text",
+      "label": "Submit Button Text",
+      "default": "Send Message"
+    }
+  ]
+}  {% endschema %}

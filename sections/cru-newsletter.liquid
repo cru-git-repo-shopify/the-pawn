@@ -1,0 +1,164 @@
+<div id="{{ section.settings.section_id }}" class="{{ section.settings.section_class }} cru-newsletter-section">
+    {% if section.settings.title != blank and section.settings.description != blank %}
+        <div class="newsletter-heading-content">
+            {% if section.settings.title != blank %}
+                <h2 class="center section-header">{{ section.settings.title }}</h2>
+            {% endif %}
+            {% if section.settings.description != blank %}
+                <p class="center content-txt">{{ section.settings.description }}</p>
+            {% endif %}
+        </div>
+    {% endif %}
+    {% form 'contact' %}
+        {% if section.settings.show_first_name %}
+            <div class="first-name">
+            {% if section.settings.show_first_name_label %}
+                <label for="first-name">First name</label>
+            {% endif %}
+            <input type="text" name="contact[first_name]" id="first-name" placeholder="{{ section.settings.first_name_placeholder }}" />
+            </div>
+        {% endif %}
+
+        {% if section.settings.show_last_name %}
+            <div class="last-name">
+            {% if section.settings.show_last_name_label %}
+                <label for="last-name">Last name</label>
+            {% endif %}
+            <input type="text" name="contact[last_name]" id="last-name" placeholder="{{ section.settings.last_name_placeholder }}" />
+            </div>
+        {% endif %}
+
+        {% if section.settings.show_phone %}
+            <div class="phone">
+            {% if section.settings.show_phone_label %}
+                <label for="phone">Phone</label>
+            {% endif %}
+            <input type="tel" name="contact[phone]" id="phone" placeholder="{{ section.settings.phone_placeholder }}" />
+            </div>
+        {% endif %}
+
+        {% if section.settings.show_email %}
+            <div class="email">
+            {% if section.settings.show_email_label %}
+                <label for="email">Email</label>
+            {% endif %}
+            <input type="email" name="contact[email]" id="email" placeholder="{{ section.settings.email_placeholder }}" />
+            </div>
+        {% endif %}
+
+        <div class="submit">
+            <input type="submit" value="{{ section.settings.submit_button_text }}" />
+        </div>
+    {% endform %}
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter Signup",
+  "class":"cru_newsletter",
+  "tag": "div",
+  "presets":[{"name": "CRU Newsletter", "category": "CRU"}], 
+  "settings": [
+    {
+        "type": "text",
+        "id": "section_id",
+        "label": "Section ID"
+    },
+    {
+        "type": "text",
+        "id": "section_class",
+        "label": "Section Class"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Sign up for our newsletter"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Stay updated with our latest news and offers."
+    },
+    {
+        "type": "checkbox",
+        "id": "show_first_name",
+        "label": "Show First Name Field",
+        "default": true
+    },
+    {
+        "type": "text",
+        "id": "first_name_placeholder",
+        "label": "First Name Placeholder",
+        "default": "Enter your first name"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_first_name_label",
+        "label": "Show First Name Field Label",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "show_last_name",
+        "label": "Show Last Name Field",
+        "default": true 
+    },
+    {
+        "type": "text",
+        "id": "last_name_placeholder",
+        "label": "Last Name Placeholder",
+        "default": "Enter your last name"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_last_name_label",
+        "label": "Show Last Name Field Label",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "show_phone",
+        "label": "Show Phone Field",
+        "default": false
+    },
+    {
+        "type": "text",
+        "id": "phone_placeholder",
+        "label": "Phone Placeholder",
+        "default": "Enter your phone number"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_phone_label",
+        "label": "Show Phone Field Label",
+        "default": false
+    },
+    {
+        "type": "text",
+        "id": "email_placeholder",
+        "label": "Email Placeholder",
+        "default": "Enter your email address"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_email",
+        "label": "Show Email Field",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "show_email_label",
+        "label": "Show Email Field Label",
+        "default": false
+    },
+    {
+        "type": "text",
+        "id": "submit_button_text",
+        "label": "Submit Button Text",
+        "default": "Subscribe"
+    }
+  ]
+}
+{% endschema %}

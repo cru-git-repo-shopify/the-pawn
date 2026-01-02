@@ -1,0 +1,165 @@
+{% assign col_numbers = 0 %}
+<div class="footer-columns" style='background-color: {{ section.settings.bg_color }}'>
+    {% if section.settings.show_col_1 %}
+        {% assign col_numbers = col_numbers |  plus: 1 %}
+    {% endif %}
+    {% if section.settings.show_col_2 %}
+        {% assign col_numbers = col_numbers |  plus: 1 %}
+    {% endif %}
+    {% if section.settings.show_col_3 %}
+        {% assign col_numbers = col_numbers |  plus: 1 %}
+    {% endif %}
+    {% if section.settings.show_col_4 %}
+        {% assign col_numbers = col_numbers |  plus: 1 %}
+    {% endif %}
+    <div class="col-full columns_{{col_numbers}}">
+        {% if section.settings.show_mailing_list %}
+        <div class="mailing_list_section">
+            {% if section.settings.mailing_list_heading %}
+                <h3>{{ section.settings.mailing_list_heading }}</h3>
+            {% endif %}
+            {% form 'customer', class: 'contact-form' %}
+                <input type="hidden" name="form_type" value="customer">
+                <input type="hidden" name="utf8" value="✓">
+                <input type="text" class="half_input" name="contact[first_name]" placeholder="Your First Name" aria-label="First Name" required>
+                <input type="text" class="half_input" name="contact[last_name]" placeholder="Your Last Name" aria-label="Last Name" required>
+                <input type="phone" name="contact[phone]" placeholder="Your Phone Number" aria-label="Phone Number" pattern="[0-9\-]*" required>
+                <input type="email" name="contact[email]" placeholder="Your email" aria-label="Email" autocapitalize="off" required>
+                <button type="submit">Subscribe</button>
+            {% endform %}
+        </div>
+    {% endif %}
+        {% if section.settings.show_col_1 %}
+            <div class="col-1 footer-column">
+                {{ section.settings.col1_content | raw }}
+            </div>
+        {% endif %}
+        {% if section.settings.show_col_2 %}
+            <div class="col-2 footer-column">
+                {{ section.settings.col2_content | raw }}
+            </div>
+        {% endif %}
+        {% if section.settings.show_col_3 %}
+            <div class="col-3 footer-column">
+                {{ section.settings.col3_content | raw }}
+            </div>
+        {% endif %}
+        {% if section.settings.show_col_4 %}
+            <div class="col-4 footer-column">
+                {{ section.settings.col4_content | raw }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="footer-notice" style='background-color: {{ section.settings.bg_color }}'>
+        <p>{{ section.settings.footer_notice | newline_to_br }}</p>
+    </div>
+</div>
+{% if section.settings.footer_menu %}
+    <div class="footer_menu_section" style='background-color: {{ section.settings.bg_color }}'>
+        <ul class="footer-menu">
+            {% for link in linklists[section.settings.footer_menu].links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+{% if section.settings.enable_copyright %}
+    <div class="copyright_section" style='background-color: {{ section.settings.bg_color }}'>
+        {{ section.settings.copyright_content }}
+    </div>
+{% endif %}
+
+{% schema %}
+{
+    "name":"CRU Footer",
+    "class":"cru_footer",
+    "tag": "div",
+    "settings":[
+        {
+            "type":"color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#000000"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_mailing_list",
+            "label": "Show Mailing List Form",
+        },
+        {
+            "type": "text",
+            "id": "mailing_list_heading",
+            "label": "Mailing List Heading",
+        },
+        {
+            "type": "checkbox",
+            "id": "show_col_1",
+            "label": "Show Column 1",
+            "default": true
+        },
+         {
+            "type": "html",
+            "id": "col1_content",
+            "label": "Column 1 Content"
+        },
+         {
+            "type": "checkbox",
+            "id": "show_col_2",
+            "label": "Show Column 2",
+            "default": false
+        },
+        {
+            "type": "html",
+            "id": "col2_content",
+            "label": "Column 2 Content"
+        },
+         {
+            "type": "checkbox",
+            "id": "show_col_3",
+            "label": "Show Column 3",
+            "default": false
+        },
+        {
+            "type": "html",
+            "id": "col3_content",
+            "label": "Column 3 Content"
+        },
+         {
+            "type": "checkbox",
+            "id": "show_col_4",
+            "label": "Show Column 4",
+            "default": false
+        },
+        {
+            "type": "html",
+            "id": "col4_content",
+            "label": "Column 4 Content"
+        },
+        {
+        "type": "textarea",
+        "id": "footer_notice",
+        "label": "Footer Notice"
+    },
+        {
+            "type": "link_list",
+            "id": "footer_menu",
+            "label": "Footer Menu"
+        },
+         {
+            "type": "checkbox",
+            "id": "enable_copyright",
+            "label": "Enable Copyright Section",
+            "default": false
+        },
+        {
+            "type": "textarea",
+            "id": "copyright_content",
+            "label": "Copyright Content"
+        }
+    ],
+    "presets":[{"name": "CRU Footer", "category": "CRU"}],
+    "blocks": []
+
+}
+{% endschema %} 

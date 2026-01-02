@@ -1,0 +1,229 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cru_page_header_EYmWRx": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 480,
+        "desktop_height_unit": "px",
+        "mobile_height": 480,
+        "mobile_height_unit": "px",
+        "desktop_background_image": "shopify://shop_images/IMG_2342.jpg",
+        "mobile_background_image": "shopify://shop_images/IMG_2342.jpg",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0.1,
+        "heading": "Contact Us",
+        "font_size": 48,
+        "font_color": "#ffffff",
+        "font-weight": "400",
+        "subheading": "",
+        "subheading_size": 15,
+        "subheading_color": "#ffffff",
+        "subheading_font_weight": "400"
+      }
+    },
+    "cru_stack_KNTp7C": {
+      "type": "cru-stack",
+      "blocks": {
+        "textarea_rR3aDe": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "Open daily from 10.30 am to 4.30 pm and often later on weekends.\n\n(closed Good Friday, Christmas Day and Boxing Day)\n\nGift Vouchers available on request.\n\n(03) 6257 8298\n\nwine@miltonvineyard.com.au",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "100",
+            "margin_top": 150
+          }
+        }
+      },
+      "block_order": [
+        "textarea_rR3aDe"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width": 90,
+        "max_width_unit": "%",
+        "bg_color": ""
+      }
+    },
+    "cru_contact_col_YDBGze": {
+      "type": "cru-contact-col",
+      "name": "CRU Contact Section",
+      "settings": {
+        "heading": "Do you have any questions?",
+        "description": "If so, please enter your details below and we’ll do our best to assist.",
+        "section_id": "contact-section",
+        "section_class": "cru-contact-col",
+        "show_first_name": true,
+        "first_name_placeholder": "First Name",
+        "show_last_name": true,
+        "last_name_placeholder": "Last Name",
+        "show_email": true,
+        "show_phone": false,
+        "phone_placeholder": "Enter your phone number",
+        "email_placeholder": "Email",
+        "show_message": true,
+        "message_placeholder": "Please leave us a detailed message here.",
+        "show_submit_button": true,
+        "submit_button_text": "Submit"
+      }
+    },
+    "image_banner_yFz6X6": {
+      "type": "image-banner",
+      "blocks": {
+        "large_img_ggYgEy": {
+          "type": "largeImg",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2858adj.jpg",
+            "enable_max_width_image": false,
+            "custom_width_image": 1170,
+            "border_radius": 0,
+            "enable_scroll_down": false,
+            "enable_custom_image": false,
+            "image_behavior": "none",
+            "sub_title": "",
+            "border_sub_title": false,
+            "font_size_sub_title": 14,
+            "font_size_sub_title_mb": 14,
+            "margin_bottom_sub_title": 14,
+            "sub_heading_font": "font_1",
+            "font_weight_sub_title": "700",
+            "sub_title_position": "sub_title_above",
+            "color_sub_title": "#232323",
+            "color_sub_title_mb": "#ffffff",
+            "heading": "",
+            "special_text": "",
+            "letter_spacing_heading": "",
+            "enable_style_italic": false,
+            "font_size_heading": 40,
+            "font_size_heading_mb": 24,
+            "margin_bottom_heading": 20,
+            "font_weight_heading": "600",
+            "color_heading": "#232323",
+            "color_heading_mb": "#ffffff",
+            "border_title": "border_s1",
+            "border_color_title": "#232323",
+            "border_color_title_mobile": "#ffffff",
+            "text": "",
+            "font_size_des": 12,
+            "font_size_des_mb": 12,
+            "line_height_des": 26,
+            "margin_bottom_des": 35,
+            "color_des": "#232323",
+            "color_des_mb": "#ffffff",
+            "countdown": "",
+            "hide_countdown_fc": "countdown",
+            "countdown_style": "round",
+            "countdown_position": "countdown_below_desc",
+            "font_size_countdown_number": 30,
+            "font_size_countdown_text": 14,
+            "color_countdown": "#232323",
+            "color_countdown_mb": "#ffffff",
+            "countdown_margin_bottom": 35,
+            "content_width": 475,
+            "bg_color_content": "",
+            "align": "center",
+            "align_items": "center",
+            "position": "left",
+            "custom_horizontal": "",
+            "custom_vertical": "",
+            "btn_text": "",
+            "link": "",
+            "btn_icon": "",
+            "button_1_width": 235,
+            "enable_button_custom_border": false,
+            "button_color": "#ffffff",
+            "button_border": "#232323",
+            "button_background": "#232323",
+            "button_background_gradient": "",
+            "button_color_hover": "#ffffff",
+            "button_border_hover": "#232323",
+            "button_background_hover": "#232323",
+            "button_background_gradient_hover": "",
+            "btn_text_2": "",
+            "link_2": "",
+            "btn_icon_2": "",
+            "button_color_2": "#ffffff",
+            "button_border_2": "#232323",
+            "button_background_2": "#232323",
+            "button_background_2_gradient": "",
+            "button_color_hover_2": "#ffffff",
+            "button_border_hover_2": "#232323",
+            "button_background_hover_2": "#232323",
+            "button_background_gradient_hover_2": "",
+            "video_link": "",
+            "adaptive_height_video": "56",
+            "icon_style": "style_1",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
+            "enable_custom_video_icon_position": false,
+            "video_icon_horizontal_position": "",
+            "video_icon_vertical_position": "",
+            "video_icon_horizontal_position_mb": "",
+            "video_icon_vertical_position_mb": ""
+          }
+        }
+      },
+      "block_order": [
+        "large_img_ggYgEy"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "id_section": "contact_bot",
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "display_type": "slide",
+        "enable_arrows": false,
+        "arrows_position": "",
+        "enable_dots": false,
+        "enable_autoplay": false,
+        "list_gap": 0,
+        "image_banner_title": "",
+        "enable_border_title": false,
+        "color_title": "#202020",
+        "fontsize_title": 24,
+        "fontsize_title_mb": 20,
+        "margin_bottom_title": 25,
+        "image_banner_des": "",
+        "color_des": "#202020",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "style_bg": "none",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cru_page_header_EYmWRx",
+    "cru_stack_KNTp7C",
+    "cru_contact_col_YDBGze",
+    "image_banner_yFz6X6"
+  ]
+}

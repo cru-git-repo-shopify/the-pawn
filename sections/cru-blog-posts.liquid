@@ -1,0 +1,212 @@
+<style>
+    #{{ section.id }} .post-article {
+        {% if section.settings.number_of_posts > 0 %}
+        width: calc((100% / {{ section.settings.number_of_posts }}) - 15px);
+        {% else %}
+        width: calc(25% - 30px);
+        {% endif %}
+        margin-right: 15px;
+        margin-bottom: 15px;
+        background-color: {{ section.settings.card_background }};
+    }
+    #{{ section.id }} .article_content {
+        background-color: {{ section.settings.card_background }};
+    }
+     #{{ section.id }}.all_posts{     
+        max-width: {{ section.settings.section_max_width |  append: 'px'}};       
+     }
+    #{{ section.id }} .post-article:nth-child({{ section.settings.number_of_posts }}n){
+        margin-right: 0;
+    }
+    #{{ section.id }} h2.article_title, #{{ section.id }} h2.article_title a{
+        font-size: {{ section.settings.title_font_size |  append: 'px'}};
+        font-weight: {{ section.settings.title_font_weight }};
+        color: {{ section.settings.title_color }};
+    }
+    #{{ section.id }} h2.article_title:hover, #{{ section.id }} h2.article_title a:hover{
+        color: {{ section.settings.hover_title_color }};
+    }
+    #{{ section.id }} .short_desc{
+        font-size: {{ section.settings.desc_font_size }};
+    }
+</style>
+
+<script>
+    jQuery(document).ready(function(){
+        jQuery('#{{ section.id }}.all_posts.masonry').masonry({
+            itemSelector: '.post-article',
+        });
+    });
+    
+</script>
+
+<div id="{{ section.id }}" class="all_posts {{ section.settings.section_class }} {% if section.settings.Type == 'masonry' %}masonry{% endif %}";>
+    {% for article in blogs['news'].articles %}
+        <article class="post-article">
+            <div class="article_feat_image" style="background-image: url('{{ article.image | image_url }}" alt="{{ article.title }}');"></div>
+                <div class="article_content">
+                    <h2 class="article_title"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                    {% if article.excerpt != blank and section.settings.show_description%}
+                        <p class="shor_desc">{{ article.excerpt | strip_html }}</p>
+                    {% else %}
+                        {% if section.settings.show_description %}
+                            <p class="shor_desc">{{ article.content | strip_html | truncatewords: 50 }}</p>
+                        {% endif %}
+                    {% endif %}
+                    {% if section.settings.show_button %}
+                        <a class="article_link" href="{{ article.url }}">Read more</a>
+                    {% endif %}
+                </div>
+        </article>
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+    "name": "CRU Contact Section",
+    "class": "cru_contact_section",
+    "tag": "div",
+    "settings": [
+        {
+            "type": "text",
+            "id": "section_class",
+            "label": "Class"
+        },
+        {
+            "type": "number",
+            "id": "section_max_width",
+            "label": "Section Max-width"
+        },
+        {
+            "type": "select",
+            "id": "Type",
+            "label": "Type",
+            "options": [
+                {
+                    "value": "grid",
+                    "label": "Grid"
+                },
+                {
+                    "value": "masonry",
+                    "label": "Masonry"
+                }
+            ],
+            "default": "grid"
+        },
+        {
+            "type": "range",
+            "id": "number_of_posts",
+            "label": "Number of Posts per Row",
+            "min": 1,
+            "max": 4,
+            "step": 1,
+            "default": 3
+        },
+        {
+            "type": "checkbox",
+            "id": "show_description",
+            "label": "Show Description",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "show_button",
+            "label": "Show Read More Button",
+            "default": true
+        },
+        {
+            "type": "color",
+            "id": "card_background",
+            "label": "Post Card Background"
+        },
+        {
+            "type": "number",
+            "id": "title_font_size",
+            "label": "Title Font Size"
+        },
+        {
+            "type": "select",
+            "id": "title_font_weight",
+            "label": "Title Font Weight",
+            "options": [
+                {
+                "value": "100",
+                "label": "100"
+                },
+                {
+                "value": "200",
+                "label": "200"
+                },
+                {
+                "value": "300",
+                "label": "300"
+                },
+                {
+                "value": "400",
+                "label": "400"
+                },
+                {
+                "value": "500",
+                "label": "500"
+                },
+                {
+                "value": "600",
+                "label": "600"
+                },
+                {
+                "value": "700",
+                "label": "700"
+                },
+                {
+                "value": "800",
+                "label": "800"
+                },
+                {
+                "value": "900",
+                "label": "900"
+                },
+                {
+                "value": "normal",
+                "label": "Normal"
+                },
+                {
+                "value": "bold",
+                "label": "Bold"
+                },
+                {
+                "value": "bolder",
+                "label": "Bolder"
+                },
+                {
+                "value": "lighter",
+                "label": "Lighter"
+                }
+            ]
+        },
+        {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "hover_title_color",
+            "label": "Hover Title Color",
+            "default": "#000000"
+        },
+        {
+            "type": "number",
+            "id": "desc_font_size",
+            "label": "Description Font Size"
+        }
+    ],
+    "blocks": [],
+    "presets": [
+        {
+            "name": "CRU Posts",
+            "category": "CRU"
+        }
+    ]
+}
+{% endschema %}

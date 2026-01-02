@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "cru_footer_1_MeFwxB": {
+      "type": "cru-footer-1",
+      "name": "CRU Footer",
+      "settings": {
+        "bg_color": "#f8f8f8",
+        "show_mailing_list": false,
+        "mailing_list_heading": "",
+        "show_col_1": true,
+        "col1_content": "<img class=\"footer_logo\" src=\"https://cdn.shopify.com/s/files/1/0703/9762/4409/files/Milton-Logo-TOP_v21-e1430355681739.png?v=1764050919\" alt=\"My Image\">",
+        "show_col_2": true,
+        "col2_content": "<div class=\"footer_menu\">\n<ul>\n<li><a href=\"#\">Shop</a></li>\n<li><a href=\"#\">Wineclub</a></li>\n<li><a href=\"#\">About Us</a></li>\n<li><a href=\"#\">My Account</a></li>\n<li><a href=\"#\">Contact</a></li>\n</ul>\n</div>",
+        "show_col_3": true,
+        "col3_content": "",
+        "show_col_4": false,
+        "col4_content": "",
+        "footer_notice": "Warning: under the Liquor Licensing Act 1990, it is an offence:\nfor liquor to be delivered to a person under the age of 18 years. Penalty: Fine not exceeding 20 penalty units\nfor a person under the age of 18 years to purchase liquor. Penalty: Fine not exceeding 10 penalty units",
+        "footer_menu": "",
+        "enable_copyright": true,
+        "copyright_content": "<div class=\"copyright_left\">\n<p>© COPYRIGHT MILTON VINEYARD 2023 | LIQUOR LICENSE NUMBER 51484</p>\n</div>\n<div class=\"copyright_right\">\n<a href=\"#\">Privacy Policy</a>\n<a href=\"#\">Website by CRU</a>\n</div>"
+      }
+    }
+  },
+  "order": [
+    "cru_footer_1_MeFwxB"
+  ]
+}

@@ -1,0 +1,250 @@
+.cru-product-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0px 0 100px;
+}
+
+/* .cru-product-item {
+    width: calc(25% - 75px);
+    padding: 65px 32px 32px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+} */
+
+p.product-title {
+    display: block;
+    font-size: 18px;
+}
+
+p.product-price {
+    font-size: 15px;
+}
+
+img.product-image {
+    display: block;
+    margin: 0 auto;
+    max-height: 324px;
+    width: auto;
+}
+
+.quantity-wrapper {
+    display: flex;
+    gap: 2px;
+}
+
+.cru-product-item input.quantity-input {
+    max-width: 45px;
+    /* padding: 10px; */
+    -moz-appearance: textfield;
+    text-align: center;
+    border: 0;
+    /* border-bottom: 1px solid; */
+    font-size: 15px;
+}
+
+.cru-product-item input.quantity-input::-webkit-outer-spin-button, .cru-product-item input.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    width: 0;
+}
+
+.quantity-wrapper button.qty-btn {
+    background: transparent;
+    border: none;
+    /* border-radius: 50px; */
+    /* padding: 10px 15px; */
+    font-size: 18px;
+    line-height: 1;
+}
+
+.ajax-add-to-cart {
+    display: flex;
+    margin-top: 30px;
+}
+
+.quantity-wrapper-inner {
+    display: flex;
+    border: 1px solid #1414140A;
+    border-radius: 50px;
+    padding: 5px 15px;
+    align-items: center;
+}
+
+.add-to-cart-wrapper {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+
+.pagination {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.shop_filter {
+    max-width: 90%;
+    margin: 25px auto 0;
+}
+
+.shop_filter ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    justify-content: center;
+    margin: 0!important;
+}
+
+a.term-item {
+    color: #000000;
+    font-size: 20px;
+}
+
+h2.filter-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 100;
+    font-family: 'FuturaStdMedium';
+}
+
+.shop_filter ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 15px!important;
+    font-size: 18px;
+    /* border-bottom: 1px dotted; */
+}
+
+.filter_mobile {
+    display: none;
+}
+
+.product_awards {
+    position: absolute;
+}
+
+p.award {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+    padding: 19px 17px;
+    text-align: center;
+    line-height: 1;
+    font-size: 15px;
+    position: relative;
+    margin: 0;
+}
+
+span.type {
+    display: block;
+}
+
+.award_accolade:not(:first-child) {
+    margin-top: -10px;
+}
+
+img.badge {
+    max-width: 68px;
+    position: relative;
+}
+
+i.fa-solid.fa-sliders {
+    transform: rotate(-90deg);
+    font-size: 17px;
+    margin-left: 0;
+    margin-right: 15px;
+    top: -3px;
+    position: relative;
+}
+
+.filter-title span {
+    position: relative;
+}
+
+.filter-title span:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    bottom: 2px;
+}
+
+.product-custom-label p {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.product-custom-label.special p {
+    color: #f37321;
+}
+
+.product-custom-label.orange.special {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cru-product-collection p.product-price:after {
+    display: none;
+}
+
+.cru-product-collection {
+    width: 90%;
+}
+
+@media only screen and (max-width: 1400px) {
+    .quantity-wrapper button.qty-btn {
+        padding: 10px 15px;
+    }
+
+    .cru-product-collection .cru-product-item {
+        width: calc(34% - 75px)!important;
+        margin-right: 15px!important;
+        padding: 35px 20px!important;
+    }
+
+    .add-to-cart-wrapper button.add-to-cart-button {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cru-product-collection .cru-product-item {
+        width: calc(50% - 15px)!important;
+    }
+    .page-subheading .wp-block-column {
+        width: 100%;
+    }
+
+    .page-subheading {
+        flex-wrap: wrap;
+    }
+
+    p.page_title_text {
+        max-width: 100%;
+    }
+
+    .btn_col a.button {
+        margin-left: 0;
+    }
+
+    .wp-block-column.btn_col {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cru-product-collection .cru-product-item {
+        width: calc(100%)!important;
+        margin-right: 0!important;
+    }
+}

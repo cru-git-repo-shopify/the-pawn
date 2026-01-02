@@ -1,0 +1,275 @@
+<style>
+    .cru-page-header-inner {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: {{ section.settings.desktop_height }}{{ section.settings.desktop_height_unit }};
+        background-size: cover;
+        background-position: center;
+        background-image: url({{ section.settings.desktop_background_image | img_url: '1920x1080' }});
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cru-page-header .background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .cru-page-header .header-content h1, .cru-page-header .header-content h2 {
+        margin: 0;
+    }
+
+    .cru-page-header .header-content h1 {
+        margin-bottom: 10px;
+    }
+
+    .cru-page-header .header-content p {
+        margin-top: 0;
+    }
+
+    #{{ section.id }} .header-content {
+        max-width: {{ section.settings.title_max_width }}px;
+    }
+
+    #{{ section.id }} .cru-post-container {
+        max-width: {{ section.settings.post_max_width }}px;
+        margin: {{ section.settings.post_margin_top }}px auto {{ section.settings.post_margin_bottom }}px;
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        .cru-page-header-inner {
+            height: {{ section.settings.mobile_height }}{{ section.settings.mobile_height_unit }};
+            background-image: url({{ section.settings.mobile_background_image | img_url: 'original' }});
+        }
+    }
+
+</style>
+<div id="{{ section.id }}">
+    {% if section.settings.show_page_heading %}
+    <div class="cru-page-header {{ section.settings.class }}">
+        <div class="cru-page-header-inner">
+            <div class="background-overlay" style="background-color: {{ section.settings.background_overlay }}; opacity: {{ section.settings.background_overlay_opacity }};"></div>
+            <div class="header-content">
+                <h1 style="font-size: {{ section.settings.font_size }}px; color: {{ section.settings.font_color }}; font-weight: {{ section.settings.font-weight }}; line-height: {{ section.settings.line_height }}px;">{{ article.title | escape }}</h1>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="cru-post-container">
+        {% if section.settings.show_page_heading == false %}
+            <h1 style="font-size: {{ section.settings.font_size }}px; color: {{ section.settings.font_color }}; font-weight: {{ section.settings.font-weight }}; line-height: {{ section.settings.line_height }}px;">{{ article.title | escape }}</h1>
+        {% endif %}
+        <div class="article-content">
+            {{ article.content }}
+        </div>
+    </div>
+</div>
+
+{%  schema  %}
+    {
+        "name": "CRU Post",
+        "class": "cru-post",
+        "tag": "div",
+        "settings": [
+            {
+                "type": "text",
+                "id": "class",
+                "label": "class"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_page_heading",
+                "label": "Show Page Heading",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Page Heading Settings"
+            },
+            {
+                "type": "number",
+                "id": "desktop_height",
+                "label": "Desktop Height",
+                "default": 400
+            },
+            {
+                "type": "select",
+                "id": "desktop_height_unit",
+                "label": "Desktop Height Unit",
+                "options": [
+                    {
+                    "value": "px",
+                    "label": "Pixels (px)"
+                    },
+                    {
+                    "value": "vh",
+                    "label": "Viewport Height (vh)"
+                    }
+                ],
+                "default": "px"
+            },
+            {
+                "type": "number",
+                "id": "mobile_height",
+                "label": "Mobile Height",
+                "default": 300
+            },
+            {
+                "type": "select",
+                "id": "mobile_height_unit",
+                "label": "Mobile Height Unit",
+                "options": [
+                    {
+                    "value": "px",
+                    "label": "Pixels (px)"
+                    },
+                    {
+                    "value": "vh",
+                    "label": "Viewport Height (vh)"
+                    }
+                ],
+                "default": "px"
+            },
+            {
+                "type": "image_picker",
+                "id": "desktop_background_image",
+                "label": "Desktop Background Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile_background_image",
+                "label": "Mobile Background Image"
+            },
+            {
+                "type": "color",
+                "id": "background_overlay",
+                "label": "Background Overlay Color",
+                "default": "#000000"
+            },
+            {
+                "type": "number",
+                "id": "background_overlay_opacity",
+                "label": "Background Overlay Opacity (0-1)",
+                "default": 0
+            },
+            {
+                "type": "number",
+                "id": "font_size",
+                "label": "Heading Font Size",
+                "default": 48
+            },
+            {
+                "type": "color",
+                "id": "font_color",
+                "label": "Heading Font Color",
+                "default": "#000000"
+            },
+            {
+                "type": "number",
+                "id": "line_height",
+                "label": "Line Height (px)",
+                "default": 48
+            },
+            {
+                "type": "select",
+                "id": "font-weight",
+                "label": "Heading Font Weight",
+                "options": [
+                    {
+                    "value": "100",
+                    "label": "100"
+                    },
+                    {
+                    "value": "200",
+                    "label": "200"
+                    },
+                    {
+                    "value": "300",
+                    "label": "300"
+                    },
+                    {
+                    "value": "400",
+                    "label": "400"
+                    },
+                    {
+                    "value": "500",
+                    "label": "500"
+                    },
+                    {
+                    "value": "600",
+                    "label": "600"
+                    },
+                    {
+                    "value": "700",
+                    "label": "700"
+                    },
+                    {
+                    "value": "800",
+                    "label": "800"
+                    },
+                    {
+                    "value": "900",
+                    "label": "900"
+                    },
+                    {
+                    "value": "normal",
+                    "label": "Normal"
+                    },
+                    {
+                    "value": "bold",
+                    "label": "Bold"
+                    },
+                    {
+                    "value": "bolder",
+                    "label": "Bolder"
+                    },
+                    {
+                    "value": "lighter",
+                    "label": "Lighter"
+                    }
+                ],
+                "default": "400"
+            },
+            {
+                "type": "number",
+                "id": "title_max_width",
+                "label": "Title Max Width"
+            },
+            {
+                "type": "header",
+                "content": "Post Settings"
+            },
+            {
+                "type": "number",
+                "id": "post_max_width",
+                "label": "Post Content Max Width"
+            },
+            {
+                "type": "number",
+                "id": "post_margin_top",
+                "label": "Post Margin Top"
+            },
+            {
+                "type": "number",
+                "id": "post_margin_bottom",
+                "label": "Post Margin Bottom"
+            }
+        ],
+        "presets": [
+            {
+                "name": "CRU Post",
+                "category": "Custom"
+            }
+        ]
+    }
+{% endschema %}

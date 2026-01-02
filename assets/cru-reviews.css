@@ -1,0 +1,41 @@
+.cru-reviews {
+    padding: 50px 0 100px;
+}
+
+.reviews_container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.reviews_container * {
+    text-align: center;
+    font-size: 15px;
+}
+
+.reviews_container h2 {font-size: 24px;}
+
+.review_content {
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.review-rating span {
+    font-size: 24px;
+}
+
+p.reviewer_name {
+    margin-bottom: 5px;
+}
+
+.reviews_container ul.slick-dots {
+    bottom: -50px!important;
+}
+
+.cru-reviews .slick-prev:before, .cru-reviews .slick-next:before {
+    color: #000;
+    font-size: 28px;
+}
+
+.reviews-list {
+    margin-top: 50px;
+}

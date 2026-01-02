@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cru_page_header_mB3cBA": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 627,
+        "desktop_height_unit": "px",
+        "mobile_height": 50,
+        "mobile_height_unit": "vh",
+        "desktop_background_image": "shopify://shop_images/Manners-Cooking-Class-scaled-e1611368268515_jpg.webp",
+        "mobile_background_image": "shopify://shop_images/Manners-Cooking-Class-scaled-e1611368268515_jpg.webp",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0.1,
+        "heading": "Barrel & Larder",
+        "font_size": 48,
+        "font_color": "#ffffff",
+        "font-weight": "400",
+        "subheading": "",
+        "subheading_size": 24,
+        "subheading_color": "#000000",
+        "subheading_font_weight": "400"
+      }
+    },
+    "cru_stack_fe6KkF": {
+      "type": "cru-stack",
+      "blocks": {
+        "image_jkaFaU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/barrellarder-logo_POS2_jpg.webp",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        },
+        "text_tjy8DU": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "School of Wine and Food",
+            "text_align": "center",
+            "text_color": "#232323",
+            "font_weight": "700",
+            "font_size": 30,
+            "margin_top": 0
+          }
+        },
+        "text_AKURLM": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "WELCOME TO BARREL & LARDER",
+            "text_align": "center",
+            "text_color": "#232323",
+            "font_weight": "900",
+            "font_size": 17,
+            "margin_bottom": 0
+          }
+        },
+        "text_3TtktN": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "ROSS HILL WINES’ SCHOOL OF WINE AND FOOD.",
+            "text_align": "center",
+            "text_color": "#232323",
+            "font_weight": "900",
+            "font_size": 17,
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "richtext_MYn3jt": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p>For any questions please contact us via t. 02 6365 3223 or <a href=\"mailto:1994@rosshillwines.com.au\">cellardoor@rosshillwines.com.au</a></p>",
+            "id": "",
+            "class": "",
+            "margin_top": 0,
+            "margin_bottom": 50
+          }
+        },
+        "html_YBYmFQ": {
+          "type": "html",
+          "settings": {
+            "html": "<script defer type=\"text/javascript\" src=\"https://rosshillwines.rezdy.com/pluginJs\"></script>\n                <iframe seamless=\"\" width=\"100%\" height=\"1000px\" frameborder=\"0\" class=\"rezdy\" src=\"https://rosshillwines.rezdy.com/catalog/402594/cooking-classes?iframe=true\"></iframe>",
+            "id": "",
+            "class": ""
+          }
+        },
+        "text_iGD33a": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Proudly supported by the NSW Government’s tourism and major events agency Destination NSW, through the 2017 – 2018 Regional Tourism Fund",
+            "text_align": "center",
+            "text_color": "#818181",
+            "font_weight": "600",
+            "font_size": 14,
+            "margin_top": 50,
+            "margin_bottom": 50
+          }
+        },
+        "richtext_TNDfHM": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p><a href=\"https://www.rosshillwines.com.au/wp-content/uploads/2015/09/BARREL-LARDER-Launch-FINAL-MR-10.11.17.pdf\" target=\"_blank\">Click here for more information on this project.</a></p>",
+            "id": "",
+            "class": "",
+            "margin_bottom": 20
+          }
+        },
+        "richtext_HQ4Ph8": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "<p><a href=\"https://www.destinationnsw.com.au/\" target=\"_blank\">www.destinationnsw.com.au</a></p>",
+            "id": "",
+            "class": "",
+            "margin_top": 0,
+            "margin_bottom": 30
+          }
+        },
+        "image_xykD4f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Destination_NSW_logo_svg_-300x106_png.webp",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_jkaFaU",
+        "text_tjy8DU",
+        "text_AKURLM",
+        "text_3TtktN",
+        "richtext_MYn3jt",
+        "html_YBYmFQ",
+        "text_iGD33a",
+        "richtext_TNDfHM",
+        "richtext_HQ4Ph8",
+        "image_xykD4f"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width": 1100,
+        "bg_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cru_page_header_mB3cBA",
+    "cru_stack_fe6KkF"
+  ]
+}

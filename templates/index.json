@@ -1,0 +1,406 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cru_hero_slider_X6WJrJ": {
+      "type": "cru-hero-slider",
+      "blocks": {
+        "slide_MXbX8t": {
+          "type": "slide",
+          "settings": {
+            "bg_image": "shopify://shop_images/IMG_2913-scaled.jpg",
+            "y_alignment": "custom",
+            "custom_y_alignment": 15,
+            "x_alignment": "center",
+            "mobile_y_alignment": "center",
+            "mobile_x_alignment": "center",
+            "allow_overlay": true,
+            "overlay_color": "#0a0a0a",
+            "overlay_opacity": 45,
+            "hero_heading": "",
+            "heading_color": "",
+            "hero_subheading": "Open each day from 10.30am to 4.30pm. <br>\n<br>\nCome in and taste our award winning wines and enjoy the ambiance of our beautiful views over the lake and vines.   Larger groups please ring ahead.<br>\n<br>\nOur restaurant “A tale among the Vines” is open from Friday to Monday 11.30am to 2.30pm.  Please ring to book.<br>\n<br>",
+            "hero_button": "Watch Our Video",
+            "hero_btn_link": "https://vimeo.com/806203192",
+            "has_nxt_btn": false,
+            "nxt_btn_txt": "",
+            "has_prev_btn": false,
+            "prev_btn_txt": "",
+            "header_type": "dark"
+          }
+        }
+      },
+      "block_order": [
+        "slide_MXbX8t"
+      ],
+      "name": "CRU Hero Slider",
+      "settings": {}
+    },
+    "cru_stack_HecbFz": {
+      "type": "cru-stack",
+      "blocks": {
+        "text_K4NHaT": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Tasmanian Wine at its Finest",
+            "text_align": "center",
+            "text_color": "#231f20",
+            "font_weight": "300",
+            "font_size": 37
+          }
+        },
+        "textarea_CfCQHD": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "Visit our cool micro-climate cellar door located on the east coast of Tasmania. Our cellar door is open Monday to Sunday from 10:30am.",
+            "text_align": "center",
+            "text_color": "",
+            "font_size": 16,
+            "font_weight": "100",
+            "margin_top": 48,
+            "margin_bottom": 48
+          }
+        }
+      },
+      "block_order": [
+        "text_K4NHaT",
+        "textarea_CfCQHD"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width": 610,
+        "bg_color": "",
+        "padding_top": 115,
+        "padding_bottom": 0
+      }
+    },
+    "cru_stack_QBWTJJ": {
+      "type": "cru-stack",
+      "blocks": {
+        "button_R6JeR7": {
+          "type": "button",
+          "settings": {
+            "link": "#",
+            "label": "Discover our Story",
+            "id": "",
+            "class": "",
+            "padding_left_right": 15,
+            "bg_color": "",
+            "font_weight": "400",
+            "text_color": "#000000",
+            "border_radius": 50,
+            "border_color": "#000000",
+            "border_style": "solid",
+            "alignment": "center",
+            "hover_bg_color": "#000000",
+            "hover_text_color": "#ffffff",
+            "hover_border_color": "#000000"
+          }
+        },
+        "button_jmbcdy": {
+          "type": "button",
+          "settings": {
+            "link": "#",
+            "label": "Join our mailing list",
+            "id": "",
+            "class": "underlined_btn",
+            "padding_top_bottom": 0,
+            "padding_left_right": 0,
+            "bg_color": "",
+            "font_weight": "600",
+            "text_color": "#585858",
+            "border_color": "",
+            "border_width": 0,
+            "border_style": "solid",
+            "alignment": "center",
+            "hover_bg_color": "",
+            "hover_text_color": "",
+            "hover_border_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_R6JeR7",
+        "button_jmbcdy"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "buttons",
+        "bg_color": "",
+        "padding_bottom": 115
+      }
+    },
+    "cru_2_col_4yjC9L": {
+      "type": "cru-2-col",
+      "blocks": {
+        "image_column_zm8HR6": {
+          "type": "image_column",
+          "settings": {
+            "type": "single",
+            "image_1": "shopify://shop_images/Edited-5719.jpg",
+            "image_alt": "Image"
+          }
+        },
+        "text_column_UKNKFa": {
+          "type": "text_column",
+          "settings": {
+            "heading": "Fine Cool Climate Wines",
+            "heading_font_size": 37,
+            "heading_color": "#ffffff",
+            "column_content": "<p>26 Hectares of vines including Pinot Noir, Syrah, Pinot Gris, Riesling, Chardonnay, Gewürztraminer<br/><br/></p>",
+            "content_font_size": 16,
+            "content_color": "#ffffff",
+            "show_button": true,
+            "button_link": "#",
+            "button_text": "Shop Now",
+            "btn_font_size": 16,
+            "button_bg_color": "rgba(0,0,0,0)",
+            "border_type": "solid",
+            "btn_border_width": 1,
+            "button_border_radius": 50,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#ffffff",
+            "button_hover_bg_color": "#ffffff",
+            "button_hover_text_color": "#000000",
+            "button_hover_border_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "image_column_zm8HR6",
+        "text_column_UKNKFa"
+      ],
+      "name": "CRU 2 Column",
+      "settings": {
+        "class": "",
+        "id": "",
+        "column_bg_color": "#141414",
+        "is_reversed": false
+      }
+    },
+    "cru_stack_q9htJt": {
+      "type": "cru-stack",
+      "blocks": {
+        "text_MRTTRe": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "page_title",
+            "text": "Cellar Door Store",
+            "text_align": "left",
+            "text_color": "",
+            "font_weight": "100"
+          }
+        },
+        "custom_6arVeG": {
+          "type": "custom",
+          "settings": {
+            "subheading": "Discover our range of wines including our Reserve label and our unique fresh sparkling wines.",
+            "section_id": "",
+            "section_class": "",
+            "has_button": true,
+            "button_text": "Shop all wines",
+            "button_link": "/"
+          }
+        }
+      },
+      "block_order": [
+        "text_MRTTRe",
+        "custom_6arVeG"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "full_width",
+        "bg_color": ""
+      }
+    },
+    "cru_featured_products_yHfD64": {
+      "type": "cru-featured-products",
+      "name": "CRU Featured Products",
+      "settings": {
+        "class": "",
+        "Heading": "FEATURED WINES",
+        "font_size": 32,
+        "font_color": "#000000",
+        "font-weight": "400",
+        "max_width": 1100,
+        "products_per_page": 4,
+        "product_collection": "frontpage",
+        "show_quantity_selector": false,
+        "show_view_all_button": true,
+        "view_all_button_text": "FEATURED WINES",
+        "view_all_button_url": "shopify://collections/all",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "image_banner_7k4rGF": {
+      "type": "image-banner",
+      "blocks": {
+        "large_img_3V8WJQ": {
+          "type": "largeImg",
+          "settings": {
+            "image": "shopify://shop_images/cellar-over-dam-towards-roae.jpg",
+            "mobile_image": "shopify://shop_images/cellar-over-dam-towards-roae.jpg",
+            "enable_max_width_image": false,
+            "custom_width_image": 1170,
+            "border_radius": 0,
+            "enable_scroll_down": false,
+            "enable_custom_image": false,
+            "image_behavior": "none",
+            "sub_title": "",
+            "border_sub_title": false,
+            "font_size_sub_title": 14,
+            "font_size_sub_title_mb": 14,
+            "margin_bottom_sub_title": 14,
+            "sub_heading_font": "font_1",
+            "font_weight_sub_title": "700",
+            "sub_title_position": "sub_title_above",
+            "color_sub_title": "#232323",
+            "color_sub_title_mb": "#ffffff",
+            "heading": "Join the Milton Family Wine Club",
+            "special_text": "",
+            "letter_spacing_heading": "",
+            "enable_style_italic": false,
+            "font_size_heading": 37,
+            "font_size_heading_mb": 24,
+            "margin_bottom_heading": 20,
+            "font_weight_heading": "400",
+            "color_heading": "#ffffff",
+            "color_heading_mb": "#ffffff",
+            "border_title": "none",
+            "border_color_title": "#ffffff",
+            "border_color_title_mobile": "#ffffff",
+            "text": "Select your own wines, 15% discount, and access member-only offers & pre-release specials",
+            "font_size_des": 16,
+            "font_size_des_mb": 16,
+            "line_height_des": 26,
+            "margin_bottom_des": 35,
+            "color_des": "#ffffff",
+            "color_des_mb": "#ffffff",
+            "countdown": "",
+            "hide_countdown_fc": "countdown",
+            "countdown_style": "round",
+            "countdown_position": "countdown_below_desc",
+            "font_size_countdown_number": 30,
+            "font_size_countdown_text": 14,
+            "color_countdown": "#232323",
+            "color_countdown_mb": "#ffffff",
+            "countdown_margin_bottom": 35,
+            "content_width": 475,
+            "bg_color_content": "#000000",
+            "align": "left",
+            "align_items": "center",
+            "position": "custom",
+            "custom_horizontal": "90",
+            "custom_vertical": "80",
+            "btn_text": "Discover More",
+            "link": "#",
+            "btn_icon": "",
+            "button_1_width": 160,
+            "enable_button_custom_border": false,
+            "button_color": "#ffffff",
+            "button_border": "#ffffff",
+            "button_background": "rgba(0,0,0,0)",
+            "button_background_gradient": "",
+            "button_color_hover": "#ffffff",
+            "button_border_hover": "#000000",
+            "button_background_hover": "#000000",
+            "button_background_gradient_hover": "",
+            "btn_text_2": "",
+            "link_2": "",
+            "btn_icon_2": "",
+            "button_color_2": "#ffffff",
+            "button_border_2": "#232323",
+            "button_background_2": "#232323",
+            "button_background_2_gradient": "",
+            "button_color_hover_2": "#ffffff",
+            "button_border_hover_2": "#232323",
+            "button_background_hover_2": "#232323",
+            "button_background_gradient_hover_2": "",
+            "video_link": "",
+            "adaptive_height_video": "56",
+            "icon_style": "style_1",
+            "color_icon": "#ffffff",
+            "bg_color_icon": "#000000",
+            "enable_custom_video_icon_position": false,
+            "video_icon_horizontal_position": "",
+            "video_icon_vertical_position": "",
+            "video_icon_horizontal_position_mb": "",
+            "video_icon_vertical_position_mb": ""
+          }
+        }
+      },
+      "block_order": [
+        "large_img_3V8WJQ"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "id_section": "terrior",
+        "container": "fullwidth",
+        "padding_full_width": 0,
+        "display_type": "slide",
+        "enable_arrows": false,
+        "arrows_position": "",
+        "enable_dots": false,
+        "enable_autoplay": false,
+        "list_gap": 0,
+        "image_banner_title": "",
+        "enable_border_title": false,
+        "color_title": "#202020",
+        "fontsize_title": 24,
+        "fontsize_title_mb": 20,
+        "margin_bottom_title": 25,
+        "image_banner_des": "",
+        "color_des": "#202020",
+        "fontsize_des": 16,
+        "title_align": "center",
+        "style_bg": "none",
+        "bg_color": "",
+        "bg_color_gradient": "",
+        "bg_image": "shopify://shop_images/cellar-over-dam-towards-roae.jpg",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "cru_contact_map_MXzXem": {
+      "type": "cru-contact-map",
+      "name": "CRU Contact Map",
+      "settings": {
+        "id": "",
+        "class": "",
+        "left_content": "<h2>We look forward to welcoming you to our cellar door</h2>\n<p>Cellar Door is open daily 10:30am – 5.00pm\n<br>\n<br>\n14635 Tasman Hwy, Swansea TAS 7190\n<br>\n\n</p><div class=\"maps_buttons\">\n<a href=\"#\">Get Directions</a>\n</div>",
+        "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509198!2d144.9537353153165!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f5b7%3A0x5045675218ceed30!2sGoogle!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>"
+      }
+    }
+  },
+  "order": [
+    "cru_hero_slider_X6WJrJ",
+    "cru_stack_HecbFz",
+    "cru_stack_QBWTJJ",
+    "cru_2_col_4yjC9L",
+    "cru_stack_q9htJt",
+    "cru_featured_products_yHfD64",
+    "image_banner_7k4rGF",
+    "cru_contact_map_MXzXem"
+  ]
+}

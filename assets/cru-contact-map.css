@@ -1,0 +1,33 @@
+.cru-contact-map {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.left-content {
+    width: 50%;
+    padding: 50px 50px 50px 5%;
+}
+
+.map-iframe {
+    width: 50%;
+}
+
+.map-iframe iframe {
+    width: 100%;
+    min-height: 600px;
+}
+
+.maps_buttons a {
+    border: 1px solid;
+    padding: 10px 15px;
+    font-weight: 700;
+}
+
+.left-content p, .left-content a {
+    font-size: 15px;
+}
+
+.maps_buttons {
+    margin-top: 50px;
+}

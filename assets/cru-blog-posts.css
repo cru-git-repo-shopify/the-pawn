@@ -1,0 +1,104 @@
+.article_feat_image {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+    display: block !important;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1 / 1;
+}
+
+.article_content {
+    margin: 0 auto;
+    padding: 40px 40px 40px;
+    height: auto;
+    bottom: 0px;
+    background-color: #F9F7EF;
+    width: 100%;
+}
+
+.all_posts {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+    max-width: calc(100% - 20px);
+    margin: 50px auto;
+    width: 90%;
+}
+
+article.post-article {
+    position: relative;
+}
+
+h2.article_title {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0 5px;
+    font-weight: 300;
+    line-height: 1.214;
+}
+
+a.article_link {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    transform: translate(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: fit-content;
+    color: #5f412d;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    /* max-width: 250px; */
+    padding: 12px 24px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+/* h2.article_title:after {
+    content: '';
+    width: 70px;
+    height: 1px;
+    display: block;
+    background-color: #231f20;
+    margin-top: 24px;
+} */
+
+p.shor_desc {
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #5f412d;
+    line-height: 24px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+a.article_link {
+    text-decoration: none !important;
+    border: 1px solid #231f20;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+a.article_link:hover {
+    color: #fff;
+    background-color: #231f20;
+}
+
+@media screen and (max-width: 900px) {
+    article.post-article {
+        width: calc((100% / 2) - 15px)!important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    article.post-article {
+        width: 100%!important;
+        margin-right: 0!important;
+    }
+}

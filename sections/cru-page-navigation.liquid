@@ -1,0 +1,100 @@
+<style>
+    #{{ section.id }} {
+        background-color: {{ section.settings.background_color }};
+        margin: {{ section.settings.margin_top }} 0 {{ section.settings.margin_bot }};
+    }
+    #{{ section.id }} li a, a.dropdown_trigger {
+        font-size: {{ section.settings.font_size }}px;
+        color: {{ section.settings.menu_text_color }};
+        padding: {{ section.settings.link_top_bottom_padding }}px {{ section.settings.link_left_right_padding }}px;
+    }
+    #{{ section.id }} li a:hover, , a.dropdown_trigger {
+        background-color: {{ section.settings.hover_bg_color }};
+    }
+</style>
+<div id="{{ section.id }}" class="cru-page-navigation">
+    <div class="cru-page-navigation-inner">
+        <ul class="nav-menu">
+            {% if section.settings.menu %}
+                {% for link in section.settings.menu.links %}
+                    <li class="nav-menu-item">
+                        <a href="{{ link.url }}" class="header-menu__link">
+                        {{ link.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+        <a href="#" class="dropdown_trigger">Expand Menu <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="nav-menu mobile">
+            {% if section.settings.menu %} 
+                {% for link in section.settings.menu.links %}
+                    <li class="nav-menu-item">
+                        <a href="{{ link.url }}" class="header-menu__link">
+                        {{ link.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</div>
+{%  schema  %}
+{
+    "name": "CRU Page Navigation",
+    "settings": [
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        },
+        {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu"
+        },
+        {
+            "type": "color",
+            "id": "menu_text_color",
+            "label": "Menu Text Color"
+        },
+        {
+            "type": "number",
+            "id": "font_size",
+            "label": "Font Size"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#818181"
+        },
+        {
+            "type": "color",
+            "id": "hover_bg_color",
+            "label": "Hover Background Color"
+        },
+        {
+            "type": "number",
+            "id": "link_top_bottom_padding",
+            "label": "Link Top-Bottom Padding"
+        },
+        {
+            "type": "number",
+            "id": "link_left_right_padding",
+            "label": "Link Left-Right Padding"
+        },
+        {
+            "type": "number",
+            "id": "margin_top",
+            "label": "Margin Top"
+        },
+        {
+            "type": "number",
+            "id": "margin_bot",
+            "label": "Margin Bottom"
+        }
+    ],
+    "presets":[{"name": "CRU Page Navigation", "category": "Custom"}],
+}
+{% endschema %}

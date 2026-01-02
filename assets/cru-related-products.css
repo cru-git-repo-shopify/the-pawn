@@ -1,0 +1,14 @@
+.related-products p.product-price:after {
+    display: none;
+}
+.related-products .product-slider-container {
+    padding-top: 50px;
+}
+.product-slider-container.layout-grid {
+    padding-left: 0;
+}
+
+.layout-grid .cru-product-slider {
+    overflow: hidden;
+    justify-content: center;
+}

@@ -1,0 +1,225 @@
+{% assign selected_collection = collections[section.settings.product_collection] %}
+<style>
+    .section-heading {
+        font-size: {{ section.settings.font_size }}px;
+        color: {{ section.settings.font_color }};
+        font-weight: {{ section.settings['font-weight'] }};
+        text-align: center;
+    }
+</style>
+<div id="section-{{ section.id }}" class="featured-product-container {{ section.settings.class }}" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="featured-product-inner" {% if section.settings.max_width != blank %} style="max-width: {{ section.settings.max_width }}px; margin-left: auto; margin-right: auto;" {% endif %}>
+        {% if section.settings.Heading != blank %}
+            <h2 class="section-heading">{{ section.settings.Heading }}</h2>
+        {% endif %}
+        <div class="cru-featured-products">
+            {% for product in selected_collection.products %}
+                <div class="featured product-item {% for tag in product.tags %}product_cat-{{ tag | handle }} {% endfor %}">
+                {% assign points = product.metafields.custom.award_points %}
+                {% assign badges = product.metafields.custom.award_badge %}
+                {%  assign index = 0 %}
+                {% if points != blank or badges != blank %}
+                    <div class="product_awards">
+                    {% if points != blank %}
+                        {% for award in points.value %}
+                        <p class="award award_accolade" style="z-index: {{ index }};"><span class="points">{{ award }}</span><span class="type">PTS</span></p>
+                        {% assign index = index | plus: 1 %}
+                        {% endfor %}
+                    {% endif %}
+                    {% for badge in badges.value %}
+                        <img src="{{ badge | img_url: 'large' }}" alt="Award Badge" class="badge award_accolade" style="z-index: {{ index }};">
+                        {% assign index = index | plus: 1 %}
+                    {% endfor %}
+                    </div>
+                    {% endif %}
+                
+                    <a class="product_image" href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="product-image ">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></p>
+                        <p class="product-price">{{ product.price | money }}</p>
+                        {% if product.available %}
+                            <div class="ajax-add-to-cart" data-variant-id="{{ product.variants.first.id }}">
+                                <div class="quantity-wrapper {% if section.settings.show_quantity_selector == false%} hidden {% endif %}">
+                                  <div class="quantity-wrapper-inner">
+                                    <button type="button" class="qty-btn minus">−</button>
+                                    <input
+                                        type="number"
+                                        name="quantity"
+                                        min="1"
+                                        value="1"
+                                        class="quantity-input"
+                                    >
+                                    <button type="button" class="qty-btn plus">+</button>
+                                  </div>
+                                </div>
+                                <div class="add-to-cart-wrapper">
+                                    <button class="add-to-cart-button">Add to Cart</button>
+                                    {% comment %} <span class="add-status"></span> {% endcomment %}
+                                </div>
+                            </div>
+                            {% else %}
+                            <p class="sold-out">Sold Out</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% if section.settings.show_view_all_button and section.settings.view_all_button_text != blank and section.settings.view_all_button_url != blank %}
+            <div class="view-all-button-wrapper">
+                <a href="{{ section.settings.view_all_button_url }}" class="view-all-button">{{ section.settings.view_all_button_text }}</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "CRU Featured Products",
+  "settings": [
+    {
+        "type": "text",
+        "id": "class",
+        "label": "Class"
+    },
+    {
+        "type": "text",
+        "id": "Heading",
+        "label": "Heading",
+        "default": "Featured Products"
+    },
+    {
+        "type": "number",
+        "id": "font_size",
+        "label": "Heading Font Size",
+        "default": 32
+    },
+    {
+        "type": "color",
+        "id": "font_color",
+        "label": "Heading Font Color",
+        "default": "#000000"
+    },
+    {
+        "type": "select",
+        "id": "font-weight",
+        "label": "Heading Font Weight",
+        "options": [
+            {
+              "value": "100",
+              "label": "100"
+            },
+            {
+              "value": "200",
+              "label": "200"
+            },
+            {
+              "value": "300",
+              "label": "300"
+            },
+            {
+              "value": "400",
+              "label": "400"
+            },
+            {
+              "value": "500",
+              "label": "500"
+            },
+            {
+              "value": "600",
+              "label": "600"
+            },
+            {
+              "value": "700",
+              "label": "700"
+            },
+            {
+              "value": "800",
+              "label": "800"
+            },
+            {
+              "value": "900",
+              "label": "900"
+            },
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "bold",
+              "label": "Bold"
+            },
+            {
+              "value": "bolder",
+              "label": "Bolder"
+            },
+            {
+              "value": "lighter",
+              "label": "Lighter"
+            }
+          ]
+    },
+    {
+        "type": "number",
+        "id": "max_width",
+        "label": "Max Width"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "Products per page",
+      "default": 4,
+        "min": 1,
+        "max": 4
+    },
+    {
+        "type": "collection",
+        "id": "product_collection",
+        "label": "Product Collection"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_quantity_selector",
+        "label": "Show Quantity Selector",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "show_view_all_button",
+        "label": "Show 'View All' Button",
+        "default": false
+    },
+    {
+        "type": "text",
+        "id": "view_all_button_text",
+        "label": "'View All' Button Text",
+        "default": "View All Products"
+    },
+    {
+        "type": "url",
+        "id": "view_all_button_url",
+        "label": "'View All' Button URL",
+        "default": "/collections/all"
+    },
+    {
+        "type": "number",
+        "id": "padding_top",
+        "label": "Padding Top (px)",
+        "default": 0
+    },
+    {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "Padding Bottom (px)",
+        "default": 0
+    }
+  ],
+  "presets": [
+    {
+        "name": "CRU Featured Products",
+        "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

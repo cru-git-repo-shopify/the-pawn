@@ -1,0 +1,91 @@
+{% assign selected_collection = collections[section.settings.product_collection] %}
+<div class="product-slider-container">
+    <div class="cru-product-slider">
+        {% for product in selected_collection.products %}
+            <div class="product-item-slider {% for tag in product.tags %}product_cat-{{ tag | handle }} {% endfor %}">
+            {% assign points = product.metafields.custom.award_points %}
+            {% assign badges = product.metafields.custom.award_badge %}
+            {%  assign index = 0 %}
+            {% if points != blank or badges != blank %}
+                <div class="product_awards">
+                {% if points != blank %}
+                    {% for award in points.value %}
+                    <p class="award award_accolade" style="z-index: {{ index }};"><span class="points">{{ award }}</span><span class="type">PTS</span></p>
+                    {% assign index = index | plus: 1 %}
+                    {% endfor %}
+                {% endif %}
+                {% for badge in badges.value %}
+                    <img src="{{ badge | img_url: 'large' }}" alt="Award Badge" class="badge award_accolade" style="z-index: {{ index }};">
+                    {% assign index = index | plus: 1 %}
+                {% endfor %}
+                </div>
+                {% endif %}
+            
+                <a href="{{ product.url }}">
+                    <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="product-image ">
+                </a>
+                <div class="product-info">
+                    <p class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></p>
+                    <p class="product-price">{{ product.price | money }}</p>
+                    {% if product.available %}
+                        <div class="ajax-add-to-cart" data-variant-id="{{ product.variants.first.id }}">
+                            <div class="quantity-wrapper">
+                                <button type="button" class="qty-btn minus">−</button>
+                                <input
+                                    type="number"
+                                    name="quantity"
+                                    min="1"
+                                    value="1"
+                                    class="quantity-input"
+                                >
+                                <button type="button" class="qty-btn plus">+</button>
+                            </div>
+                            <div class="add-to-cart-wrapper">
+                                <button class="add-to-cart-button">Add to Cart</button>
+                                {% comment %} <span class="add-status"></span> {% endcomment %}
+                            </div>
+                        </div>
+                        {% else %}
+                        <p class="sold-out">Sold Out</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+        {% comment %} <div class="pagination">
+            <span class="page-info">Page {{ paginate.current_page }} of {{ paginate.pages }}</span>
+            <div class="page-links">
+                {% if paginate.previous %}
+                    <a href="{{ paginate.previous.url }}" class="prev">Previous</a>
+                {% endif %}
+                {% if paginate.next %}
+                    <a href="{{ paginate.next.url }}" class="next">Next</a>
+                {% endif %}
+            </div>
+        </div> {% endcomment %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "CRU Product Slider",
+  "settings": [
+    {
+      "type": "number",
+      "id": "products_per_page",
+      "label": "Products per page",
+      "default": 12
+    },
+    {
+        "type": "collection",
+        "id": "product_collection",
+        "label": "Product Collection"
+    }
+  ],
+  "presets": [
+    {
+        "name": "CRU Product Slider",
+        "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,169 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cru_page_header_iWELdG": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 625,
+        "desktop_height_unit": "px",
+        "mobile_height": 50,
+        "mobile_height_unit": "vh",
+        "desktop_background_image": "shopify://shop_images/about-us-rosshill-story-opt.jpg",
+        "mobile_background_image": "shopify://shop_images/about-us-rosshill-story-opt.jpg",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0.1,
+        "heading": "THE ROSSHILL STORY",
+        "font_size": 48,
+        "font_color": "#FFFFFF",
+        "font-weight": "400",
+        "subheading": "",
+        "subheading_size": 24,
+        "subheading_color": "#000000",
+        "subheading_font_weight": "400"
+      }
+    },
+    "cru_page_navigation_WetjRC": {
+      "type": "cru-page-navigation",
+      "name": "CRU Page Navigation",
+      "settings": {
+        "class": "",
+        "menu": "about-us",
+        "menu_text_color": "",
+        "font_size": 14,
+        "background_color": "#eeeeee",
+        "hover_bg_color": "#FFFFFF",
+        "link_top_bottom_padding": 22,
+        "link_left_right_padding": 22,
+        "margin_top": 0
+      }
+    },
+    "cru_stack_wXXV6e": {
+      "type": "cru-stack",
+      "blocks": {
+        "text_nEa6g6": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "The Story",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "700",
+            "font_size": 35,
+            "margin_bottom": 50
+          }
+        },
+        "textarea_QkxQXc": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "In 1994, when Peter and Terri Robson purchased a property on Griffin Road in Orange, the Ross Hill Wines story began. At that time there were only a few other vineyards in Orange, and it didn’t take long for another one to be planted!\n\nTwelve years later, their son James and his wife Chrissy moved to Orange to bring up their young family and join the family business. James and Chrissy have taken over the reins of the day-to-day running of the winery business, with Peter still very much hands-on.",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 50
+          }
+        },
+        "image_bbx9Yf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/terry_peter_robson_foundersRosshill-opt_jpg.webp",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        },
+        "text_D7n9tJ": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Terri and Peter Robson at Griffin Road Vineyard",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "100",
+            "font_size": 14,
+            "margin_top": 0,
+            "margin_bottom": 50
+          }
+        },
+        "textarea_j7GNUy": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "In 2008, the Wallace Lane Winery was established in an old apple packing shed on Mount Canobolas. The existing four temperature controlled rooms, which previously stored fruit and juice, provided the ideal spaces to turn into barrel and wine storage rooms. The winery also had ample space for the custom-designed equipment and technology best suited for premium wine making methods.\nHard work, passion and dedication continue to be the key themes of Ross Hill, with the end goal remaining to produce exceptional quality and elegantly refined, cool-climate wines. Ross Hill Wines has been the proud recipient of an exceptional rating of Five Red Stars from James Halliday’s Wine Companion since 2014.\n\nRoss Hill Wines are available in some of Australia’s best restaurants and proudly serve as the house wines for such iconic Sydney restaurants as Catalina (Rose Bay, NSW) and the Fratelli Fresh group of restaurants. You won’t find Ross Hill Wines in any of your big supermarket bottle shops outside of Orange, but you may find the range in your favourite local pub or independently owned bottle shop.",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 50
+          }
+        },
+        "image_yTnYBx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cataline-790x400-opt_jpg.webp",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        },
+        "text_X7ymdG": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Catalina Restaurant, Rose Bay, Sydney, Australia",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "100",
+            "font_size": 14,
+            "margin_top": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_nEa6g6",
+        "textarea_QkxQXc",
+        "image_bbx9Yf",
+        "text_D7n9tJ",
+        "textarea_j7GNUy",
+        "image_yTnYBx",
+        "text_X7ymdG"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width": 790,
+        "bg_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cru_page_header_iWELdG",
+    "cru_page_navigation_WetjRC",
+    "cru_stack_wXXV6e"
+  ]
+}

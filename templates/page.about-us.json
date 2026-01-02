@@ -1,0 +1,204 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cru_page_header_ppdXTj": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 480,
+        "desktop_height_unit": "px",
+        "mobile_height": 480,
+        "mobile_height_unit": "px",
+        "desktop_background_image": "shopify://shop_images/IMG_2910adj-scaled.jpg",
+        "mobile_background_image": "shopify://shop_images/IMG_2910adj-scaled.jpg",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0,
+        "heading": "About Milton Vineyard",
+        "font_size": 37,
+        "font_color": "#ffffff",
+        "font-weight": "300",
+        "subheading": "Milton Vineyard was first farmed in 1826 initially for extra fine Tasmanian wool but is now producing fine cool climate wines.",
+        "subheading_size": 16,
+        "subheading_color": "#ffffff",
+        "subheading_font_weight": "300"
+      }
+    },
+    "cru_2_col_Rz4zXE": {
+      "type": "cru-2-col",
+      "blocks": {
+        "image_column_TNwWWz": {
+          "type": "image_column",
+          "settings": {
+            "type": "single",
+            "image_1": "shopify://shop_images/Milton-Vineyard_TIFF-404183.jpg",
+            "image_alt": "Image"
+          }
+        },
+        "text_column_p9GEMj": {
+          "type": "text_column",
+          "settings": {
+            "heading": "Our History",
+            "heading_font_size": 37,
+            "heading_color": "#000000",
+            "column_content": "<p>We have farmed at Milton since 1980 when the property was first purchased by our family.</p><p>In 1992 we set to and planted 2.5 HA in the deep red soils of our Cranbrook Syde property just across the river from our current site.  This site proved problematic for frost and vigour, so we started again on the dry, rocky free draining  soils on the old sheep paddock just by the cellar door.  The grapes were sold to Hardy’s for a few years while we learnt a lot about viticulture and then we launched our label in 2005.</p>",
+            "content_font_size": 17,
+            "content_color": "#000000",
+            "show_button": false,
+            "button_link": "https://example.com",
+            "button_text": "Learn More",
+            "btn_font_size": 16,
+            "button_bg_color": "rgba(0,0,0,0)",
+            "border_type": "solid",
+            "btn_border_width": 1,
+            "button_border_radius": 0,
+            "button_text_color": "#000000",
+            "button_border_color": "#000000",
+            "button_hover_bg_color": "rgba(0,0,0,0)",
+            "button_hover_text_color": "#ffffff",
+            "button_hover_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_column_TNwWWz",
+        "text_column_p9GEMj"
+      ],
+      "name": "CRU 2 Column",
+      "settings": {
+        "class": "",
+        "id": "",
+        "column_bg_color": "rgba(0,0,0,0)",
+        "max_width": 1030,
+        "max_width_unit": "px",
+        "margin_top": 150,
+        "margin_bottom": 0,
+        "is_reversed": true
+      }
+    },
+    "cru_2_col_LFr4rX": {
+      "type": "cru-2-col",
+      "blocks": {
+        "image_column_EHBbP7": {
+          "type": "image_column",
+          "settings": {
+            "type": "single",
+            "image_1": "shopify://shop_images/Milton-Vineyard_TIFF-404183.jpg",
+            "image_alt": "Image"
+          }
+        },
+        "text_column_4VEnCR": {
+          "type": "text_column",
+          "settings": {
+            "heading": "",
+            "heading_font_size": 37,
+            "heading_color": "#000000",
+            "column_content": "<p>From this, we have had great success with our unique micro-climate that suits the ancient grape Pinot Noir and lately, Syrah has proven very popular.    We have plantings of the aromatics, Pinot Gris, Riesling, and Gewurztraminer as well as Chardonnay.</p><p>And if this is not enough Michael has now planted a couple of hectares of Tempranillo.  If you cannot holiday in Spain you can try and grow their famous wine variety.  This planting will not be in bottle for a few years yet.  All in all, we have 26 Hectares of vines in the ground and further plantings of Chardonnay planned.</p><p> The cellar door is open 7 days a week.  Our focus is on producing small quantities of handmade wine.  Close attention is paid to every detail in the vineyard and the wines represent this exacting work.</p><p>Come and visit us in the Cellar Door and experience our East Coast hospitality and delicious wines.  We look forward to meeting you.</p>",
+            "content_font_size": 17,
+            "content_color": "#000000",
+            "show_button": false,
+            "button_link": "https://example.com",
+            "button_text": "Learn More",
+            "btn_font_size": 16,
+            "button_bg_color": "rgba(0,0,0,0)",
+            "border_type": "solid",
+            "btn_border_width": 1,
+            "button_border_radius": 0,
+            "button_text_color": "#000000",
+            "button_border_color": "#000000",
+            "button_hover_bg_color": "rgba(0,0,0,0)",
+            "button_hover_text_color": "#ffffff",
+            "button_hover_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_column_EHBbP7",
+        "text_column_4VEnCR"
+      ],
+      "name": "CRU 2 Column",
+      "settings": {
+        "class": "",
+        "id": "",
+        "column_bg_color": "rgba(0,0,0,0)",
+        "max_width": 1030,
+        "max_width_unit": "px",
+        "margin_top": 100,
+        "margin_bottom": 0,
+        "is_reversed": false
+      }
+    },
+    "cru_2_col_p94XFz": {
+      "type": "cru-2-col",
+      "blocks": {
+        "image_column_9YKqAC": {
+          "type": "image_column",
+          "settings": {
+            "type": "single",
+            "image_1": "shopify://shop_images/Pinot-Noir-Harvest-003-IMG_7941-jpeg-sat-contrast-up-scaled.jpg",
+            "image_alt": "Image"
+          }
+        },
+        "text_column_cbRtyL": {
+          "type": "text_column",
+          "settings": {
+            "heading": "",
+            "heading_font_size": 37,
+            "heading_color": "#000000",
+            "column_content": "<p>Milton Vineyard is excited to announce our new winery is completed.  We have welcomed Jacqui Dolan to the Milton team as our winemaker.  Her experience and knowledge are greatly welcomed.<br/><br/></p>",
+            "content_font_size": 17,
+            "content_color": "#000000",
+            "show_button": false,
+            "button_link": "https://example.com",
+            "button_text": "Learn More",
+            "btn_font_size": 16,
+            "button_bg_color": "rgba(0,0,0,0)",
+            "border_type": "solid",
+            "btn_border_width": 1,
+            "button_border_radius": 0,
+            "button_text_color": "#000000",
+            "button_border_color": "#000000",
+            "button_hover_bg_color": "rgba(0,0,0,0)",
+            "button_hover_text_color": "#ffffff",
+            "button_hover_border_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_column_9YKqAC",
+        "text_column_cbRtyL"
+      ],
+      "name": "CRU 2 Column",
+      "settings": {
+        "class": "",
+        "id": "",
+        "column_bg_color": "rgba(0,0,0,0)",
+        "max_width": 1030,
+        "max_width_unit": "px",
+        "margin_top": 100,
+        "margin_bottom": 100,
+        "is_reversed": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cru_page_header_ppdXTj",
+    "cru_2_col_Rz4zXE",
+    "cru_2_col_LFr4rX",
+    "cru_2_col_p94XFz"
+  ]
+}

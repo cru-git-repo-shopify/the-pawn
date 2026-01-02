@@ -1,0 +1,262 @@
+{% case section.settings.aspect_ratio %}
+    {% when 'square' %}
+        {% assign aspect_ratio = '1 / 1' %}
+    {% when 'landscape' %}
+        {% assign aspect_ratio = '4 / 3' %}
+    {% when 'portrait' %}
+        {% assign aspect_ratio = '3 / 4' %}
+    {% when 'widescreen' %}
+        {% assign aspect_ratio = '16 / 9' %}
+    {% else %}
+        {% assign aspect_ratio = 'auto' %}
+{% endcase %};
+<style>
+    #{{ section.id }} .cru-image-gallery-inner {
+        {% if section.settings.max_width %}
+        max-width: {{ section.settings.max_width }}px;
+        margin-left: auto;
+        margin-right: auto;
+        {% endif %}
+    }
+     #{{ section.id }} .cru-image-gallery-inner.gallery-grid {
+        display: grid;
+        gap: {{ section.settings.gap }}px;
+        grid-template-columns: repeat({{ section.settings.number_of_columns }}, 1fr);
+    }
+    .cru-image-gallery-inner .grid-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    #{{ section.id }} .cru-image-gallery-inner.gallery-grid .grid-item img {
+        {% if section.settings.aspect_ratio != 'original' %}
+        aspect-ratio: {{ aspect_ratio }};
+        object-fit: cover;
+        {% endif %}
+    }
+</style>
+{% if section.settings.layout == 'slider' %}
+    <style>
+        #{{ section.id }} .cru-image-gallery-inner.gallery-slider {
+            max-width: {{ section.settings.max_width }}px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #000;
+        }
+        #{{ section.id }} .cru-image-gallery-inner.gallery-slider .grid-item img {
+            {% if section.settings.slider_height %}
+            height: {{ section.settings.slider_height }}px;
+            {% endif %}
+            width: auto;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('#{{ section.id }} .cru-image-gallery-inner.gallery-slider').slick({
+                slidesToShow: {{ section.settings.slides_to_show }},
+                autoplay: {{ section.settings.autoplay | json }},
+                autoplaySpeed: {{ section.settings.autoplay_speed }},
+                dots: {{ section.settings.show_dots | json }},
+                arrows: {{ section.settings.show_arrows | json }},
+                prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+{% endif %}
+<div id="{{ section.id }}" class="cru-image-gallery {{ section.settings.class }}" style="padding-top: {{ section.settings.padding-top }}px; padding-bottom: {{ section.settings.padding-bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px; background-color: {{ section.settings.background_color }};">
+    <div class="cru-image-gallery-inner {% if section.settings.layout == 'slider' %} gallery-slider {% endif %} {% if section.settings.layout == 'grid' %} gallery-grid {% endif %} grid grid-cols-{{ section.blocks.size | divided_by: section.settings.number_of_columns | ceil }} md:grid-cols-{{ section.settings.number_of_columns }} gap-4">
+        {% for block in section.blocks %}
+            <div class="grid-item {{ block.settings.class }}">
+                {% if block.settings.image %}
+                    <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.alt_text }}">
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{%  schema  %}
+    {
+        "name": "CRU Image Gallery",
+        "class": "cru_image_gallery",
+        "tag": "div",
+        "settings": [
+            {
+                "type": "text",
+                "id": "class",
+                "label": "Class"
+            },
+            {
+                "type": "number",
+                "id": "max_width",
+                "label": "Max Width (px)",
+            },
+            {
+                "type": "select",
+                "id": "layout",
+                "label": "Layout",
+                "options": [
+                    {
+                        "value": "grid",
+                        "label": "Grid"
+                    },
+                    {
+                        "value": "slider",
+                        "label": "Slider"
+                    }
+                ],
+                "default": "grid"
+            },
+            {
+                "type": "header",
+                "content": "Grid Settings"
+            },
+            {
+                "type": "number",
+                "id": "number_of_columns",
+                "label": "Number of Columns",
+                "default": 3
+            },
+            {
+                "type": "number",
+                "id": "gap",
+                "label": "Gap (px)",
+                "default": 0
+            },
+            {
+                "type": "select",
+                "id": "aspect_ratio",
+                "label": "Image Aspect Ratio",
+                "options": [
+                    {
+                        "value": "original",
+                        "label": "Original"
+                    },
+                    {
+                        "value": "square",
+                        "label": "Square"
+                    },
+                    {
+                        "value": "landscape",
+                        "label": "Landscape (4:3)"
+                    },
+                    {
+                        "value": "portrait",
+                        "label": "Portrait (3:4)"
+                    },
+                    {
+                        "value": "widescreen",
+                        "label": "Widescreen (16:9)"
+                    }
+                ],
+                "default": "square",
+            },
+            {
+                "type": "header",
+                "content": "Slider Settings"
+            },
+            {
+                "type": "number",
+                "id": "slider_height",
+                "label": "Slider Height"
+            },
+            {
+                "type": "range",
+                "id": "slides_to_show",
+                "label": "Slides to Show",
+                "default": 1,
+                "min": 1,
+                "max": 4
+            },
+            {
+                "type": "checkbox",
+                "id": "autoplay",
+                "label": "Autoplay",
+                "default": false
+            },
+            {
+                "type": "number",
+                "id": "autoplay_speed",
+                "label": "Autoplay Speed (ms)",
+                "default": 3000
+            },
+            {
+                "type": "checkbox",
+                "id": "show_dots",
+                "label": "Show Dots",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "show_arrows",
+                "label": "Show Arrows",
+                "default": true
+            },
+            {
+                "type": "number",
+                "id": "padding-top",
+                "label": "Padding Top"
+            },
+            {
+                "type": "number",
+                "id": "padding-bottom",
+                "label": "Padding Bottom"
+            },
+            {
+                "type": "number",
+                "id": "margin_top",
+                "label": "Margin Top"
+            },
+            {
+                "type": "number",
+                "id": "margin_bottom",
+                "label": "Margin Bottom"
+            },
+            {
+                "type": "color",
+                "id": "background_color",
+                "label": "Background Color",
+                "default": "transparent"
+            }
+    
+        ],
+        "blocks": [
+            {
+                "type": "grid_item",
+                "name": "Grid Item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "class",
+                        "label": "Class"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "alt_text",
+                        "label": "Alt Text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "CRU Image Gallery",
+                "category": "Custom"
+            }
+        ]
+    }
+{% endschema %}

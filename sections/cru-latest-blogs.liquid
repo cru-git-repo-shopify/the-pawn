@@ -1,0 +1,55 @@
+<div id="{{ section.settings.section_id }}" class="latest_posts {{ section.settings.section_class }}";>
+    {% for article in blogs['news'].articles limit: section.settings.nmbr_post %}
+        <div class="post-item flex-wrapper">
+<!-- 			<div class="featured-img bg-image lazy"style="background-image: url('<?php //echo $img; ?>');" ></div> -->
+			<div class="post-details flex-wrapper flex-column justify-center" style="background-image: url('{{ article.image | image_url }}" alt="{{ article.title }}');">
+				<div class="inner-wrapper">
+				<div class="post-title">{{ article.title }}</div>
+				{% comment %} <div class="post-excerpt">{{ article.excerpt | strip_html }}</div> {% endcomment %}
+                 {% if section.settings.show_btn %}
+                    <div class="button-wrapper">
+                    <a class="general_btn wht_btn" href="{{ article.url }}">{{ section.settings.btn_txt }}</a>
+                    </div>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+    {% endfor %}
+</div>
+
+{%  schema  %} 
+{
+    "name":"CRU Latest Blogs",
+    "class":"cru_latest_blog",
+    "tag": "div",
+    "settings":[
+        {
+            "type": "text",
+            "id": "section_id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "section_class",
+            "label": "Class"
+        },
+        {
+            "type": "number",
+            "id": "nmbr_post",
+            "label": "Number of Posts"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_btn",
+            "label": "Has Read More Button"
+        },
+        {
+            "type": "text",
+            "id": "btn_txt",
+            "label": "Button Label"
+        }
+    ],
+    "blocks": [],
+    "presets":[{"name": "CRU Latest Blogs", "category": "CRU"}]
+}
+{% endschema %}

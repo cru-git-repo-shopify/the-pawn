@@ -1,0 +1,1026 @@
+<style>
+.stack_{{ section.id }}{
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+  background-color: {{ section.settings.bg_color }};
+}
+.stack_{{ section.id }} .stack_inner{
+  width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }};
+  margin: 0 auto;
+}
+</style>
+
+<div id="{{ section.settings.id }}" class="stack {{ section.settings.class }} stack_{{ section.id }}" style="background-color: {{ section.settings.bg_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="stack_inner">
+      {% for block in section.blocks %}
+      <div class="block-{{ block.type }} {{ block.settings.class }}" id="{{ block.settings.id }}">
+          {% case block.type %}
+          {% when 'text' %}
+              <p style="font-weight: {{ block.settings.font_weight }}; text-align: {{ block.settings.text_align }}; color: {{ block.settings.text_color }}; font-size: {{ block.settings.font_size }}px; margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px;">{{ block.settings.text }}</p>
+          {% when 'textarea' %}
+              <p style="font-weight: {{ block.settings.font_weight }}; text-align: {{ block.settings.text_align }}; color: {{ block.settings.text_color }}; font-size: {{ block.settings.font_size }}px; margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px;">{{ block.settings.textarea | newline_to_br }}</p>
+          {% when 'richtext' %}
+              <style>
+                .stack_{{ section.id }} .block-{{ block.type }} h1 {
+                  font-size: {{ block.settings.h1_font_size }}px;
+                  color: {{ block.settings.text_color }};
+                }
+                .stack_{{ section.id }} .block-{{ block.type }} h2 {
+                  font-size: {{ block.settings.h2_font_size }}px;
+                  color: {{ block.settings.text_color }};
+                }
+                .stack_{{ section.id }} .block-{{ block.type }} h3 {
+                  font-size: {{ block.settings.h3_font_size }}px;
+                  color: {{ block.settings.text_color }};
+                }
+                .stack_{{ section.id }} .block-{{ block.type }} h4 {
+                  font-size: {{ block.settings.h4_font_size }}px;
+                  color: {{ block.settings.text_color }};
+                }
+                .stack_{{ section.id }} .block-{{ block.type }} h5 {
+                  font-size: {{ block.settings.h5_font_size }}px;
+                  color: {{ block.settings.text_color }};
+                }
+                .stack_{{ section.id }} .block-{{ block.type }} h6 {
+                  font-size: {{ block.settings.h6_font_size }}px;
+                  color: {{ block.settings.text_color }};
+                }
+                .stack_{{ section.id }} .block-{{ block.type }} p, .stack_{{ section.id }} .block-{{ block.type }} a, .stack_{{ section.id }} .block-{{ block.type }} li  {
+                  font-size: {{ block.settings.p_font_size }}px;
+                  color: {{ block.settings.text_color }};
+                }
+                </style>
+              <div class="block-{{ block.type }}" style="margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px; text-align: {{ block.settings.text_align }}; color: {{ block.settings.text_color }}; font-size: {{ block.settings.font_size }}px;">
+                {{ block.settings.richtext }}
+              </div>
+          {% when 'image' %}
+              <div class="image-container" style="margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px; display: flex; justify-content: {{ block.settings.alignment }};">
+                  <img  src="{{ block.settings.image | img_url: 'original' }}" alt="">
+              </div>
+          {% when 'video' %}
+            {% if block.settings.video_url != blank %}
+              {% if block.settings.video_url.type == 'youtube' %}
+                <iframe 
+                  src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}" 
+                  frameborder="0" 
+                  allowfullscreen>
+                </iframe>
+              {% elsif block.settings.video_url.type == 'vimeo' %}
+                <iframe 
+                  src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}" 
+                  frameborder="0" 
+                  allowfullscreen>
+                </iframe>
+              {% endif %}
+            {% endif %}
+          {% when 'url' %}
+              <a  href="{{ block.settings.link }}">{{ block.settings.label }}</a>
+          {% when 'color' %}
+              <div  style="background-color: {{ block.settings.color }}; width: 50px; height: 50px;"></div>
+          {% when 'select' %}
+              <p >Selected: {{ block.settings.select }}</p>
+          {% when 'product' %}
+              {% assign product = all_products[block.settings.product] %}
+              <p >{{ product.title }}</p>
+          {% when 'collection' %}
+              {% assign collection = collections[block.settings.collection] %}
+              <p >{{ collection.title }}</p>
+          {% when 'blog' %}
+              <p >Blog: {{ block.settings.blog }}</p>
+          {% when 'article' %}
+              <p >Article: {{ block.settings.article }}</p>
+          {% when 'page' %}
+              <p>Page: {{ block.settings.page }}</p>
+          {% when 'html' %}
+              {{ block.settings.html }}
+          {% when 'liquid' %}
+              {{ block.settings.liquid_code }}
+          {% when 'custom' %}
+            <div class="page-subheading {{ block.settings.section_class }}" id="{{ block.settings.section_id }}">
+            <div class="wp-block-column">
+                <p class="page_title_text">{{ block.settings.subheading }}</p>
+                </div>
+                {% if block.settings.has_button %}
+                    <div class="wp-block-column btn_col">
+                        <a class="button" href="{{ block.settings.button_link }}" rel="">{{ block.settings.button_text }}</a>
+                    </div>
+                {% endif %}
+            </div>
+            {% when 'button' %}
+              <style>
+              #{{ block.id }}.button_col a {
+                padding: {{ block.settings.padding_top_bottom }}px {{ block.settings.padding_left_right }}px;
+                background-color: {{ block.settings.bg_color }};
+                font-size: {{ block.settings.font_size }}px;
+                font-weight: {{ block.settings.font_weight }};
+                color: {{ block.settings.text_color }};
+                border-radius: {{ block.settings.border_radius }}px;
+                border: {{ block.settings.border_width }}px {{ block.settings.border_style }} {{ block.settings.border_color }};
+              } 
+              #{{ block.id }}.button_col a:hover {
+                  background-color: {{ block.settings.hover_bg_color }};
+                  border: {{ block.settings.border_width }}px {{ block.settings.border_style }} {{ block.settings.hover_border_color }};
+                  color: {{ block.settings.hover_text_color }};
+              }
+              #{{ block.id }}.button_col {
+                  margin-top: {{ block.settings.margin_top }}px;
+                  margin-bottom: {{ block.settings.margin_bottom }}px;
+              }
+              </style>
+              <div id="{{ block.id }}" class="wp-block-column button_col {{ block.settings.class }}" style="display: flex; justify-content: {% if block.settings.alignment == 'left' %}flex-start{% elsif block.settings.alignment == 'center' %}center{% else %}flex-end{% endif %};">
+                  <a class="button" href="{{ block.settings.link }}" rel="">{{ block.settings.label }}</a>
+              </div>
+          {% endcase %}
+      </div>
+      {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "CRU Stack",
+  "settings": [
+    {
+        "type": "text",
+        "id" : "id",
+        "label" : "ID"
+    },
+    {
+        "type": "text",
+        "id" : "class",
+        "label": "Class"
+    },
+    {
+      "type": "number",
+      "id": "max_width",
+      "label": "Max Width"
+    },
+    {
+      "type": "select",
+      "id": "max_width_unit",
+      "label": "Max Width Unit",
+      "options": [
+        {
+          "value": "px",
+          "label": "Pixels"
+        },
+        {
+          "value": "%",
+          "label": "Percentage"
+        },
+        {
+          "value": "vw",
+          "label": "Viewport Width"
+        }
+      ],
+      "default": "px"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "Padding Top"
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "Padding Bottom"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text Align",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color"
+        },
+        {
+          "type": "select",
+          "id": "font_weight",
+          "label": "Font Weight",
+          "options": [
+            {
+              "value": "100",
+              "label": "100"
+            },
+            {
+              "value": "200",
+              "label": "200"
+            },
+            {
+              "value": "300",
+              "label": "300"
+            },
+            {
+              "value": "400",
+              "label": "400"
+            },
+            {
+              "value": "500",
+              "label": "500"
+            },
+            {
+              "value": "600",
+              "label": "600"
+            },
+            {
+              "value": "700",
+              "label": "700"
+            },
+            {
+              "value": "800",
+              "label": "800"
+            },
+            {
+              "value": "900",
+              "label": "900"
+            },
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "bold",
+              "label": "Bold"
+            },
+            {
+              "value": "bolder",
+              "label": "Bolder"
+            },
+            {
+              "value": "lighter",
+              "label": "Lighter"
+            }
+          ]
+        },
+        {
+          "type": "number",
+          "id": "font_size",
+          "label": "Font Size"
+        },
+        {
+          "type": "number",
+          "id": "margin_top",
+          "label": "Margin Top"
+        },
+        {
+          "type": "number",
+          "id": "margin_bottom",
+          "label": "Margin Bottom"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "name": "Textarea",
+      "settings": [
+         {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        },
+        {
+          "type": "textarea",
+          "id": "textarea",
+          "label": "Textarea"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text Align",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color"
+        },
+        {
+          "type": "number",
+          "id": "font_size",
+          "label": "Font Size"
+        },
+         {
+          "type": "select",
+          "id": "font_weight",
+          "label": "Font Weight",
+          "options": [
+            {
+              "value": "100",
+              "label": "100"
+            },
+            {
+              "value": "200",
+              "label": "200"
+            },
+            {
+              "value": "300",
+              "label": "300"
+            },
+            {
+              "value": "400",
+              "label": "400"
+            },
+            {
+              "value": "500",
+              "label": "500"
+            },
+            {
+              "value": "600",
+              "label": "600"
+            },
+            {
+              "value": "700",
+              "label": "700"
+            },
+            {
+              "value": "800",
+              "label": "800"
+            },
+            {
+              "value": "900",
+              "label": "900"
+            },
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "bold",
+              "label": "Bold"
+            },
+            {
+              "value": "bolder",
+              "label": "Bolder"
+            },
+            {
+              "value": "lighter",
+              "label": "Lighter"
+            }
+          ]
+        },
+        {
+          "type": "number",
+          "id": "margin_top",
+          "label": "Margin Top"
+        },
+        {
+          "type": "number",
+          "id": "margin_bottom",
+          "label": "Margin Bottom"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "name": "Rich Text",
+      "settings": [
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        },
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Rich Text"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text Align",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "number",
+          "id": "h1_font_size",
+          "label": "H1 Font Size"
+        },
+        {
+          "type": "number",
+          "id": "h2_font_size",
+          "label": "H2 Font Size"
+        },
+        {
+          "type": "number",
+          "id": "h3_font_size",
+          "label": "H3 Font Size"
+        },
+        {
+          "type": "number",
+          "id": "h4_font_size",
+          "label": "H4 Font Size"
+        },
+        {
+          "type": "number",
+          "id": "h5_font_size",
+          "label": "H5 Font Size"
+        },
+        {
+          "type": "number",
+          "id": "h6_font_size",
+          "label": "H6 Font Size"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color"
+        },
+        {
+          "type": "number",
+          "id": "p_font_size",
+          "label": "Paragraph Font Size"
+        },
+        {
+          "type": "number",
+          "id": "margin_top",
+          "label": "Margin Top"
+        },
+        {
+          "type": "number",
+          "id": "margin_bottom",
+          "label": "Margin Bottom"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Image Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        },
+        {
+          "type": "number",
+          "id": "margin_top",
+          "label": "Margin Top"
+        },
+        {
+          "type": "number",
+          "id": "margin_bottom",
+          "label": "Margin Bottom"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "label": "Video URL",
+          "accept": ["youtube", "vimeo"]
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "url",
+      "name": "URL",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+            "type": "text",
+            "id": "label",
+            "label": "Link Text"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+            "type": "text",
+            "id": "label",
+            "label": "Button Text"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        },
+        {
+          "type": "number",
+          "id": "padding_top_bottom",
+          "label": "Padding Top & Bottom"
+        },
+        {
+          "type": "number",
+          "id": "padding_left_right",
+          "label": "Padding Left & Right"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color"
+        },
+        {
+          "type": "number",
+          "id": "font_size",
+          "label": "Font Size"
+        },
+        {
+          "type": "select",
+          "id": "font_weight",
+          "label": "Font Weight",
+          "options": [
+            {
+              "value": "100",
+              "label": "100"
+            },
+            {
+              "value": "200",
+              "label": "200"
+            },
+            {
+              "value": "300",
+              "label": "300"
+            },
+            {
+              "value": "400",
+              "label": "400"
+            },
+            {
+              "value": "500",
+              "label": "500"
+            },
+            {
+              "value": "600",
+              "label": "600"
+            },
+            {
+              "value": "700",
+              "label": "700"
+            },
+            {
+              "value": "800",
+              "label": "800"
+            },
+            {
+              "value": "900",
+              "label": "900"
+            },
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "bold",
+              "label": "Bold"
+            },
+            {
+              "value": "bolder",
+              "label": "Bolder"
+            },
+            {
+              "value": "lighter",
+              "label": "Lighter"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color"
+        },
+        {
+          "type": "number",
+          "id": "border_radius",
+          "label": "Border Radius"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border Color"
+        },
+        {
+          "type": "number",
+          "id": "border_width",
+          "label": "Border Width"
+        },
+        {
+          "type": "select",
+          "id": "border_style",
+          "label": "Border Style",
+          "options": [
+            {
+              "value": "solid",
+              "label": "Solid"
+            },
+            {
+              "value": "dashed",
+              "label": "Dashed"
+            },
+            {
+              "value": "dotted",
+              "label": "Dotted"
+            },
+            {
+              "value": "double",
+              "label": "Double"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Button Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "hover_bg_color",
+          "label": "Hover Background Color"
+        },
+        {
+          "type": "color",
+          "id": "hover_text_color",
+          "label": "Hover Text Color"
+        },
+        {
+          "type": "color",
+          "id": "hover_border_color",
+          "label": "Hover Border Color"
+        },
+        {
+          "type": "number",
+          "id": "margin_top",
+          "label": "Margin Top"
+        },
+        {
+          "type": "number",
+          "id": "margin_bottom",
+          "label": "Margin Bottom"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "name": "Color",
+      "settings": [
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Blog"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "name": "Article",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Article"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "name": "Page",
+      "settings": [
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "name": "HTML",
+      "settings": [
+        {
+          "type": "html",
+          "id": "html",
+          "label": "Custom HTML"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "liquid",
+      "name": "Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "liquid_code",
+          "label": "Custom Liquid Code"
+        },
+        {
+            "type": "text",
+            "id": "id",
+            "label": "ID"
+        },
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Class"
+        }
+      ]
+    },
+    {
+      "type": "custom",
+      "name": "CRU Page Subheading",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "Your Subheading"
+        },
+        {
+          "type": "text",
+          "id": "section_id",
+          "label": "Section ID"
+        },
+        {
+          "type": "text",
+          "id": "section_class",
+          "label": "Section Class"
+        },
+        {
+          "type": "checkbox",
+          "id": "has_button",
+          "label": "Has Button",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link",
+          "default": "/"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "CRU Stack",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

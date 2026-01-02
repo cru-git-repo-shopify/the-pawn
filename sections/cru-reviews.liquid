@@ -1,0 +1,134 @@
+<div class="cru-reviews" id="{{ section.id }}" style="background-color: {{ section.settings.background_color }};">
+    <div class="reviews_container">
+        <h2>{{ section.settings.section_title }}</h2>
+        <p>{{ section.settings.section_subtitle }}</p>
+        <div class="reviews-list">
+            {% for block in section.blocks %}
+            <div class="review-item">
+                {% if block.settings.show_rating %}
+                    <div class="review-rating">
+                        {% for i in (1..block.settings.review_rating) %}
+                        <span class="star">★</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <p class="review_content">{{ block.settings.review_text }}</p>
+                <p class="reviewer_name">{{ block.settings.reviewer_name }}</p>
+                {% if block.settings.show_date and block.settings.review_date %}
+                <span class="review-date">{{ block.settings.review_date }}</span>
+                {% endif %}
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{%  schema  %} 
+{
+  "name": "CRU Reviews",
+  "settings": [
+    {
+        "type": "header",
+        "content": "CRU Reviews Section"
+    },
+    {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "What Our Customers Say"
+    },
+    {
+        "type": "text",
+        "id": "section_subtitle",
+        "label": "Section Subtitle",
+        "default": "Real reviews from our valued customers"
+    },
+    {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#f9f9f9"
+    },
+    {
+        "type": "text",
+        "id": "id",
+        "label": "ID"
+    },
+    {
+        "type": "text",
+        "id": "class",
+        "label": "Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name"
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_date",
+            "label": "Show Review Date",
+            "default": false
+        },
+        {
+            "type": "text",
+            "id": "review_date",
+            "label": "Review Date",
+            "info": "e.g., January 1, 2023"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_rating",
+            "label": "Show Rating",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "review_rating",
+            "label": "Review Rating",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "1 Star"
+                },
+                {
+                    "value": "2",
+                    "label": "2 Stars"
+                },
+                {
+                    "value": "3",
+                    "label": "3 Stars"
+                },
+                {
+                    "value": "4",
+                    "label": "4 Stars"
+                },
+                {
+                    "value": "5",
+                    "label": "5 Stars"
+                }
+            ]
+        }
+      ]
+    }
+  ],
+    "presets": [
+        {
+        "name": "CRU Reviews",
+        "category": "Custom"
+        }
+    ]
+}
+{% endschema %}

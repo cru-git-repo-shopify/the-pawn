@@ -1,0 +1,133 @@
+.in-grid {
+    max-width: 750px;
+    padding: 115px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+.header {
+    font-size: 40px;
+    color: #231f20;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.header:after {
+    content: '';
+    width: 95px;
+    display: block;
+    height: 1px;
+    background-color: #000;
+    margin: 24px auto 0;
+}
+
+.content-txt {
+    margin-top: 24px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 23px;
+    color: #231f20;
+}
+
+.button a, .button {
+    max-width: fit-content;
+}
+
+.prod_section-header {
+    width: 100%;
+    padding-top: 115px;
+    padding-left: 5%;
+}
+
+.prod_section-header p {
+    font-size: 40px;
+    color: #231f20;
+    font-family: "calibri";
+    font-weight: 100;
+    line-height: 1;
+    text-align: left;
+}
+
+span.separator {
+    font-size: 40px;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-family: "calibri";
+}
+
+a.link_to_shop {
+    font-size: 24px;
+    border: none !important;
+    text-decoration: none !important;
+    border-bottom: 1px dotted #231f20 !important;
+    color: #231f20;
+    font-family: "calibri";
+}
+
+.prod_slider_txt {
+    margin-bottom: 50px;
+    max-width: 850px;
+    padding-left: 5%;
+    text-align: left;
+}
+
+p.page_title_text {
+    margin-top: 0;
+    max-width: 75%;
+    font-size: 15px;
+}
+
+.wp-block-column.btn_col {
+    width: 25%;
+}
+
+.block-textarea.section_head_description p {
+    font-size: 24px;
+    line-height: 23px;
+    color: #5f412d;
+    line-height: 28.8px;
+    max-width: 720px;
+    width: 100%;
+    margin: 50px auto 0;
+}
+
+.stack.section_head.transparent {
+    background: transparent;
+}
+
+.stack h2 {
+    font-size: 45px;
+    color: #5f412d;
+    line-height: 60px;
+    font-weight: 300;
+    font-family: 'calibri';
+}
+
+.stack {
+    text-align: center;
+}
+
+.button_col a.button {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 781px){
+    .in-grid {
+        max-width: 90%;
+    }
+    .prod_section-header {
+        padding-left: 0;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .prod_slider_txt {
+        padding-left: 0!important;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}

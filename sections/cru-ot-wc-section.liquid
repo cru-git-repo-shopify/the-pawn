@@ -1,0 +1,82 @@
+<div class="general_row_container">
+    <div class="gen_row_content">
+        <div class="gen_row_left">
+            <img src="{{ section.settings.cru_club_image | img_url: 'large' }}">
+        </div>
+        <div class="gen_row_right">
+            <p class="gen_sub_head">{{ section.settings.cru_club_subtitle }}</p>
+            <h2>{{ section.settings.cru_club_title }}</h2>
+            <div class="gen_text">
+                <ul>
+                    {% if section.settings.cru_club_benefit_1 %}
+                        <li>{{ section.settings.cru_club_benefit_1 }}</li>
+                    {% endif %}
+                    {% if section.settings.cru_club_benefit_2 %}
+                        <li>{{ section.settings.cru_club_benefit_2 }}</li>
+                    {% endif %}
+                    {% if section.settings.cru_club_benefit_3 %}
+                        <li>{{ section.settings.cru_club_benefit_3 }}</li>
+                    {% endif %}
+                    {% if section.settings.cru_club_benefit_4 %}
+                        <li>{{ section.settings.cru_club_benefit_4 }}</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%  schema  %}
+    {
+        "name": "CRU Club Section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "cru_club_image",
+                "label": "CRU Club Image"
+            },
+            {
+                "type": "text",
+                "id": "cru_club_title",
+                "label": "CRU Club Title",
+                "default": "JOIN THE EXCLUSIVE"
+            },
+            {
+                "type": "text",
+                "id": "cru_club_subtitle",
+                "label": "CRU Club Subtitle",
+                "default": "CRU CLUB"
+            },
+            {
+                "type": "text",
+                "id": "cru_club_benefit_1",
+                "label": "CRU Club Benefit 1",
+                "default": "FREE FREIGHT"
+            },
+            {
+                "type": "text",
+                "id": "cru_club_benefit_2",
+                "label": "CRU Club Benefit 2",
+                "default": "GREAT DISCOUNTS"
+            },
+            {
+                "type": "text",
+                "id": "cru_club_benefit_3",
+                "label": "CRU Club Benefit 3",
+                "default": "EXCLUSIVE WINES"
+            },
+            {
+                "type": "text",
+                "id": "cru_club_benefit_4",
+                "label": "CRU Club Benefit 4",
+                "default": "MEMBER EVENTS"
+            }
+        ],
+        "presets": [
+            {
+                "name": "CRU Club Section",
+                "category": "CRU"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,79 @@
+.latest_posts {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+}
+
+.post-item.flex-wrapper {
+    display: block;
+    width: calc(33.3333% - 2px);
+    position: relative;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+}
+
+.latest_posts .post-item:nth-child(2n+1) .post-details {
+    background: #464743;
+    color: #fff;
+}
+
+.post-details {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    min-height: 620px;
+    padding: 30px 0;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.latest_posts .post-item .post-details {
+    color: #464743;
+}
+
+.cru_latest_posts .inner-wrapper {}
+
+.cru_latest_blog .inner-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    height: 80%;
+    width: 90%;
+}
+
+.post-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    color: #fff;
+    text-align: left;
+}
+
+.post-details .button-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.post-item a.general_btn.wht_btn:hover {
+    background-color: #fff !important;
+    color: #000;
+}
+
+.post-details:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    top: 0;
+    z-index: 9;
+}

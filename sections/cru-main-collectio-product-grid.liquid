@@ -1,0 +1,506 @@
+{% assign all_tags = collections.all.all_tags %}
+
+<style>
+  #{{ section.id }}_filter, #{{ section.id }}_filter_mobile {
+    background-color: {{ section.settings.filter_background_color }};
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+  #{{ section.id }}_filter ul li a, #{{ section.id }}_filter_mobile select {
+    color: {{ section.settings.filter_text_color }};
+    font-size: {{ section.settings.filter_font_size }}px;
+  }
+  #{{ section.id }}_filter ul li a:hover, #{{ section.id }}_filter ul li a.active {
+    background-color: {{ section.settings.filter_hover_bg_color }};
+  }
+  #{{ section.id }}_filter .cru-product-item {
+    background-color: {{ section.settings.product_background_color }};
+  }
+  #{{ section.id }}_collection .cru-product-item .product-image {
+    background-color: {{ section.settings.product_img_bg_color }};
+  }
+  #{{ section.id }}_collection .cru-product-item .product-info .product-title a {
+    color: {{ section.settings.product_title_color }};
+    font-size: {{ section.settings.product_name_font_size }}px;
+  }
+  #{{ section.id }}_collection .cru-product-item .product-info .product-price {
+    color: {{ section.settings.product_price_color }};
+    font-size: {{ section.settings.product_price_font_size }}px;
+  }
+  #{{ section.id }}_collection .cru-product-item .ajax-add-to-cart .add-to-cart-button {
+    background-color: {{ section.settings.button_background_color }};
+    color: {{ section.settings.button_text_color }};
+  }
+  #{{ section.id }}_collection .cru-product-item .ajax-add-to-cart .add-to-cart-button:hover {
+    background-color: {{ section.settings.button_hover_bg_color }};
+    color: {{ section.settings.button_hover_text_color }};
+  }
+  #{{ section.id }}_collection.cru-product-collection {
+    {% if section.settings.products_container_width %}
+      max-width: {{ section.settings.products_container_width }}{{ section.settings.container_width_unit }};
+    {% else %}
+      max-width: 100%;
+    {% endif %}
+    margin: 0 auto;
+  }
+  #{{ section.id }}_collection.cru-product-collection .cru-product-item {
+    {% if section.settings.products_per_row > 0 %}
+      width: calc((100% / {{ section.settings.products_per_row }}) - 15px);
+    {% else %}
+      width: calc(25% - 30px);
+    {% endif %}
+    margin-right: 15px;
+    margin-bottom: 25px;
+  }
+  #{{ section.id }}_collection.cru-product-collection .cru-product-item:hover a.img_link:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: {{ section.settings.hover_overlay }};
+    opacity: {{ section.settings.overlay_opacity }};
+    top: 0;
+    left: 0;
+  }
+  #{{ section.id }}_collection .cru-product-item:nth-child({{ section.settings.products_per_row |  append: 'n' }}) {
+      margin-right: 0;
+  }
+  .img_link {
+    position: relative;
+  }
+</style>
+
+<div class="shop_filter" style="padding-bottom: 50px;">
+  <h2 class="filter-title">Filter by <i class="fa-solid fa-sliders"></i> <span>Category:</span></h2>
+  <ul>
+    <li><a class="term-item active" href="*">All Products</a></li>
+      {% for tag in all_tags %}
+          <li><a class="term-item" href=".product_cat-{{ tag | handle }}">{{ tag }}</a></li>
+      {% endfor %}
+  </ul>
+</div>
+<div class="filter_mobile">
+  <select class="filters_select">
+    <option value="*">All Wines</option>
+      {% for tag in all_tags %}
+        <option value=".product_cat-{{ tag | handle }}">{{ tag }}</option>
+      {% endfor %}
+  </select>
+</div>
+
+{% paginate collections.all.products by section.settings.products_per_page %}
+<div id="{{ section.id }}_collection" class="cru-product-collection">
+    {% for product in collections.all.products %}
+        <div class="cru-product-item {% for tag in product.tags %}product_cat-{{ tag | handle }} {% endfor %}" style="background-color: {{ product.metafields.custom.product_background_color }};">
+          {% assign points = product.metafields.custom.award_points %}
+          {% assign badges = product.metafields.custom.award_badge %}
+          {%  assign index = 0 %}
+          {% if product.metafields.custom.label != blank %}
+            {%  if product.metafields.custom.special_label %}
+              {%  assign label_type =  'special' %}
+            {% else %}
+              {%  assign label_type =  'normal' %}
+            {% endif %}
+            <div class="product-custom-label orange {{ label_type }}"><p>{{ product.metafields.custom.label }}</p></div>
+          {% endif %}
+          {% if points != blank or badges != blank %}
+            <div class="product_awards">
+              {% if points != blank %}
+                {% for award in points.value %}
+                  <p class="award award_accolade" style="z-index: {{ index }};"><span class="points">{{ award }}</span><span class="type">PTS</span></p>
+                  {% assign index = index | plus: 1 %}
+                {% endfor %}
+              {% endif %}
+              {% for badge in badges.value %}
+                <img src="{{ badge | img_url: 'large' }}" alt="Award Badge" class="badge award_accolade" style="z-index: {{ index }};">
+                {% assign index = index | plus: 1 %}
+              {% endfor %}
+            </div>
+            {% endif %}
+          
+            <a class="img_link" href="{{ product.url }}">
+                <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="product-image ">
+            </a>
+            <div class="product-info">
+                <p class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></p>
+                <p class="product-price"><span>RRP: </span>{{ product.price | money }}</p>
+                {% if product.available %}
+                    <div class="ajax-add-to-cart" data-variant-id="{{ product.variants.first.id }}">
+                        {% comment %} {% if section.settings.show_quantity_selector %} {% endcomment %}
+                        <div class="quantity-wrapper {% if section.settings.show_quantity_selector == false%} hidden {% endif %}">
+                          <div class="quantity-wrapper-inner">
+                            <button type="button" class="qty-btn minus">−</button>
+                            <input
+                                type="number"
+                                name="quantity"
+                                min="1"
+                                value="1"
+                                class="quantity-input"
+                            >
+                            <button type="button" class="qty-btn plus">+</button>
+                          </div>
+                        </div>
+                        {% comment %} {% endif %} {% endcomment %}
+                        <div class="add-to-cart-wrapper">
+                            <button class="add-to-cart-button">Add to Cart</button>
+                            {% comment %} <span class="add-status"></span> {% endcomment %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <p class="sold-out">Sold<br/>Out</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    {% comment %} <div class="pagination">
+        <span class="page-info">Page {{ paginate.current_page }} of {{ paginate.pages }}</span>
+        <div class="page-links">
+            {% if paginate.previous %}
+                <a href="{{ paginate.previous.url }}" class="prev">Previous</a>
+            {% endif %}
+            {% if paginate.next %}
+                <a href="{{ paginate.next.url }}" class="next">Next</a>
+            {% endif %}
+        </div>
+    </div> {% endcomment %}
+</div>
+{% endpaginate %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.ajax-add-to-cart').forEach(function (container) {
+    const button = container.querySelector('.add-to-cart-button');
+    const quantityInput = container.querySelector('.quantity-input');
+    const plusBtn = container.querySelector('.qty-btn.plus');
+    const minusBtn = container.querySelector('.qty-btn.minus');
+    const statusSpan = container.querySelector('.add-status');
+    const variantId = container.dataset.variantId;
+
+    // Quantity increment/decrement logic
+    // plusBtn.addEventListener('click', () => {
+    //   quantityInput.value = parseInt(quantityInput.value || 1) + 1;
+    // });
+
+    // minusBtn.addEventListener('click', () => {
+    //   const current = parseInt(quantityInput.value || 1);
+    //   if (current > 1) quantityInput.value = current - 1;
+    // });
+
+    // Add to cart AJAX logic
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      const quantity = parseInt(quantityInput.value, 10);
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          id: variantId,
+          quantity: quantity
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        updateCart();
+        openCart(); // Open the cart sidebar
+        // statusSpan.textContent = "Added!";
+        // statusSpan.style.color = "green";
+        // setTimeout(() => statusSpan.textContent = '', 2000);
+      })
+      .catch(err => {
+        // statusSpan.textContent = "Error adding to cart";
+        // statusSpan.style.color = "red";
+      });
+    });
+  });
+
+  // Update Cart Function
+    function updateCart() {
+      fetch('/cart.js')
+        .then(res => res.json())
+        .then(cart => {
+          const itemsContainer = document.getElementById('ajax-cart-items');
+          const subtotal = document.getElementById('ajax-cart-subtotal');
+          itemsContainer.innerHTML = '';
+
+          if (cart.items.length === 0) {
+            itemsContainer.innerHTML = '<p class="text-gray-500">Your cart is empty.</p>';
+          } else {
+            cart.items.forEach((item, index) => {
+              itemsContainer.innerHTML += `
+                <div class="flex items-start side-cart-item">
+                  <div class="cart-item-details">
+                    <div class="font-semibold cart-item-title">${item.product_title}</div>
+                    <div class="price_info">
+                      <div class="flex items-center side-cart-qty">
+                        <div>${Shopify.formatMoney(item.line_price)} x </div>
+                        <div class="qty_inner">
+                          <button class="quantity-btn" data-line="${index + 1}" data-action="minus">-</button>
+                          <input type="text" value="${item.quantity}" readonly class="side_cart_qty_input">
+                          <button class="quantity-btn" data-line="${index + 1}" data-action="plus">+</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <img src="${item.image}" alt="${item.title}" class="w-16 h-16 object-cover border rounded">
+                  <button 
+                    class="text-red-500 hover:text-red-700 text-sm remove-cart-item"
+                    data-line="${index + 1}"
+                    title="Remove"
+                  >✕</button>
+                </div>
+              `;
+            });
+          }
+
+          subtotal.textContent = Shopify.formatMoney(cart.total_price);
+
+          // Bind remove buttons
+          document.querySelectorAll('.remove-cart-item').forEach(button => {
+            button.addEventListener('click', function () {
+              const line = this.getAttribute('data-line');
+
+              fetch('/cart/change.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                  line: parseInt(line),
+                  quantity: 0
+                })
+              })
+              .then(res => res.json())
+              .then(data => {
+                updateCart();
+              });
+            });
+          });
+
+          document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', function () {
+              const line = this.getAttribute('data-line');
+              const action = this.getAttribute('data-action');
+              const input = this.parentElement.querySelector('input');
+              let currentQty = parseInt(input.value);
+
+              if (action === 'minus' && currentQty > 1) {
+                changeCartQuantity(line, currentQty - 1);
+              }
+              if (action === 'plus') {
+                changeCartQuantity(line, currentQty + 1);
+              }
+            });
+          });
+        });
+    }
+
+    function changeCartQuantity(line, qty) {
+      fetch('/cart/change.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          line: parseInt(line),
+          quantity: qty
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        updateCart();
+      });
+    }
+    
+
+    function openCart() {
+      const cartSidebar = document.getElementById('ajax-cart-sidebar');
+      const overlay = document.getElementById('cart-overlay');
+      cartSidebar.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+    }
+
+    if (typeof Shopify === 'undefined') {
+      var Shopify = {};
+    }
+    Shopify.formatMoney = function(cents) {
+      return '$' + (cents / 100).toFixed(2);
+    }
+});
+
+</script>
+
+{% schema %}
+{
+  "name": "CRU Product Collection",
+  "settings": [
+    {
+      "type": "number",
+      "id": "products_per_page",
+      "label": "Products per page",
+      "default": 999
+    },
+    {
+      "type": "number",
+      "id": "products_container_width",
+      "label": "Products Container Width"
+    },
+    {
+      "type": "select",
+      "id": "container_width_unit",
+      "label": "Container Width Unit",
+      "options": [
+        {
+          "value": "px",
+          "label": "Pixels (px)"
+        },
+        {
+          "value": "%",
+          "label": "Percentage (%)"
+        }
+      ],
+      "default": "px"
+    },
+    {
+      "type": "number",
+      "id": "products_per_row",
+      "label": "Products per row",
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": "Show Quantity Selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Filter Styling"
+    },
+    {
+      "type": "color",
+      "id": "filter_background_color",
+      "label": "Filter Background Color",
+      "default": "#c2c2c2"
+    },
+    {
+      "type": "color",
+      "id": "filter_text_color",
+      "label": "Filter Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "filter_hover_bg_color",
+      "label": "Filter Hover Background Color",
+      "default": "#ff6600"
+    },
+    {
+      "type": "number",
+      "id": "filter_font_size",
+      "label": "Filter Font Size (px)",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "margin_top",
+      "label": "Margin Top (px)",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom",
+      "label": "Margin Bottom (px)",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Product Item Styling"
+    },
+    {
+      "type": "number",
+      "id": "product_name_font_size",
+      "label": "Product Name Font Size (px)",
+      "default": 18
+    },
+    {
+      "type": "number",
+      "id": "product_price_font_size",
+      "label": "Product Price Font Size (px)",
+      "default": 16
+    },  
+    {
+      "type": "color",
+      "id": "product_background_color",
+      "label": "Product Item Background Color",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "product_img_bg_color",
+      "label": "Product Image Background Color",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "product_title_color",
+      "label": "Product Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "product_price_color",
+      "label": "Product Price Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Add to Cart Button Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Add to Cart Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Add to Cart Button Hover Background Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Add to Cart Button Hover Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "hover_overlay",
+      "label": "Hover Overlay"
+    },
+    {
+      "type": "number",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "default": 1
+    }
+  ],
+  "presets": [
+    {
+        "name": "CRU Product Collection",
+        "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

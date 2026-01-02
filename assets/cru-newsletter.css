@@ -1,0 +1,83 @@
+.cru-newsletter-section {
+    max-width: 750px;
+    padding: 115px 0;
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.cru-newsletter-section input:not([type="submit"]) {
+    background-color: #fff;
+    box-shadow: none;
+    border-radius: 0 !important;
+    border: none !important;
+    color: #43454b;
+    font-family: "Muli" !important;
+    line-height: .618 !important;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+    font-size: 15px !important;
+    padding: 8px !important;
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 50px;
+    text-align: left;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: 0;
+    background-color: #fff;
+    width: 100%;
+    background: #fff !important;
+}
+
+.cru_newsletter {
+    background: #f6f6f6;
+}
+
+.first-name, .last-name {
+    width: 49%;
+    display: inline-block;
+}
+
+.first-name {
+    margin-right: 1.5%;
+}
+
+.first-name, .last-name, .email, .phone {
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    border-radius: 0;
+    background: none;
+    border-color: #43454b;
+    cursor: pointer;
+    padding: .6180469716em 1.41575em;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: none;
+    display: inline-block;
+    -webkit-appearance: none;
+    width: 170px;
+    background-color: transparent;
+    border: 1px solid;
+    font-family: "Muli" !important;
+    margin-bottom: 0;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+}
+
+.submit {
+    margin-top: 35px;
+}
+
+@media only screen and (max-width: 781px) {
+    .cru-newsletter-section {
+        width: 90%;
+    }
+
+    .first-name, .last-name, .email, .phone {
+        width: 100%;
+    }
+}

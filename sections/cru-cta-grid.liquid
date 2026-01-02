@@ -1,0 +1,396 @@
+<style>
+  #{{ section.id }} .btn {
+    background-color: {{ section.settings.button_background_color }};
+    color: {{ section.settings.button_text_color }};
+    font-size: {{ section.settings.button_size }}px;
+    font-weight: {{ section.settings.button_font_weight }};
+    border-radius: {{ section.settings.button_border_radius }}px;
+    border: {{ section.settings.button_border_width }}px solid {{ section.settings.button_border_color }};
+  }
+  #{{ section.id }} .btn:hover {
+    background-color: {{ section.settings.button_hover_background_color }};
+    color: {{ section.settings.button_hover_text_color }};
+    border-color: {{ section.settings.button_border_hover_color }};
+  }
+  #{{ section.id }} .btn:focus {
+    outline: 2px solid {{ section.settings.button_border_hover_color }};
+  }
+</style>
+<div id="{{ section.id }}" class="cru-cta-grid">
+  {% for block in section.blocks %}
+    {% if block.type == "cta_block" %}
+      <div class="cta-block" style="background-color: {{ block.settings.background_color }};">
+        <img src="{{ block.settings.background_image | img_url: 'original' }}" alt="{{ block.settings.title }}" class="cta-background" />
+          <div class="cta-overlay">
+              <h2 style="font-weight: {{ section.settings.heading_font_weight }}; color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
+              {% if block.settings.description != "" %}
+                <p style="font-size: {{ section.settings.description_size }}px; color: {{ block.settings.description_color }}">{{ block.settings.description }}</p>
+              {% endif %}
+              <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_text }}</a>
+          </div>
+      </div>
+      {% else if block.type == "cta_product_block" %}
+        <div id="{{ block.id }}" class="cta-block cta-product-block">
+          <div class="cta-overlay">
+            <h2 style="font-weight: {{ section.settings.heading_font_weight }}; color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
+            <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_text }}</a>
+          </div>
+          <div class="cta-products">
+            {% for product in collections.all.products %}
+              <div class="cru-product-item {% for tag in product.tags %}product_cat-{{ tag | handle }} {% endfor %}">
+                  {% assign points = product.metafields.custom.award_points %}
+                  {% assign badges = product.metafields.custom.award_badge %}
+                  {%  assign index = 0 %}
+                  {% if points != blank or badges != blank %}
+                    <div class="product_awards">
+                      {% if points != blank %}
+                        {% for award in points.value %}
+                          <p class="award award_accolade" style="z-index: {{ index }};"><span class="points">{{ award }}</span><span class="type">PTS</span></p>
+                          {% assign index = index | plus: 1 %}
+                        {% endfor %}
+                      {% endif %}
+                      {% for badge in badges.value %}
+                        <img src="{{ badge | img_url: 'large' }}" alt="Award Badge" class="badge award_accolade" style="z-index: {{ index }};">
+                        {% assign index = index | plus: 1 %}
+                      {% endfor %}
+                    </div>
+                    {% endif %}
+                  
+                    <a href="{{ product.url }}">
+                        <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="product-image ">
+                    </a>
+                    <div class="product-info">
+                        <p class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></p>
+                        <p class="product-price">{{ product.price | money }}</p>
+                        {% if product.available %}
+                            <div class="ajax-add-to-cart" data-variant-id="{{ product.variants.first.id }}">
+                                <div class="quantity-wrapper">
+                                    <button type="button" class="qty-btn minus">−</button>
+                                    <input
+                                        type="number"
+                                        name="quantity"
+                                        min="1"
+                                        value="1"
+                                        class="quantity-input"
+                                    >
+                                    <button type="button" class="qty-btn plus">+</button>
+                                </div>
+                                <div class="add-to-cart-wrapper">
+                                    <button class="add-to-cart-button">Add to Cart</button>
+                                    {% comment %} <span class="add-status"></span> {% endcomment %}
+                                </div>
+                            </div>
+                            {% else %}
+                            <p class="sold-out">Sold Out</p>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+</div>
+{% schema  %}  
+{
+  "name": "CRU CTA Grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "CRU CTA Grid Settings"
+    },
+    {
+      "type": "number",
+      "id": "heading_size",
+      "label": "Heading Font Size (px)",
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Heading Font Weight",
+      "options": [
+            {
+              "value": "100",
+              "label": "100"
+            },
+            {
+              "value": "200",
+              "label": "200"
+            },
+            {
+              "value": "300",
+              "label": "300"
+            },
+            {
+              "value": "400",
+              "label": "400"
+            },
+            {
+              "value": "500",
+              "label": "500"
+            },
+            {
+              "value": "600",
+              "label": "600"
+            },
+            {
+              "value": "700",
+              "label": "700"
+            },
+            {
+              "value": "800",
+              "label": "800"
+            },
+            {
+              "value": "900",
+              "label": "900"
+            },
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "bold",
+              "label": "Bold"
+            },
+            {
+              "value": "bolder",
+              "label": "Bolder"
+            },
+            {
+              "value": "lighter",
+              "label": "Lighter"
+            }
+          ]
+    },
+    {
+      "type": "number",
+      "id": "description_size",
+      "label": "Description Font Size (px)",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "button_size",
+      "label": "Button Font Size (px)",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Button Font Weight",
+      "options": [
+            {
+              "value": "100",
+              "label": "100"
+            },
+            {
+              "value": "200",
+              "label": "200"
+            },
+            {
+              "value": "300",
+              "label": "300"
+            },
+            {
+              "value": "400",
+              "label": "400"
+            },
+            {
+              "value": "500",
+              "label": "500"
+            },
+            {
+              "value": "600",
+              "label": "600"
+            },
+            {
+              "value": "700",
+              "label": "700"
+            },
+            {
+              "value": "800",
+              "label": "800"
+            },
+            {
+              "value": "900",
+              "label": "900"
+            },
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "bold",
+              "label": "Bold"
+            },
+            {
+              "value": "bolder",
+              "label": "Bolder"
+            },
+            {
+              "value": "lighter",
+              "label": "Lighter"
+            }
+          ]
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Background Color",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "Button Hover Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button Hover Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "number",
+      "id": "button_border_radius",
+      "label": "Button Border Radius (px)",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "button_border_width",
+      "label": "Button Border Width (px)",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button Border Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_border_hover_color",
+      "label": "Button Border Hover Color",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "cta_block",
+      "name": "CTA Block",
+      "settings": [
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "transparent"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "Call to Action"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#000000"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "This is a call to action section."
+        },
+        {
+            "type": "color",
+            "id": "description_color",
+            "label": "Description Color",
+            "default": "#000000"
+        },
+        {
+            "type": "text",
+            "id": "button_link",
+            "label": "Button Link",
+            "default": "https://example.com"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Learn More"
+        }
+      ]
+    },
+    {
+      "type": "cta_product_block",
+      "name": "CTA Product Block",
+      "settings": [
+        {
+          "type": "number",
+          "id": "number_of_products",
+          "label": "Number of Products to Show"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "Call to Action"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#000000"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "This is a call to action section."
+        },
+        {
+            "type": "color",
+            "id": "description_color",
+            "label": "Description Color",
+            "default": "#000000"
+        },
+        {
+            "type": "text",
+            "id": "button_link",
+            "label": "Button Link",
+            "default": "https://example.com"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Learn More"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CRU CTA Grid",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

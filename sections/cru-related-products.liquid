@@ -1,0 +1,383 @@
+<style>
+    #{{ section.id }}_related_products {
+        margin-top: {{ section.settings.margin_top }}px;
+        margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+    #{{ section.id }}_related_products h2 {
+      color: {{ section.settings.title_color }};
+      font-size: {{ section.settings.title_font_size }}px;
+        font-weight: {{ section.settings.title_font_weight }};
+        max-width: {{ section.settings.max_width }}px;
+        margin: 0 auto;
+    }
+    #{{ section.id }}_related_products .layout-grid {
+        max-width: {{ section.settings.max_width }}px;
+        margin: 0 auto;
+    }
+    #{{ section.id }}_related_products .product-item-slider {
+    background-color: {{ section.settings.product_background_color }};
+  }
+    #{{ section.id }}_related_products .product-item-slider .product-image {
+    background-color: {{ section.settings.product_img_bg_color }};
+  }
+  #{{ section.id }}_related_products .product-item-slider .product-info .product-title a {
+    color: {{ section.settings.product_title_color }};
+    font-size: {{ section.settings.product_name_font_size }}px;
+  }
+  #{{ section.id }}_related_products .product-item-slider .product-info .product-price {
+    color: {{ section.settings.product_price_color }};
+    font-size: {{ section.settings.product_price_font_size }}px;
+  }
+  #{{ section.id }}_related_products .product-item-slider .ajax-add-to-cart .add-to-cart-button {
+    background-color: {{ section.settings.button_background_color }};
+    color: {{ section.settings.button_text_color }};
+  }
+  #{{ section.id }}_related_products .product-item-slider .ajax-add-to-cart .add-to-cart-button:hover {
+    background-color: {{ section.settings.button_hover_bg_color }};
+    color: {{ section.settings.button_hover_text_color }};
+  }
+  #{{ section.id }}_related_products .product-collection {
+    {% if section.settings.products_container_width %}
+      max-width: {{ section.settings.products_container_width }}px;
+    {% else %}
+      max-width: 100%;
+    {% endif %}
+    margin: 0 auto;
+  }
+
+  #{{ section.id }}_related_products .product-item-slider:hover a.img_link:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: {{ section.settings.hover_overlay }};
+    opacity: {{ section.settings.overlay_opacity }};
+    top: 0;
+    left: 0;
+  }
+  #{{ section.id }}_related_products .product-item-slider:nth-child({{ section.settings.products_per_row |  append: 'n' }}) {
+      margin-right: 0;
+  }
+  .img_link {
+    position: relative;
+  }
+  #{{ section.id }}_related_products .product-item-slider{
+    {% if section.settings.products_per_row > 0 %}
+      width: calc((100% / {{ section.settings.products_per_row }}) - 15px);
+    {% else %}
+      width: calc(25% - 30px);
+    {% endif %}
+    margin-right: 15px;
+    margin-bottom: 25px;
+  }
+</style>
+{% assign first_tag = product.tags.first %}
+{% assign pool = collections['all'].products %}
+{% assign related_products = pool | where_exp: 'p', 'p.tags contains related_tag' %}
+{% if related_products.size > 0 %}
+    <div id="{{ section.id }}_related_products" class="related-products">
+        <h2>{{section.settings.title}}</h2>
+        <div class="product-slider-container layout-{{ section.settings.layout_style }}">
+            <div class="cru-product-slider">
+                {% assign shown = 0 %}
+                {% for related_product in related_products %}
+                    {% assign has_common_tag = false %}
+                    {% for tag in product.tags %}
+                        {% if related_product.tags contains tag %}
+                            {% assign has_common_tag = true %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if has_common_tag %}
+                        {% if related_product.id != product.id %}
+                            <div class="product-item-slider {% for tag in related_product.tags %}product_cat-{{ tag | handle }} {% endfor %} layout-{{ section.settings.layout_style }}">
+                                {% assign points = related_product.metafields.custom.award_points %}
+                                {% assign badges = related_product.metafields.custom.award_badge %}
+                                {%  assign index = 0 %}
+                                {% if related_product.metafields.custom.label != blank %}
+                                    {%  if related_product.metafields.custom.special_label %}
+                                    {%  assign label_type =  'special' %}
+                                    {% else %}
+                                    {%  assign label_type =  'normal' %}
+                                    {% endif %}
+                                    <div class="product-custom-label orange {{ label_type }}"><p>{{ related_product.metafields.custom.label }}</p></div>
+                                {% endif %}
+                                {% if points != blank or badges != blank %}
+                                    <div class="product_awards">
+                                    {% if points != blank %}
+                                        {% for award in points.value %}
+                                        <p class="award award_accolade" style="z-index: {{ index }};"><span class="points">{{ award }}</span><span class="type">PTS</span></p>
+                                        {% assign index = index | plus: 1 %}
+                                        {% endfor %}
+                                    {% endif %}
+                                    {% for badge in badges.value %}
+                                        <img src="{{ badge | img_url: 'large' }}" alt="Award Badge" class="badge award_accolade" style="z-index: {{ index }};">
+                                        {% assign index = index | plus: 1 %}
+                                    {% endfor %}
+                                    </div>
+                                    {% endif %}
+
+                                    <a class="img_link" href="{{ related_product.url }}">
+                                        <img src="{{ related_product.featured_image | img_url: 'large' }}" alt="{{ related_product.title }}" class="product-image ">
+                                    </a>
+                                    <div class="product-info">
+                                        <p class="product-title"><a href="{{ related_product.url }}">{{ related_product.title }}</a></p>
+                                        <p class="product-price"><span>RRP: </span>{{ related_product.price | money }}</p>
+                                        {% if related_product.available %}
+                                            <div class="ajax-add-to-cart" data-variant-id="{{ related_product.variants.first.id }}">
+                                                {% if section.settings.show_quantity_selector %}
+                                                <div class="quantity-wrapper">
+                                                <div class="quantity-wrapper-inner">
+                                                    <button type="button" class="qty-btn minus">−</button>
+                                                    <input
+                                                        type="number"
+                                                        name="quantity"
+                                                        min="1"
+                                                        value="1"
+                                                        class="quantity-input"
+                                                    >
+                                                    <button type="button" class="qty-btn plus">+</button>
+                                                </div>
+                                                </div>
+                                                {% endif %}
+                                                <div class="add-to-cart-wrapper">
+                                                    <button class="add-to-cart-button">Add to Cart</button>
+                                                    {% comment %} <span class="add-status"></span> {% endcomment %}
+                                                </div>
+                                            </div>
+                                            {% else %}
+                                            <p class="sold-out">Sold<br/>Out</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% assign shown = shown | plus: 1 %}
+                            {% if shown >= 4 and section.settings.layout_style == 'grid' %}
+                                {% break %}
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{%  schema  %} 
+  {
+    "name": "Related Products",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section Styling"
+        },
+        {
+            "type": "number",
+            "id": "max_width",
+            "label": "Section Max Width (px)"
+        },
+        {
+            "type": "number",
+            "id": "margin_top",
+            "label": "Margin Top (px)"
+        },
+        {
+            "type": "number",
+            "id": "margin_bottom",
+            "label": "Margin Bottom (px)"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "Related Products"
+        },
+        {
+            "type": "number",
+            "id": "title_font_size",
+            "label": "Title Font Size (px)",
+            "default": 40
+        },
+        {
+            "type": "color",
+            "id": "title_color",
+            "label": "Title Color",
+            "default": "#000000"
+        },
+        {
+            "type": "select",
+            "id": "title_font_weight",
+            "label": "Title Font Weight",
+            "options": [
+                {
+                    "value": "100",
+                    "label": "100"
+                },
+                {
+                    "value": "200",
+                    "label": "200"
+                },
+                {
+                    "value": "300",
+                    "label": "300"
+                },
+                {
+                    "value": "400",
+                    "label": "400"
+                },
+                {
+                    "value": "500",
+                    "label": "500"
+                },
+                {
+                    "value": "600",
+                    "label": "600"
+                },
+                {
+                    "value": "700",
+                    "label": "700"
+                },
+                {
+                    "value": "800",
+                    "label": "800"
+                },
+                {
+                    "value": "900",
+                    "label": "900"
+                },
+                {
+                    "value": "normal",
+                    "label": "Normal"
+                },
+                {
+                    "value": "bold",
+                    "label": "Bold"
+                },
+                {
+                    "value": "bolder",
+                    "label": "Bolder"
+                },
+                {
+                    "value": "lighter",
+                    "label": "Lighter"
+                }
+            ],
+            "default": "normal"
+        },
+        {
+            "type": "number",
+            "id": "products_container_width",
+            "label": "Products Container Width (px)"
+        },
+        {
+            "type": "select",
+            "id": "layout_style",
+            "label": "Layout Style",
+            "options": [
+                {
+                    "value": "grid",
+                    "label": "Grid"
+                },
+                {
+                    "value": "slider",
+                    "label": "Slider"
+                }
+            ],
+            "default": "slider"
+        },
+        {
+            "type": "number",
+            "id": "products_per_row",
+            "label": "Products to show in a row (Grid Only)",
+            "default": 4
+        },
+        {
+            "type": "checkbox",
+            "id": "show_quantity_selector",
+            "label": "Show Quantity Selector",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Product Item Styling"
+        },
+        {
+            "type": "number",
+            "id": "product_name_font_size",
+            "label": "Product Name Font Size (px)",
+            "default": 18
+        },
+        {
+            "type": "number",
+            "id": "product_price_font_size",
+            "label": "Product Price Font Size (px)",
+            "default": 16
+        },  
+        {
+            "type": "color",
+            "id": "product_background_color",
+            "label": "Product Item Background Color",
+            "default": "transparent"
+        },
+        {
+            "type": "color",
+            "id": "product_img_bg_color",
+            "label": "Product Image Background Color",
+            "default": "transparent"
+        },
+        {
+            "type": "color",
+            "id": "product_title_color",
+            "label": "Product Title Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "product_price_color",
+            "label": "Product Price Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Add to Cart Button Background Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Add to Cart Button Text Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "button_hover_bg_color",
+            "label": "Add to Cart Button Hover Background Color",
+            "default": "#333333"
+        },
+            {
+            "type": "color",
+            "id": "button_hover_text_color",
+            "label": "Add to Cart Button Hover Text Color",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "hover_overlay",
+            "label": "Hover Overlay"
+        },
+        {
+            "type": "number",
+            "id": "overlay_opacity",
+            "label": "Overlay Opacity",
+            "default": 1
+        }
+    ],
+    "presets": [
+      {
+        "name": "CRU Related Products",
+        "category": "CRU"
+      }
+    ]
+  }
+{% endschema %}

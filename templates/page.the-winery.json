@@ -1,0 +1,262 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cru_page_header_634gHA": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 625,
+        "desktop_height_unit": "px",
+        "mobile_height": 50,
+        "mobile_height_unit": "vh",
+        "desktop_background_image": "shopify://shop_images/about-us-winery-title-bg-opt.jpg",
+        "mobile_background_image": "shopify://shop_images/about-us-winery-title-bg-opt.jpg",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0,
+        "heading": "THE WINERY",
+        "font_size": 48,
+        "font_color": "#ffffff",
+        "font-weight": "400",
+        "subheading": "",
+        "subheading_size": 24,
+        "subheading_color": "#000000",
+        "subheading_font_weight": "400"
+      }
+    },
+    "cru_page_navigation_DxxTWQ": {
+      "type": "cru-page-navigation",
+      "name": "CRU Page Navigation",
+      "settings": {
+        "class": "",
+        "menu": "about-us",
+        "menu_text_color": "",
+        "font_size": 14,
+        "background_color": "#eeeeee",
+        "hover_bg_color": "#ffffff",
+        "link_top_bottom_padding": 22,
+        "link_left_right_padding": 22,
+        "margin_top": 0
+      }
+    },
+    "cru_stack_TnEiPM": {
+      "type": "cru-stack",
+      "blocks": {
+        "text_4gcTyh": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Australia’s 1st “Climate Active” CertifiedCarbon Neutral Winery",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "700",
+            "font_size": 35,
+            "margin_bottom": 50
+          }
+        },
+        "textarea_nPe9U7": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "Ross Hill Wines has long been committed to sustainability and has introduced measures to reduce the company’s carbon footprint, such as efficient use of operational resources, decreasing tractor hours and installing solar power. After six years of hard work, dedication and determination, Ross Hill Wines was recognised in 2016 as the only wine company, registered with the Australian Federal Government as an NCOS certified carbon neutral winery. This has been superceded by the Climate Active Program.",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 50
+          }
+        },
+        "image_MQDBBp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Climate_Active_Network_Member_Logo_pos_RGB-300x249_png.webp",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        },
+        "textarea_UgEPyW": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "As the wines produced here are recognised as carbon neutral too, when you’re next enjoying a sublime glass of Ross Hill wine you are also doing your bit for the environment – and that’s got to be a feeling that washes down well!",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 50
+          }
+        },
+        "button_CcTMDp": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/carbon-neutral-wines",
+            "label": "READ MORE",
+            "id": "",
+            "class": "",
+            "padding_top_bottom": 10,
+            "padding_left_right": 29,
+            "bg_color": "",
+            "font_size": 16,
+            "font_weight": "100",
+            "text_color": "",
+            "border_color": "",
+            "border_style": "solid",
+            "alignment": "left",
+            "hover_bg_color": "#404f24",
+            "hover_text_color": "#ffffff",
+            "hover_border_color": "#404f24",
+            "margin_bottom": 75
+          }
+        },
+        "image_rYkp7L": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ROSS-HILL-2015-63-of-120-opt_jpg.webp",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        },
+        "text_9dndge": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Wallace Lane Winery",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "700",
+            "font_size": 35,
+            "margin_bottom": 50
+          }
+        },
+        "textarea_3LkfJC": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "In 2008, the Wallace Lane Winery was established in an old apple packing shed on Mount Canobolas. The existing four temperature controlled rooms, which previously stored fruit and juice, provided the ideal spaces to turn into barrel and wine storage rooms. The winery also had ample space for the custom-designed equipment and technology best suited for premium wine making methods.\n\nHard work, passion and dedication continue to be the key themes of Ross Hill, with the end goal remaining to produce exceptional quality and elegantly refined, cool-climate wines. Ross Hill Wines has been the proud recipient of an exceptional rating of Five Red Stars from James Halliday’s Wine Companion since 2012, and was named amongst the “Best of the Best” in 2021 for holding this rating for 10 years in a row!",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 50
+          }
+        },
+        "image_ekMVwt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PBP-111-683x1024.jpg",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        },
+        "text_UD3GPx": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Long Lunches at Ross Hill",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "700",
+            "font_size": 35,
+            "margin_bottom": 50
+          }
+        },
+        "textarea_VchfdR": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "The winery plays host to two superb Long Lunch functions throughout the year in spring and autumn. On these celebratory days up to 180 guests enjoy a feast prepared by renowned chefs. The menu is a perfect pairing of scrumptious food with generous splashes of mouth-watering Ross Hill wine.",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 50
+          }
+        },
+        "button_btabBK": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/news",
+            "label": "READ MORE",
+            "id": "",
+            "class": "",
+            "padding_top_bottom": 10,
+            "padding_left_right": 29,
+            "bg_color": "",
+            "font_size": 16,
+            "font_weight": "100",
+            "text_color": "",
+            "border_color": "",
+            "border_style": "solid",
+            "alignment": "left",
+            "hover_bg_color": "#404f24",
+            "hover_text_color": "#ffffff",
+            "hover_border_color": "#404f24",
+            "margin_bottom": 75
+          }
+        },
+        "image_TCwwxq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ROSS-HILL-2015-10-of-120-opt_jpg.webp",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_4gcTyh",
+        "textarea_nPe9U7",
+        "image_MQDBBp",
+        "textarea_UgEPyW",
+        "button_CcTMDp",
+        "image_rYkp7L",
+        "text_9dndge",
+        "textarea_3LkfJC",
+        "image_ekMVwt",
+        "text_UD3GPx",
+        "textarea_VchfdR",
+        "button_btabBK",
+        "image_TCwwxq"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width": 790,
+        "bg_color": "",
+        "padding_top": 100,
+        "padding_bottom": 125
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cru_page_header_634gHA",
+    "cru_page_navigation_DxxTWQ",
+    "cru_stack_TnEiPM"
+  ]
+}

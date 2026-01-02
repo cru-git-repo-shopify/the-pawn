@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "cru_header_1_fjeqqT": {
+      "type": "cru-header-1",
+      "name": "CRU Header Centered Logo",
+      "settings": {
+        "menu": "main-menu",
+        "menu_style": "LLRM",
+        "svg_logo": "",
+        "logo": "shopify://shop_images/Milton-Logo-TOP_v21-e1430355681739.png",
+        "show_login_icon": true,
+        "show_cart_icon": true,
+        "social_ig": false,
+        "ig_link": "",
+        "show_button": false,
+        "button_text": "Book Now",
+        "button_link": "#",
+        "slider_bottom": ""
+      }
+    },
+    "header-mobile": {
+      "type": "header-mobile",
+      "blocks": {
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944": {
+          "type": "menu",
+          "settings": {
+            "color": "#232323",
+            "menu_tab_bg": "#000000"
+          }
+        },
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53": {
+          "type": "search",
+          "settings": {
+            "icon": "1",
+            "popup_action": false,
+            "color": "#232323"
+          }
+        },
+        "550fbd21-75fb-4051-9dee-77d91b5239f0": {
+          "type": "logo",
+          "settings": {
+            "logo_width_mobile": 65,
+            "logo_text": "",
+            "logo_font_size": 20,
+            "logo_font_weight": "900",
+            "logo_text_transform": "uppercase",
+            "logo_color": "#232323",
+            "alignment": "center"
+          }
+        },
+        "20dae707-64c0-4ea3-a05e-561cae9836d8": {
+          "type": "customer",
+          "settings": {
+            "icon": "1",
+            "color": "#232323"
+          }
+        },
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d": {
+          "type": "cart",
+          "settings": {
+            "icon": "2",
+            "show_cart_count_bubble": true,
+            "color": "#232323",
+            "color_bubble": "#ffffff",
+            "bg_bubble": "#232323"
+          }
+        }
+      },
+      "block_order": [
+        "7de2266e-0cd4-4fda-9f09-06f75a17f944",
+        "163e2cb5-14f2-4af6-9ac3-77193c082f53",
+        "550fbd21-75fb-4051-9dee-77d91b5239f0",
+        "20dae707-64c0-4ea3-a05e-561cae9836d8",
+        "633f9dae-3f65-4bda-9ca8-9d3e231aaf9d"
+      ],
+      "disabled": true,
+      "settings": {
+        "background": "#ffffff",
+        "gradient": "",
+        "sticky_header_type": "on_scroll",
+        "enable_transparent": false,
+        "transparent_color": "#ffffff",
+        "transparent_border_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cru_side_cart_Uw3z7t": {
+      "type": "cru-side-cart",
+      "name": "CRU Side Cart",
+      "settings": {}
+    }
+  },
+  "order": [
+    "cru_header_1_fjeqqT",
+    "header-mobile",
+    "cru_side_cart_Uw3z7t"
+  ]
+}

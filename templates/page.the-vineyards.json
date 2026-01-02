@@ -1,0 +1,235 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cru_page_header_MTfWNp": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 625,
+        "desktop_height_unit": "px",
+        "mobile_height": 50,
+        "mobile_height_unit": "vh",
+        "desktop_background_image": "shopify://shop_images/title-bg-opt.jpg",
+        "mobile_background_image": "shopify://shop_images/title-bg-opt.jpg",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0.1,
+        "heading": "THE VINEYARDS",
+        "font_size": 48,
+        "font_color": "#ffffff",
+        "font-weight": "400",
+        "subheading": "",
+        "subheading_size": 24,
+        "subheading_color": "#000000",
+        "subheading_font_weight": "400"
+      }
+    },
+    "cru_page_navigation_Q63V9E": {
+      "type": "cru-page-navigation",
+      "name": "CRU Page Navigation",
+      "settings": {
+        "class": "",
+        "menu": "about-us",
+        "menu_text_color": "#232323",
+        "font_size": 14,
+        "background_color": "#eeeeee",
+        "hover_bg_color": "#ffffff",
+        "link_top_bottom_padding": 22,
+        "link_left_right_padding": 22,
+        "margin_top": 0
+      }
+    },
+    "cru_stack_EwR7e4": {
+      "type": "cru-stack",
+      "blocks": {
+        "text_gmJUDR": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Australia’s Only Carbon Neutral Vineyards",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "700",
+            "font_size": 35,
+            "margin_bottom": 50
+          }
+        },
+        "textarea_XbG3aJ": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "Ross Hill’s 18 hectares of vines are handled with the utmost care – each vine is managed by hand, maintaining low-cropping rates that ensure their exceptional quality and flavour extend to the wines. Ross Hill has prided itself on its environmental policy and has carefully approached all aspects of the wine production process by adopting sustainable principles. This is reflected in all aspects of the winemaking process.",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 10
+          }
+        },
+        "button_UUeVWp": {
+          "type": "button",
+          "settings": {
+            "link": "shopify://pages/carbon-neutral-wines",
+            "label": "READ MORE",
+            "id": "",
+            "class": "",
+            "padding_top_bottom": 10,
+            "padding_left_right": 29,
+            "bg_color": "",
+            "font_size": 16,
+            "font_weight": "100",
+            "text_color": "",
+            "border_color": "",
+            "border_style": "solid",
+            "alignment": "left",
+            "hover_bg_color": "#404f24",
+            "hover_text_color": "#ffffff",
+            "hover_border_color": "#404f24",
+            "margin_bottom": 75
+          }
+        },
+        "text_KEYymC": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Griffin Road Vineyard",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "700",
+            "font_size": 35,
+            "margin_bottom": 50
+          }
+        },
+        "textarea_d6PfqQ": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "Planted over 20 years ago, the original Ross Hill Vineyard is situated on gentle north-facing slopes of Orange, with elevations ranging from 750 to 810 metres. The elevation of Griffin Road presents itself in Ross Hill wines with characteristics that are distinctively high altitude and cool climate – both now synonymous with the label.\nThe undulating hills of the property are now covered in 13 hectares (ha) of established vine that grows the majority of the grapes used in Ross Hill’s wines. The white varietals grown including Chardonnay and Sauvignon Blanc and the iconic red fruit of Merlot, Shiraz, Cabernet Franc, Cabernet Sauvignon and Cabernet Shiraz also call Griffin Road home.",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 50
+          }
+        },
+        "image_3zAfR8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DSC_8178-copy.jpg",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        },
+        "text_PjbghC": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Griffin Road Vineyard",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "100",
+            "font_size": 14,
+            "margin_top": 0,
+            "margin_bottom": 75
+          }
+        },
+        "text_8Crq6H": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Wallace Lane Vineyard",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "700",
+            "font_size": 35,
+            "margin_bottom": 50
+          }
+        },
+        "textarea_h3DTgi": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "To complement the Griffin Road vineyard, a further planting of 5 more hectares of vine were planted in the fertile, volcanic, basalt soils of Mount Canobolas. This extinct volcano complex erupted several times 11 to 13 million years ago and created a unique terroir for the region.\n\nWith an even higher altitude of 1020 metres above sea level, the Wallace Lane vineyard is one of the highest and coolest in Australia. This environment provides perfect conditions for varietals Sauvignon Blanc, Pinot Gris and Pinot Noir. The property, previously an apple and cherry orchard with a large fruit packing shed, now also houses Ross Hill Wines’ carbon neutral winery, cellar door and office.\n\nWe are currently expanding our vineyard further to include Chardonnay, Pinot Noir and Gamay.",
+            "text_align": "left",
+            "text_color": "",
+            "font_size": 14,
+            "font_weight": "100",
+            "margin_bottom": 50
+          }
+        },
+        "image_AFPyXJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DSC_7762-opt_jpg.webp",
+            "alignment": "center",
+            "id": "",
+            "class": ""
+          }
+        },
+        "text_JtGFnN": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Wallace Lane Vineyard",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "100",
+            "font_size": 14,
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_gmJUDR",
+        "textarea_XbG3aJ",
+        "button_UUeVWp",
+        "text_KEYymC",
+        "textarea_d6PfqQ",
+        "image_3zAfR8",
+        "text_PjbghC",
+        "text_8Crq6H",
+        "textarea_h3DTgi",
+        "image_AFPyXJ",
+        "text_JtGFnN"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width": 790,
+        "bg_color": "",
+        "padding_top": 100,
+        "padding_bottom": 125
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cru_page_header_MTfWNp",
+    "cru_page_navigation_Q63V9E",
+    "cru_stack_EwR7e4"
+  ]
+}
