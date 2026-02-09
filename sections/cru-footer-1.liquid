@@ -21,11 +21,11 @@
             {% form 'customer', class: 'contact-form' %}
                 <input type="hidden" name="form_type" value="customer">
                 <input type="hidden" name="utf8" value="✓">
-                <label for="contact[email]">Email Address</label>
+                <label for="contact[email]">Email Address <span class="required">*</span></label>
                 <input type="email" name="contact[email]" placeholder="" aria-label="Email" autocapitalize="off" required>
-                <label for="contact[first_name]">First Name</label>
+                <label for="contact[first_name]">First Name <span class="required">*</span></label>
                 <input type="text" class="" name="contact[first_name]" placeholder="" aria-label="First Name" required>
-                <label for="contact[last_name]">Last Name</label>
+                <label for="contact[last_name]">Last Name <span class="required">*</span></label>
                 <input type="text" class="" name="contact[last_name]" placeholder="" aria-label="Last Name" required>
                 {% comment %} <input type="phone" name="contact[phone]" placeholder="Your Phone Number" aria-label="Phone Number" pattern="[0-9\-]*" required> {% endcomment %}
                 <button type="submit">Join Now</button>
