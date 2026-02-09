@@ -21,9 +21,12 @@
             {% form 'customer', class: 'contact-form' %}
                 <input type="hidden" name="form_type" value="customer">
                 <input type="hidden" name="utf8" value="✓">
-                <input type="email" name="contact[email]" placeholder="Your email" aria-label="Email" autocapitalize="off" required>
-                <input type="text" class="" name="contact[first_name]" placeholder="Your First Name" aria-label="First Name" required>
-                <input type="text" class="" name="contact[last_name]" placeholder="Your Last Name" aria-label="Last Name" required>
+                <label for="contact[email]">Email Address</label>
+                <input type="email" name="contact[email]" placeholder="" aria-label="Email" autocapitalize="off" required>
+                <label for="contact[first_name]">First Name</label>
+                <input type="text" class="" name="contact[first_name]" placeholder="" aria-label="First Name" required>
+                <label for="contact[last_name]">Last Name</label>
+                <input type="text" class="" name="contact[last_name]" placeholder="" aria-label="Last Name" required>
                 {% comment %} <input type="phone" name="contact[phone]" placeholder="Your Phone Number" aria-label="Phone Number" pattern="[0-9\-]*" required> {% endcomment %}
                 <button type="submit">Join Now</button>
             {% endform %}
