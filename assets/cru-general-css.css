@@ -583,7 +583,7 @@ h3.footer_section_header {
     -webkit-font-smoothing: antialiased;
 }
 
-h3.footer_section_header {
+h3.footer_section_header, .mailing_list_section h3 {
     font-size: 20px;
     font-weight: 600;
     color: #fff;
