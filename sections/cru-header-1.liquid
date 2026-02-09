@@ -14,6 +14,16 @@
                 >
             {% endif %}
         </a>
+        {% if section.settings.season_img and section.settings.season_txt %}
+            <div class="weater">
+                <img src="{{ section.settings.season_img | image_url: width: 300 }}"
+                alt="{{ section.settings.season_img.alt | escape }}"
+                loading="lazy"
+                width="{{ section.settings.logo.width }}"
+                height="{{ section.settings.logo.height }}">
+                <p class="weather_txt">{{ section.settings.weather_txt }}</p>
+            </div>
+        {% endif %}
     </div>
     <div class="header_right_area">
         {% if section.settings.show_button %}
