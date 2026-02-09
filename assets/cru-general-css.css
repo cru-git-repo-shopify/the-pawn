@@ -874,7 +874,7 @@ a.open-cart span, a.to_account span {
 
 /* footer */
 .cru_footer .col-full {
-    align-items: center;
+    align-items: flex-start;
     padding-top: 121px;
     padding-right: 72px;
     padding-bottom: 120px;
