@@ -34,8 +34,7 @@ header#masthead {
 
 li.menu-item {
     display: inline-block;
-    /* margin-right: 25px; */
-    font-size: 24px
+    font-size: 14px;
 }
 
 li.menu-item:last-child {
@@ -170,8 +169,8 @@ ul#menu-main-menu {
 
 a.social_url {
     font-size: 24px;
-    color: #fff;
-    margin-right: 24px
+    color: #000;
+    margin-right: 0;
 }
 
 a.social_url:last-child {
@@ -271,6 +270,14 @@ a.login_right {
     color: #000
 }
 
+.scrolled li.menu-item.menu-item-type-post_type.header-menu__item a {
+    color: #fff !important;
+}
+
+.scrolled .header-container.left_logo_right_menu {
+    background: #000;
+}
+
 #header_cart_info a {
     font-size: 21px;
     color: #000;
@@ -322,7 +329,7 @@ header i {
 .header_right_area a {
     display: inline-block;
     vertical-align: middle;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .dark .header_right_area a {
@@ -338,7 +345,7 @@ header i {
     display: flex;
     justify-content: end !important;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .page-subheading {
@@ -572,7 +579,7 @@ i.fa-solid.fa-bag-shopping {
 }
 
 i.fa-solid.fa-user {
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 @media only screen and (max-width: 1000px){

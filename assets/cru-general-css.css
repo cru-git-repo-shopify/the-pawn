@@ -823,7 +823,7 @@ a.open_submenu i {
 /* header */
 .header-container.left_logo_right_menu {
     width: 100%;
-    padding: 25px 5%;
+    padding: 10px 45px;
     background-color: #fff;
 }
 
@@ -843,12 +843,12 @@ a.open_submenu i {
 .left_logo_right_menu ul#menu-main-menu {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 li.menu-item.menu-item-type-post_type.header-menu__item a {
     color: #000 !important;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0;
     font-weight: 400;
 }
@@ -862,11 +862,11 @@ li.menu-item.menu-item-type-post_type.header-menu__item a {
     width: 25px;
 }
 
-a.open-cart, a.to_account {
+/* a.open-cart, a.to_account {
     background-color: #F6F6F6;
     border-radius: 50px;
     padding: 10px 20px 8px;
-}
+} */
 
 a.open-cart span, a.to_account span {
     font-size: 14px !important;
