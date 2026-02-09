@@ -48,6 +48,9 @@
     <div class="cru-page-header-inner">
         <div class="background-overlay" style="background-color: {{ section.settings.background_overlay }}; opacity: {{ section.settings.background_overlay_opacity }};"></div>
         <div class="header-content">
+          {% if section.settings.image_content %}
+            <img class="image_content" src="{{ section.settings.image_content | img_url: '1920x1080' }}">
+          {% endif %}
             <h1 style="font-size: {{ section.settings.font_size }}px; color: {{ section.settings.font_color }}; font-weight: {{ section.settings.font-weight }};">{{ section.settings.heading }}</h1>
             {% if section.settings.subheading != "" %}
                 <p style="font-size: {{ section.settings.subheading_size }}px; color: {{ section.settings.subheading_color }}; font-weight: {{ section.settings.subheading_font_weight }};">{{ section.settings.subheading }}</p>
@@ -117,6 +120,11 @@
         "type": "image_picker",
         "id": "mobile_background_image",
         "label": "Mobile Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_content",
+      "label": "Image Content"
     },
     {
         "type": "color",
