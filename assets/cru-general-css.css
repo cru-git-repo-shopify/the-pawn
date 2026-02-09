@@ -1076,6 +1076,34 @@ form#contact_form .first-name, form#contact_form .last-name {
     display: none;
 }
 
+.weater {
+    display: flex;
+    flex-direction: column;
+    max-width: 60px;
+    justify-content: center;
+    transition: all 0.2s ease;
+    visibility: visible;
+    opacity: 1;
+}
+
+.weater img {
+    max-width: 32px;
+    max-height: 32px;
+    margin: 0 auto;
+}
+
+p.weather_txt {
+    text-align: left;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.scrolled .weater {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
