@@ -46,6 +46,11 @@
       background-attachment: fixed;
     }
   {% endif %}
+  {% if section.settings.fix_content %}
+    #{{ section.id }} .header-content{
+      position: fixed;
+    }
+  {% endif %}
 
 </style>
 
@@ -313,6 +318,11 @@
             }
        ],
        "default": "400"
+    },
+    {
+      "type": "checkbox",
+      "id": "fix_content",
+      "label": "Fix content position"
     }
   ],
   "presets": [
