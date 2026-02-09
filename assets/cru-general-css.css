@@ -670,8 +670,8 @@ input.half_input {
 }
 
 .mailing_list_section form {
-    max-width: 81%;
-    margin-top: 30px!important;
+    max-width: 416px;
+    margin: 30px auto 0;
 }
 
 .mailing_list_section button {
