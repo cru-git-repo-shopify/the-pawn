@@ -9,42 +9,31 @@
  */
 {
   "sections": {
-    "cru_hero_slider_X6WJrJ": {
-      "type": "cru-hero-slider",
-      "blocks": {
-        "slide_MXbX8t": {
-          "type": "slide",
-          "settings": {
-            "bg_image": "shopify://shop_images/Spring_Header_bg.jpg",
-            "y_alignment": "center",
-            "custom_y_alignment": 15,
-            "x_alignment": "center",
-            "mobile_y_alignment": "center",
-            "mobile_x_alignment": "center",
-            "allow_overlay": false,
-            "overlay_color": "#0a0a0a",
-            "overlay_opacity": 45,
-            "hero_heading": "",
-            "heading_color": "",
-            "hero_subheading": "Make a cool move",
-            "hero_button": "",
-            "hero_btn_link": "#",
-            "has_nxt_btn": false,
-            "nxt_btn_txt": "",
-            "has_prev_btn": false,
-            "prev_btn_txt": "",
-            "header_type": "dark"
-          }
-        }
-      },
-      "block_order": [
-        "slide_MXbX8t"
-      ],
-      "name": "CRU Hero Slider",
-      "settings": {}
+    "cru_page_header_7ke4jP": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 670,
+        "desktop_height_unit": "px",
+        "mobile_height": 600,
+        "mobile_height_unit": "px",
+        "desktop_background_image": "shopify://shop_images/Spring_Header_bg.jpg",
+        "mobile_background_image": "shopify://shop_images/Spring_Header_bg.jpg",
+        "background_overlay": "rgba(0,0,0,0)",
+        "background_overlay_opacity": 0,
+        "heading": "",
+        "font_size": 48,
+        "font_color": "#000000",
+        "font-weight": "400",
+        "subheading": "Make a cool move",
+        "subheading_size": 24,
+        "subheading_color": "#000000",
+        "subheading_font_weight": "400"
+      }
     }
   },
   "order": [
-    "cru_hero_slider_X6WJrJ"
+    "cru_page_header_7ke4jP"
   ]
 }
