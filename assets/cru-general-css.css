@@ -685,7 +685,7 @@ input.half_input {
     transition: box-shadow .3s;
     position: relative;
     overflow: hidden;
-    width: 230px;
+    width: 230px !important;
     height: 60px;
     line-height: 60px;
     border: 2px solid #fff;
@@ -697,6 +697,9 @@ input.half_input {
     font-family: Poppins, sans-serif !important;
     color: #fff;
     transition: all .1s linear;
+    display: block;
+    margin-top: 20px;
+    background-color: #000;
 }
 
 .mailing_list_section label {
