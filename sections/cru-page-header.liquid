@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: {{ section.settings.desktop_height }}{{ section.settings.desktop_height_unit }};
+    min-height: {{ section.settings.desktop_height }}{{ section.settings.desktop_height_unit }};
     background-size: cover;
     background-position: center;
     background-image: url({{ section.settings.desktop_background_image | img_url: '1920x1080' }});
@@ -16,7 +16,7 @@
   
   @media (max-width: 768px) {
     .cru-page-header-inner {
-      height: {{ section.settings.mobile_height }}{{ section.settings.mobile_height_unit }};
+      min-height: {{ section.settings.mobile_height }}{{ section.settings.mobile_height_unit }};
       background-image: url({{ section.settings.mobile_background_image | img_url: 'original' }});
     }
   }
