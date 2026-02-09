@@ -14,7 +14,7 @@
                 >
             {% endif %}
         </a>
-        {% if section.settings.season_img and section.settings.season_txt %}
+        
             <div class="weather">
                 <img src="{{ section.settings.season_img | image_url: width: 300 }}"
                 alt="{{ section.settings.season_img.alt | escape }}"
@@ -23,7 +23,7 @@
                 height="{{ section.settings.logo.height }}">
                 <p class="weather_txt">{{ section.settings.season_txt }}</p>
             </div>
-        {% endif %}
+        
     </div>
     <div class="header_right_area">
         {% if section.settings.show_button %}
