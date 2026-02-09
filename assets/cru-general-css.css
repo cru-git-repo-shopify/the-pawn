@@ -536,11 +536,51 @@ a.element-button:hover {
     display: flex;
     justify-content: center;
     padding: 0;
-    gap: 20px;
+    gap: 5px;
 }
 
 .col-full * {
     color: #fff;
+}
+
+h3.footer_section_header {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Inter, sans-serif !important;
+    margin-top: 0;
+}
+
+.cru_footer ul li:first-child {
+    margin-top: 0;
+}
+
+.footer_social {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.footer_social a {
+    display: inline-block;
+    border: 2px solid #000;
+    font-size: 15px;
+    padding: 17px 0 0;
+    box-sizing: border-box;
+    background: #fff;
+    color: #000;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.footer_social a i {
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
 }
 
 .wrapper-footer h3 {
