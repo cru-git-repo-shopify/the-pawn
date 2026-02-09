@@ -13,7 +13,7 @@
       "type": "cru-page-header",
       "name": "CRU Page Header",
       "settings": {
-        "class": "",
+        "class": "home_header",
         "desktop_height": 680,
         "desktop_height_unit": "px",
         "mobile_height": 600,
@@ -22,7 +22,7 @@
         "mobile_background_image": "shopify://shop_images/Spring_Header_bg.jpg",
         "background_type": "parallax",
         "image_content": "shopify://shop_images/center-logo2-e1698115868334-300x244.png",
-        "background_overlay": "#FFFFFF",
+        "background_overlay": "#ffffff",
         "background_overlay_opacity": 0.3,
         "heading": "",
         "font_size": 48,
