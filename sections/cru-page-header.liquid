@@ -41,10 +41,15 @@
   .cru-page-header .header-content p {
     margin-top: 0;
   }
+  {% if section.settings.background_type == "parallax" %}
+    #{{ section.id }} .cru-page-header-inner{
+      background-attachment: fixed;
+    }
+  {% endif %}
 
 </style>
 
-<div class="cru-page-header {{ section.settings.class }}">
+<div id="{{ section.id }}" class="cru-page-header {{ section.settings.class }}">
     <div class="cru-page-header-inner">
         <div class="background-overlay" style="background-color: {{ section.settings.background_overlay }}; opacity: {{ section.settings.background_overlay_opacity }};"></div>
         <div class="header-content">
