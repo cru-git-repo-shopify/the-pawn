@@ -896,11 +896,14 @@ img.cta-background {
 
 .header-content {
     position: absolute;
-    bottom: -45px;
-    background-color: rgba(0, 0, 0, 1);
+    /* bottom: -45px; */
+    /* background-color: #000; */
     z-index: 9;
     max-width: 768px;
     padding: 44px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
