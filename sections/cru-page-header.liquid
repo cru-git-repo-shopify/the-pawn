@@ -41,6 +41,9 @@
   .cru-page-header .header-content p {
     margin-top: 0;
   }
+  #{{ section.id }} .subheading{
+    margin-top: {{ section.settings.subheading_margin_top }}px;
+  }
   {% if section.settings.background_type == "parallax" %}
     #{{ section.id }} .cru-page-header-inner{
       background-attachment: fixed;
@@ -63,7 +66,7 @@
           {% endif %}
             <h1 style="font-size: {{ section.settings.font_size }}px; color: {{ section.settings.font_color }}; font-weight: {{ section.settings.font-weight }};">{{ section.settings.heading }}</h1>
             {% if section.settings.subheading != "" %}
-                <p style="font-size: {{ section.settings.subheading_size }}px; color: {{ section.settings.subheading_color }}; font-weight: {{ section.settings.subheading_font_weight }};">{{ section.settings.subheading }}</p>
+                <p class="subheading" style="font-size: {{ section.settings.subheading_size }}px; color: {{ section.settings.subheading_color }}; font-weight: {{ section.settings.subheading_font_weight }};">{{ section.settings.subheading }}</p>
             {% endif %}
         </div>
     </div>
@@ -258,6 +261,18 @@
        	"id": 	"subheading_color",
        	"label": 	"Subheading Font Color",
        	"default": 	"#000000"
+    },
+    {
+      "type": "number",
+      "id": "subheading_margin_top",
+      "label": "Subheading Margin Top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "subheading_margin_bot",
+      "label": "Subheading Margin Bottom",
+      "default": 0
     },
     {
        	"type": 	"select",
