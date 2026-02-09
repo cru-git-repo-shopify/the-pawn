@@ -21,15 +21,15 @@
         "show_col_1": true,
         "col1_content": "<h3 class=\"footer_section_header\">Contact Us</h3>\n<div class=\"footer_address\">\nThe Pawn Wine Co.<br>PO Box 139<br>Langhorne Creek <br> South Australia 5255\n<p>T 0438 373 247<br> F 08 8537 3109<br> <a href=\"mailto:info@thepawn.com.au\" style=\"font-weight: 700\">info@thepawn.com.au</a></p>\n</div>\n<div class=\"footer_social\">\n\t<ul>\n\t\t<li><a href=\"https://www.facebook.com/The-Pawn-Wine-Co-131277803574070\"><i class=\"fa-brands fa-facebook\"></i></a></li>\n\t\t<li><a href=\"https://twitter.com/ThePawnWineCo\"><i class=\"fa-brands fa-twitter\"></i></a></li>\n<li><a href=\"https://www.instagram.com/thepawnwineco/\"><i class=\"fa-brands fa-instagram\"></i></a></li>\n\t</ul>\n</div>",
         "show_col_2": true,
-        "col2_content": "<div class=\"footer_menu\">\n<ul>\n<li><a href=\"#\">Shop</a></li>\n<li><a href=\"#\">Wineclub</a></li>\n<li><a href=\"#\">About Us</a></li>\n<li><a href=\"#\">My Account</a></li>\n<li><a href=\"#\">Contact</a></li>\n</ul>\n</div>",
+        "col2_content": "<ul class=\"footer_menu\">\n\t<li><a href=\"/about-us/\">About</a></li>\n\t<li><a href=\"/wines/\">Wines</a></li>\n\t<li><a href=\"/wine-club/\">Wine Club</a></li>\n<li><a href=\"/social/\">Social</a></li>\n</ul>\n<img class=\"footer_logo\" src=\"https://cdn.shopify.com/s/files/1/0946/8605/2719/files/footer-logo.png?v=1770608263\" alt=\"My Image\">",
         "show_col_3": false,
         "col3_content": "",
         "show_col_4": false,
         "col4_content": "",
-        "footer_notice": "Warning: under the Liquor Licensing Act 1990, it is an offence:\nfor liquor to be delivered to a person under the age of 18 years. Penalty: Fine not exceeding 20 penalty units\nfor a person under the age of 18 years to purchase liquor. Penalty: Fine not exceeding 10 penalty units",
+        "footer_notice": "",
         "footer_menu": "",
         "enable_copyright": true,
-        "copyright_content": "<div class=\"copyright_left\">\n<p>© COPYRIGHT MILTON VINEYARD 2023 | LIQUOR LICENSE NUMBER 51484</p>\n</div>\n<div class=\"copyright_right\">\n<a href=\"#\">Privacy Policy</a>\n<a href=\"#\">Website by CRU</a>\n</div>"
+        "copyright_content": "© 2016 The Pawn Wine Co. | <a href=\"https://thepawn.com.au?ubwc=K6BLI8amfyVMoBgKrYSh10498-21212\">CRU Support</a> & eCommerce by <a href=\"http://cru.io/\" target=\"_blank\" class=\"cru-banner\">CRU</a> - Winery Marketing"
       }
     }
   },
