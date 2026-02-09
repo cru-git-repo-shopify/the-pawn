@@ -407,15 +407,15 @@ a.element-button:hover {
 }
 
 .mailing_list_section {
-    width: 50%;
+    width: 33.3333%;
 }
 
 .col-1.footer-column {
-    width: 25%;
+    width: 33.3333%;
     text-align: center;
 }
 .col-2.footer-column {
-    width: 50%;
+    width: 33.3333%;
     text-align: center;
 }
 .col-3.footer-column {
@@ -874,8 +874,11 @@ a.open-cart span, a.to_account span {
 
 /* footer */
 .cru_footer .col-full {
-    padding: 60px 5%;
     align-items: center;
+    padding-top: 121px;
+    padding-right: 72px;
+    padding-bottom: 120px;
+    padding-left: 72px;
 }
 
 .footer_menu ul {
