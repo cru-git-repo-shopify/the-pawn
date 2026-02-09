@@ -9,14 +9,18 @@ p.footer_heading {text-align: center;font-size: 28px;color: #fff;line-height: 34
 .cru_footer ul { list-style-type: none; margin: 0; text-align: center; }
 .cru_footer ul li {
     display: block;
-    margin-right: 35px;
+    text-align: center;
+    line-height: 1.2em;
+    margin: 8px 0 12px;
 }
 .cru_footer ul li:last-child { margin-right: 0px!important; }
 .cru_footer ul li a {
-    color: #000 !important;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Inter", sans-serif !important;
 }
 .footer_social_media_icons { text-align: center; margin-top: 24px; }
 .footer_social_media_icons a.social_url { display: inline-block; color: #fff!important; }
