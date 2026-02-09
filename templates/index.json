@@ -31,7 +31,8 @@
         "subheading": "Make a cool move",
         "subheading_size": 24,
         "subheading_color": "#000000",
-        "subheading_font_weight": "400"
+        "subheading_font_weight": "400",
+        "fix_content": true
       }
     }
   },
