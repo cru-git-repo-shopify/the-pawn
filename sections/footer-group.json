@@ -15,7 +15,7 @@
       "type": "cru-footer-1",
       "name": "CRU Footer",
       "settings": {
-        "bg_color": "#f8f8f8",
+        "bg_color": "#000000",
         "show_mailing_list": true,
         "mailing_list_heading": "",
         "show_col_1": true,
