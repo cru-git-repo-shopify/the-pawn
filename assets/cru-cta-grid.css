@@ -44,9 +44,9 @@ img.cta-background {
 
 .cta-overlay {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    left: 0;
     z-index: 10;
+    bottom: 0;
 }
 
 .cta-overlay * {
