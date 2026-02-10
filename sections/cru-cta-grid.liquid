@@ -28,8 +28,8 @@
               {% if block.settings.description != "" %}
                 <p style="font-size: {{ section.settings.description_size }}px; color: {{ block.settings.description_color }}">{{ block.settings.description }}</p>
               {% endif %}
-              <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_text }}</a>
           </div>
+          <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_text }}</a>
       </div>
       {% else if block.type == "cta_product_block" %}
         <div id="{{ block.id }}" class="cta-block cta-product-block">
