@@ -82,4 +82,19 @@ jQuery(document).ready(function($) {
 		}
 	});
 	
+	jQuery('.cta-block a.btn').on('click', function(e){
+		e.preventDefault();
+		if(!jQuery(this).siblings('.cta-overlay').hasClass('active')){
+			jQuery('.cta-overlay.active').each(function(){
+				jQuery(this).removeClass('active');
+				jQuery(this).slideToggle();
+			});
+			jQuery(this).siblings('.cta-overlay').addClass('active');
+			jQuery(this).siblings('.cta-overlay').slideToggle();
+		}
+		else{
+			jQuery(this).siblings('.cta-overlay').removeClass('active');
+			jQuery(this).siblings('.cta-overlay').slideToggle();
+		}
+	});
 });
