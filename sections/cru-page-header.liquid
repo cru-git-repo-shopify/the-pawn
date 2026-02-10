@@ -69,10 +69,10 @@
             {% if section.settings.subheading != "" %}
                 <p class="subheading" style="font-size: {{ section.settings.subheading_size }}px; color: {{ section.settings.subheading_color }}; font-weight: {{ section.settings.subheading_font_weight }};">{{ section.settings.subheading }}</p>
             {% endif %}
+            {% if section.settings.scroll_down_btn %}
+              {{ section.settings.scroll_down_btn }}
+            {%  endif %}
         </div>
-        {% if section.settings.scroll_down_btn %}
-          {{ section.settings.scroll_down_btn }}
-        {%  endif %}
     </div>
 </div>
 {%  schema  %}
