@@ -65,11 +65,33 @@
             "text_color": "#000000",
             "p_font_size": 18
           }
+        },
+        "button_QmBwVt": {
+          "type": "button",
+          "settings": {
+            "link": "#",
+            "label": "MORE STUFF THIS WAY",
+            "id": "",
+            "class": "",
+            "padding_left_right": 29,
+            "bg_color": "#000000",
+            "font_size": 16,
+            "font_weight": "100",
+            "text_color": "#ffffff",
+            "border_color": "#000000",
+            "border_style": "solid",
+            "alignment": "center",
+            "hover_bg_color": "#ffffff",
+            "hover_text_color": "#000000",
+            "hover_border_color": "",
+            "margin_top": 30
+          }
         }
       },
       "block_order": [
         "text_HCNYVW",
-        "richtext_ikMbYR"
+        "richtext_ikMbYR",
+        "button_QmBwVt"
       ],
       "name": "CRU Stack",
       "settings": {
