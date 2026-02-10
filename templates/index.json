@@ -107,10 +107,29 @@
     },
     "cru_stack_h3inHy": {
       "type": "cru-stack",
+      "blocks": {
+        "text_VCcYK4": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Artisanal wines that speak of their origin.",
+            "text_align": "center",
+            "text_color": "#ffffff",
+            "font_weight": "300",
+            "font_size": 40,
+            "margin_top": 131,
+            "margin_bottom": 75
+          }
+        }
+      },
+      "block_order": [
+        "text_VCcYK4"
+      ],
       "name": "CRU Stack",
       "settings": {
         "id": "",
-        "class": "",
+        "class": "full_width",
         "max_width_unit": "px",
         "bg_color": "",
         "background_img": "shopify://shop_images/BMAC7141-scaled.jpg",
