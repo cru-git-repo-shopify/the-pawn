@@ -801,7 +801,7 @@ ul.footer-menu {
 .cru-featured-products {
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 48px;
 }
 
 .featured.product-item {
