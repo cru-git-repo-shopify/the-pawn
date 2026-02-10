@@ -203,7 +203,7 @@
             "id": "",
             "class": "",
             "txt_width": 790,
-            "text": "OUR HOME, OUR PLACE,<br>OUR PATCH OF DIRT",
+            "text": "OUR HOME, OUR PLACE,OUR PATCH OF DIRT",
             "text_align": "center",
             "text_color": "#ffffff",
             "font_weight": "400",
@@ -218,11 +218,26 @@
             "id": "",
             "class": ""
           }
+        },
+        "text_EY8ibq": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "300m above sea level",
+            "text_align": "center",
+            "text_color": "#FFFFFF",
+            "font_weight": "300",
+            "font_size": 28,
+            "txt_line_height": 28,
+            "margin_top": 20
+          }
         }
       },
       "block_order": [
         "text_9mFWt9",
-        "html_dQCMkL"
+        "html_dQCMkL",
+        "text_EY8ibq"
       ],
       "name": "CRU Stack",
       "settings": {
