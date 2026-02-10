@@ -1231,6 +1231,7 @@ a.open-cart span, a.to_account span {
 .featured-product-inner {
     max-width: 90%!important;
     width: 100%;
+    margin: 0 auto;
 }
 
 .full_width .stack_inner {
