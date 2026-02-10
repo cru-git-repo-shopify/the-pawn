@@ -9,6 +9,8 @@
   {% endif %}
   {% if section.settings.background_type == "parallax" %}
     background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
   {%  endif %}
 }
 .stack_{{ section.id }} .stack_inner{
