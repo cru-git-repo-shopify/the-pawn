@@ -56,8 +56,13 @@
                   font-size: {{ block.settings.p_font_size }}px;
                   color: {{ block.settings.text_color }};
                 }
+                {% if block.settings.max_width %}
+                  #{{ block.id }}{
+                    max-width: {{ block.settings.max_width }};
+                  }
+                {% endif %}
                 </style>
-              <div class="block-{{ block.type }}" style="margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px; text-align: {{ block.settings.text_align }}; color: {{ block.settings.text_color }}; font-size: {{ block.settings.font_size }}px;">
+              <div id="{{ block.id }}" class="block-{{ block.type }}" style="margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px; text-align: {{ block.settings.text_align }}; color: {{ block.settings.text_color }}; font-size: {{ block.settings.font_size }}px;">
                 {{ block.settings.richtext }}
               </div>
           {% when 'image' %}
@@ -462,6 +467,11 @@
       "type": "richtext",
       "name": "Rich Text",
       "settings": [
+        {
+          "type": "number",
+          "id": "max_width",
+          "label": "Max Width"
+        },
         {
             "type": "text",
             "id": "class",
