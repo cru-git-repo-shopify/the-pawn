@@ -207,7 +207,8 @@
             "text_align": "center",
             "text_color": "#ffffff",
             "font_weight": "400",
-            "font_size": 55
+            "font_size": 55,
+            "txt_line_height": 66
           }
         }
       },
