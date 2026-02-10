@@ -167,6 +167,8 @@
       "settings": {
         "class": "",
         "Heading": "FEATURED WINES",
+        "padding_top": 100,
+        "padding_bottom": 50,
         "font_size": 55,
         "font_color": "#000000",
         "font-weight": "400",
@@ -176,8 +178,18 @@
         "show_view_all_button": true,
         "view_all_button_text": "WINE THIS WAY",
         "view_all_button_url": "shopify://collections/all",
-        "padding_top": 100,
-        "padding_bottom": 50
+        "padding_top_bottom": 15,
+        "padding_left_right": 29,
+        "bg_color": "",
+        "btn_font_size": 16,
+        "font_weight": "400",
+        "text_color": "",
+        "border_color": "",
+        "border_style": "solid",
+        "alignment": "left",
+        "hover_bg_color": "",
+        "hover_text_color": "",
+        "hover_border_color": ""
       }
     }
   },
