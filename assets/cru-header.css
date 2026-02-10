@@ -582,6 +582,10 @@ i.fa-solid.fa-user {
     margin-right: 0px;
 }
 
+.scrolled .header_right_area a {
+    color: #fff;
+}
+
 @media only screen and (max-width: 1000px){
     .upper_link_left, .upper_link_right {
         width: unset;
