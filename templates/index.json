@@ -183,10 +183,10 @@
         "bg_color": "",
         "btn_font_size": 16,
         "font_weight": "400",
-        "text_color": "",
+        "text_color": "#000000",
         "border_color": "",
         "border_style": "solid",
-        "alignment": "left",
+        "alignment": "center",
         "hover_bg_color": "",
         "hover_text_color": "",
         "hover_border_color": ""
