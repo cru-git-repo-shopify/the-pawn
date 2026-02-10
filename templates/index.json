@@ -174,7 +174,7 @@
         "font-weight": "400",
         "products_per_page": 4,
         "product_collection": "frontpage",
-        "show_quantity_selector": true,
+        "show_quantity_selector": false,
         "show_view_all_button": true,
         "view_all_button_text": "WINE THIS WAY",
         "view_all_button_url": "shopify://collections/all",
