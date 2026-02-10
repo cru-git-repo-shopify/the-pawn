@@ -270,6 +270,19 @@
     "cru_stack_YKa94t": {
       "type": "cru-stack",
       "blocks": {
+        "text_GGrLzX": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "El Desperado",
+            "text_align": "center",
+            "text_color": "#4693a6",
+            "font_weight": "400",
+            "font_size": 55,
+            "margin_bottom": 75
+          }
+        },
         "textarea_XKL64g": {
           "type": "textarea",
           "settings": {
@@ -332,6 +345,7 @@
         }
       },
       "block_order": [
+        "text_GGrLzX",
         "textarea_XKL64g",
         "text_H4BQYy",
         "textarea_zQJBeh",
