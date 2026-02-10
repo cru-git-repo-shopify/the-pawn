@@ -37,9 +37,20 @@
         "fix_content": true,
         "scroll_down_btn": "<i class=\"fa-solid fa-circle-chevron-down\"></i>"
       }
+    },
+    "cru_stack_9UL9bE": {
+      "type": "cru-stack",
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width_unit": "px",
+        "bg_color": ""
+      }
     }
   },
   "order": [
-    "cru_page_header_7ke4jP"
+    "cru_page_header_7ke4jP",
+    "cru_stack_9UL9bE"
   ]
 }
