@@ -173,7 +173,7 @@
         "font_color": "#000000",
         "font-weight": "400",
         "products_per_page": 4,
-        "product_collection": "",
+        "product_collection": "frontpage",
         "show_quantity_selector": true,
         "show_view_all_button": true,
         "view_all_button_text": "WINE THIS WAY",
