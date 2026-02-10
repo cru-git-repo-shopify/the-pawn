@@ -7,7 +7,14 @@
 .stack_{{ section.id }} .stack_inner{
   width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }};
   margin: 0 auto;
+  {% if section.settings.background_img %}
+    background-image: url({{ section.settings.background_img | img_url: '1920x1080' }});
+  {% endif %}
+  {% if section.settings.background_type == "parallax" %}
+    background-attachment: fixed;
+  {%  endif %}
 }
+
 </style>
 
 <div id="{{ section.settings.id }}" class="stack {{ section.settings.class }} stack_{{ section.id }}" style="background-color: {{ section.settings.bg_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
