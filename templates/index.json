@@ -180,16 +180,17 @@
         "view_all_button_url": "shopify://collections/all",
         "padding_top_bottom": 15,
         "padding_left_right": 29,
-        "bg_color": "",
+        "bg_color": "#000000",
         "btn_font_size": 16,
         "font_weight": "400",
-        "text_color": "#000000",
-        "border_color": "",
+        "text_color": "#ffffff",
+        "border_color": "#000000",
+        "border_width": 1,
         "border_style": "solid",
         "alignment": "center",
-        "hover_bg_color": "",
-        "hover_text_color": "",
-        "hover_border_color": ""
+        "hover_bg_color": "#ffffff",
+        "hover_text_color": "#000000",
+        "hover_border_color": "#000000"
       }
     }
   },
