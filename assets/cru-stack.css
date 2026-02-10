@@ -113,6 +113,7 @@ p.page_title_text {
 
 .button_col a.button {
     text-decoration: none;
+    text-transform: none;
 }
 
 @media only screen and (max-width: 781px){
