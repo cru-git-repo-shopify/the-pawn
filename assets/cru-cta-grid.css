@@ -49,6 +49,7 @@ img.cta-background {
     bottom: 0;
     background-color: #000;
     padding: 15px;
+    display: none;
 }
 
 .cta-overlay * {
