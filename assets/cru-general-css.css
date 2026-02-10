@@ -1470,6 +1470,12 @@ p.weather_txt {
     left: 48%;
 }
 
+.cta-overlay p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
