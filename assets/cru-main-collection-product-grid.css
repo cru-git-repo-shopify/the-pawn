@@ -19,6 +19,7 @@ p.product-title {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: #000;
 }
 
 p.product-price {
