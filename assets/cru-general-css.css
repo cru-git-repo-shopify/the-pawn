@@ -861,7 +861,7 @@ button.add-to-cart-button {
 
 a.product_image {
     display: block;
-    background-color: #EEEEEE !important;
+    /* background-color: #EEEEEE !important; */
     padding: 46px 24px 45px;
 }
 
