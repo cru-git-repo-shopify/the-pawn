@@ -135,6 +135,7 @@
             "font_weight": "100",
             "text_color": "",
             "border_color": "#ffffff",
+            "border_width": 1,
             "border_style": "solid",
             "alignment": "center",
             "hover_bg_color": "#000000",
