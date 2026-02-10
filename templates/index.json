@@ -226,18 +226,33 @@
             "class": "",
             "text": "300m above sea level",
             "text_align": "center",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "font_weight": "300",
             "font_size": 28,
             "txt_line_height": 28,
             "margin_top": 20
+          }
+        },
+        "textarea_b9rz6w": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "Langhorne Creek and the Adelaide Hills have enormous variation between the high daytime temperatures and a low night-time temperatures during the ripening period. This variation has an amazing effect on our grapes, producing high acid and a high sugar content, as the exposure to sunlight increases the ripening qualities, while the sudden drop in temperature at night preserves the balance of natural acids in the grape.",
+            "text_align": "center",
+            "text_color": "#ffffff",
+            "font_size": 18,
+            "font_weight": "300",
+            "margin_top": 70,
+            "margin_bottom": 0
           }
         }
       },
       "block_order": [
         "text_9mFWt9",
         "html_dQCMkL",
-        "text_EY8ibq"
+        "text_EY8ibq",
+        "textarea_b9rz6w"
       ],
       "name": "CRU Stack",
       "settings": {
