@@ -417,6 +417,28 @@ h1.page-header.text-left {
     margin-top: 50px;
 }
 
+.block-text.has_borders p:before, .block-text.has_borders p:after {
+    height: 6px;
+    content: '';
+    display: inline-block;
+    width: 190px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    vertical-align: middle;
+}
+
+.block-text.has_borders p:before{
+    margin-right: 35px;
+}
+.block-text.has_borders p:after{
+    margin-left: 35px;
+}
+
+.has_borders p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .header-content i.fa-solid.fa-circle-chevron-down {
     font-size: 45px;
     color: #fff;
