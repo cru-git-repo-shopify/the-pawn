@@ -24,7 +24,7 @@
       <div class="block-{{ block.type }} {{ block.settings.class }}" id="{{ block.settings.id }}">
           {% case block.type %}
           {% when 'text' %}
-              <p style="font-weight: {{ block.settings.font_weight }}; text-align: {{ block.settings.text_align }}; color: {{ block.settings.text_color }}; font-size: {{ block.settings.font_size }}px; margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px; margin-left: auto; margin-right: auto; max-width: {{ block.settings.txt_width }}px;">{{ block.settings.text }}</p>
+              <p style="font-weight: {{ block.settings.font_weight }}; text-align: {{ block.settings.text_align }}; color: {{ block.settings.text_color }}; font-size: {{ block.settings.font_size }}px; margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px; margin-left: auto; margin-right: auto; max-width: {{ block.settings.txt_width }}px; line-height: {{ block.settings.txt_line_height }}px;">{{ block.settings.text }}</p>
           {% when 'textarea' %}
               <p style="font-weight: {{ block.settings.font_weight }}; text-align: {{ block.settings.text_align }}; color: {{ block.settings.text_color }}; font-size: {{ block.settings.font_size }}px; margin-top: {{ block.settings.margin_top }}px; margin-bottom: {{ block.settings.margin_bottom }}px;">{{ block.settings.textarea | newline_to_br }}</p>
           {% when 'richtext' %}
