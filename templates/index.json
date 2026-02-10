@@ -101,6 +101,8 @@
         "max_width_unit": "px",
         "bg_color": "#ffffff",
         "background_type": "normal",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -157,6 +159,8 @@
         "bg_color": "",
         "background_img": "shopify://shop_images/BMAC7141-scaled.jpg",
         "background_type": "normal",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center",
         "padding_top": 130,
         "padding_bottom": 100
       }
@@ -264,6 +268,8 @@
         "bg_color": "",
         "background_img": "shopify://shop_images/Home_Row5_v2.jpg",
         "background_type": "parallax",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center",
         "padding_top": 100,
         "padding_bottom": 99
       }
@@ -362,6 +368,8 @@
         "bg_color": "",
         "background_img": "shopify://shop_images/PW230501-El-Desperado-Asset-Package-AI-Images-Pinot-Grigio-RESIZED-2-2.jpg",
         "background_type": "parallax",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center",
         "padding_top": 130,
         "padding_bottom": 100
       }
@@ -410,6 +418,8 @@
         "bg_color": "",
         "background_img": "shopify://shop_images/2020-12-09-10.43.38-scaled.jpg",
         "background_type": "parallax",
+        "bg_pos_y": "top",
+        "bg_pos_x": "center",
         "padding_top": 100,
         "padding_bottom": 100
       }
