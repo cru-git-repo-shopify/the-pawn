@@ -210,10 +210,19 @@
             "font_size": 55,
             "txt_line_height": 66
           }
+        },
+        "html_dQCMkL": {
+          "type": "html",
+          "settings": {
+            "html": "<div class=\"elavation_digits\">\n<div class=\"elavation_1\">\n<p>3535°11'07.0''S</p>\n</div>\n<div class=\"elavation_2\">\n<p>138°48'32.9''E°11'07</p>\n</div>\n</div>",
+            "id": "",
+            "class": ""
+          }
         }
       },
       "block_order": [
-        "text_9mFWt9"
+        "text_9mFWt9",
+        "html_dQCMkL"
       ],
       "name": "CRU Stack",
       "settings": {
