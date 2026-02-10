@@ -21,15 +21,16 @@
     {% if block.type == "cta_block" %}
       <div class="cta-block" style="background-color: {{ block.settings.background_color }};">
         <img src="{{ block.settings.background_image | img_url: 'original' }}" alt="{{ block.settings.title }}" class="cta-background" />
-          <div class="cta-overlay">
-            {% if block.settings.title != "" %}
-              <h2 style="font-weight: {{ section.settings.heading_font_weight }}; color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
+        <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_text }}</a>
+        <div class="cta-overlay">
+          {% if block.settings.title != "" %}
+            <h2 style="font-weight: {{ section.settings.heading_font_weight }}; color: {{ block.settings.title_color }}">{{ block.settings.title }}</h2>
+          {% endif %}
+            {% if block.settings.description != "" %}
+              <p style="font-size: {{ section.settings.description_size }}px; color: {{ block.settings.description_color }}">{{ block.settings.description }}</p>
             {% endif %}
-              {% if block.settings.description != "" %}
-                <p style="font-size: {{ section.settings.description_size }}px; color: {{ block.settings.description_color }}">{{ block.settings.description }}</p>
-              {% endif %}
-          </div>
-          <a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_text }}</a>
+        </div>
+          
       </div>
       {% else if block.type == "cta_product_block" %}
         <div id="{{ block.id }}" class="cta-block cta-product-block">
