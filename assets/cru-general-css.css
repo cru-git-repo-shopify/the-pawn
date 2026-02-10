@@ -412,6 +412,12 @@ h1.page-header.text-left {
     font-size: 24px;
 }
 
+.header-content i.fa-solid.fa-circle-chevron-down {
+    font-size: 50px;
+    color: #fff;
+    margin-top: 50px;
+}
+
 .article-header {
     max-width: 840px;
     padding-top: 234px;
