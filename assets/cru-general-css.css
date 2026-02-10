@@ -811,7 +811,6 @@ ul.footer-menu {
 p.product-title {
     text-align: center;
     margin-bottom: 0;
-    font-style: italic;
 }
 
 .ajax-add-to-cart {
@@ -906,10 +905,10 @@ a.view-all-button:hover {
     margin-bottom: 75px;
 }
 
-.cta-overlay {
+/* .cta-overlay {
     position: unset;
     padding: 50px;
-}
+} */
 
 .cru-cta-grid {
     padding: 0;
@@ -919,7 +918,7 @@ a.view-all-button:hover {
 
 .cta-block {
     width: 33.333%;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 
 img.cta-background {
@@ -1406,6 +1405,19 @@ p.weather_txt {
     display: none;
     opacity: 0;
     visibility: hidden;
+}
+
+.elavation_digits {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.elavation_digits p {
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    margin: 0;
 }
 
 @media only screen and (max-width: 1000px){
