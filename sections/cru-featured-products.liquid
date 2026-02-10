@@ -52,12 +52,8 @@
                     {% endif %}
                 
                     <a class="product_image" href="{{ product.url }}">
-                        <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="product-image ">
-                    </a>
-                    <div class="product-info">
-                        <p class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></p>
-                        <p class="product-price">{{ product.price | money }}</p>
-                        {% if product.available %}
+                      <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="product-image ">
+                      {% if product.available %}
                             <div class="ajax-add-to-cart" data-variant-id="{{ product.variants.first.id }}">
                                 <div class="quantity-wrapper {% if section.settings.show_quantity_selector == false%} hidden {% endif %}">
                                   <div class="quantity-wrapper-inner">
@@ -80,6 +76,10 @@
                             {% else %}
                             <p class="sold-out">Sold Out</p>
                         {% endif %}
+                     </a>
+                    <div class="product-info">
+                        <p class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></p>
+                        <p class="product-price">{{ product.price | money }}</p>
                     </div>
                 </div>
             {% endfor %}
