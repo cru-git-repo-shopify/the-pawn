@@ -365,6 +365,54 @@
         "padding_top": 130,
         "padding_bottom": 100
       }
+    },
+    "cru_stack_UNAr7H": {
+      "type": "cru-stack",
+      "blocks": {
+        "text_WeTKLB": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "KERMIT WAS WRONG…<br>IT’S EASY BEING GREEN",
+            "text_align": "center",
+            "text_color": "#ffffff",
+            "font_weight": "400",
+            "font_size": 55,
+            "txt_line_height": 66
+          }
+        },
+        "textarea_XHkbV4": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "txtarea_width": 790,
+            "textarea": "The vineyard utilises best practice environmentally sustainable principles and is a member of the Sustainable Winegrowing Australia Program.\n\nThe Sustainable Winegrowing Australia (SWA) program is the result of a series of initiatives that were developed with the objective to improve viticultural practices, fruit quality and financial viability across our family vineyards and growers in Langhorne Creek the Adelaide Hills regions.\n\nThe program was developed to maximise growers and regional overall sustainability, and aims to minimise environmental impacts. The data capture and reporting provides growers with the best management tool to demonstrate their performance against their regional peers and recognised best practice.\n\n“We believe that an integrated pest management system utilising naturally occurring biological systems is more sustainable to our land and our vines. Our family and growers are committed to maintaining organically and biologically sustainable vineyards for The Pawn” TK",
+            "textarea_style": "normal",
+            "text_align": "center",
+            "text_color": "#ffffff",
+            "font_size": 18,
+            "font_weight": "300",
+            "margin_top": 75
+          }
+        }
+      },
+      "block_order": [
+        "text_WeTKLB",
+        "textarea_XHkbV4"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width_unit": "px",
+        "bg_color": "",
+        "background_img": "shopify://shop_images/2020-12-09-10.43.38-scaled.jpg",
+        "background_type": "parallax",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
@@ -373,6 +421,7 @@
     "cru_stack_h3inHy",
     "cru_featured_products_zpmJjF",
     "cru_stack_zVdWKr",
-    "cru_stack_YKa94t"
+    "cru_stack_YKa94t",
+    "cru_stack_UNAr7H"
   ]
 }
