@@ -838,16 +838,19 @@ p.product-title {
 }
 
 button.add-to-cart-button {
-    width: fit-content!important;
+    width: fit-content !important;
     padding: 5px 0;
     text-transform: none;
     background: transparent;
     box-shadow: none;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     border: none;
-    border-bottom: 2px dotted #000;
-    font-size: 16px;
+    /* border-bottom: 2px dotted #000; */
+    font-size: 18px;
     font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 15px;
 }
 
 .featured.product-item:hover .ajax-add-to-cart, .featured.product-item:hover a.product_image:after {
