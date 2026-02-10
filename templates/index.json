@@ -57,6 +57,7 @@
         "richtext_ikMbYR": {
           "type": "richtext",
           "settings": {
+            "max_width": 685,
             "class": "",
             "richtext": "<h3>The Pawn is not driven by regal ambition, but a strong resolve to rescue unique grape varieties from becoming lost as blending tools in the corporate wine game.</h3><p>Owned and handcrafted by Viticulturalist and Winemaker Tom Keelan, his passionate moves have rebelled against the trend, realising the potential of alternative wine styles and varieties and allowing them to shine within the wine industry.</p><p>By staying small and hands-on, TK can continue his crusade to create uniquely handcrafted, artisinal wines from the cool climate of the Adelaide Hills & Langhorne Creek.</p>",
             "text_align": "center",
