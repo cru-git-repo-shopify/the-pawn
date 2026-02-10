@@ -73,6 +73,7 @@
             "label": "MORE STUFF THIS WAY",
             "id": "",
             "class": "",
+            "padding_top_bottom": 0,
             "padding_left_right": 29,
             "bg_color": "#000000",
             "font_size": 16,
