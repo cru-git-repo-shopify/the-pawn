@@ -270,6 +270,19 @@
     "cru_stack_YKa94t": {
       "type": "cru-stack",
       "blocks": {
+        "textarea_zQJBeh": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "Through the use of an artificial intelligence art tool designed to generate images from natural text, we carefully crafted detailed ‘prompts’ whereby the AI\ninterpreted the parameters and generated unique images reflective of each individual request.\nThis new technology is based on the principle of Generative Adversarial Networks (GANs), which are a type of neural network that can generate new data from scratch.\nThe prompting process is defined by a broad range of trained variables and functions which allows for a great degree of creative control, fine tuning and exploration when approached and managed in the right manner.\nThe emergence of these tools equipped me with a new approach to telling the El Desperado story in an unconventional, innovative and imaginative way that will appeal to younger tech-savvy drinkers looking for a distinctive talking point amongst friends, and the more mature drinker seeking an appealing package with a meaningful story.",
+            "text_align": "center",
+            "text_color": "#000000",
+            "font_size": 18,
+            "font_weight": "300",
+            "margin_top": 20
+          }
+        },
         "button_BabQzR": {
           "type": "button",
           "settings": {
@@ -295,6 +308,7 @@
         }
       },
       "block_order": [
+        "textarea_zQJBeh",
         "button_BabQzR"
       ],
       "name": "CRU Stack",
