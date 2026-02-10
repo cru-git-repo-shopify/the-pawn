@@ -1420,6 +1420,48 @@ p.weather_txt {
     margin: 0;
 }
 
+ @keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        -webkit-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+        transform: scale(1.25)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.cta-block a.btn {
+    background: url(https://cdn.shopify.com/s/files/1/0946/8605/2719/files/map-pin-1-white.png?v=1770697201);
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    border-radius: 9999px;
+    text-indent: -9999em;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
