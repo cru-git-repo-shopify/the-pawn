@@ -1234,6 +1234,10 @@ a.open-cart span, a.to_account span {
     margin: 0 auto;
 }
 
+.featured-product-container {
+    background-color: #fff;
+}
+
 .full_width .stack_inner {
     max-width: 100%!important;
     width: 100%!important;
