@@ -1461,10 +1461,14 @@ p.weather_txt {
     animation-iteration-count: infinite;
 }
 
-.cta-block a.btn:hover{
+.cta-block a.btn:hover, .cta-block a.btn:focus{
     background-color: none!important;
 }
 
+.cta-block:first-child a.btn {
+    top: 28%;
+    left: 48%;
+}
 
 @media only screen and (max-width: 1000px){
     .desktop {
