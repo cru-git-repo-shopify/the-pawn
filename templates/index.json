@@ -160,11 +160,31 @@
         "padding_top": 130,
         "padding_bottom": 100
       }
+    },
+    "cru_featured_products_zpmJjF": {
+      "type": "cru-featured-products",
+      "name": "CRU Featured Products",
+      "settings": {
+        "class": "",
+        "Heading": "FEATURED WINES",
+        "font_size": 55,
+        "font_color": "#000000",
+        "font-weight": "400",
+        "products_per_page": 4,
+        "product_collection": "",
+        "show_quantity_selector": true,
+        "show_view_all_button": true,
+        "view_all_button_text": "WINE THIS WAY",
+        "view_all_button_url": "shopify://collections/all",
+        "padding_top": 100,
+        "padding_bottom": 50
+      }
     }
   },
   "order": [
     "cru_page_header_7ke4jP",
     "cru_stack_9UL9bE",
-    "cru_stack_h3inHy"
+    "cru_stack_h3inHy",
+    "cru_featured_products_zpmJjF"
   ]
 }
