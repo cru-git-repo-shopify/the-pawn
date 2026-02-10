@@ -190,7 +190,8 @@
         "alignment": "center",
         "hover_bg_color": "#ffffff",
         "hover_text_color": "#000000",
-        "hover_border_color": "#000000"
+        "hover_border_color": "#000000",
+        "margin_top": 18
       }
     }
   },
