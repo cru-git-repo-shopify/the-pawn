@@ -121,10 +121,31 @@
             "margin_top": 131,
             "margin_bottom": 75
           }
+        },
+        "button_eACtrk": {
+          "type": "button",
+          "settings": {
+            "link": "#",
+            "label": "BUY WINE BUTTON - press anytime",
+            "id": "",
+            "class": "",
+            "padding_top_bottom": 15,
+            "padding_left_right": 29,
+            "bg_color": "#ffffff",
+            "font_weight": "100",
+            "text_color": "",
+            "border_color": "#ffffff",
+            "border_style": "solid",
+            "alignment": "center",
+            "hover_bg_color": "#000000",
+            "hover_text_color": "#ffffff",
+            "hover_border_color": "#000000"
+          }
         }
       },
       "block_order": [
-        "text_VCcYK4"
+        "text_VCcYK4",
+        "button_eACtrk"
       ],
       "name": "CRU Stack",
       "settings": {
