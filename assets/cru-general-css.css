@@ -1450,7 +1450,7 @@ p.weather_txt {
     width: 60px;
     height: 60px;
     padding: 0;
-    border: none;
+    border: none!important;
     border-radius: 9999px;
     text-indent: -9999em;
     -webkit-animation-name: pulse;
