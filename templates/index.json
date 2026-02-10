@@ -270,6 +270,18 @@
     "cru_stack_YKa94t": {
       "type": "cru-stack",
       "blocks": {
+        "textarea_XKL64g": {
+          "type": "textarea",
+          "settings": {
+            "id": "",
+            "class": "",
+            "textarea": "A bandit and his outlaw dog\nOn a vinous crusade\nBorn from the rugged hills.\nCrafted in the ancient Creek.\nInnovation defying the ordinary.\nA rebel with a cause.",
+            "text_align": "center",
+            "text_color": "#000000",
+            "font_size": 25,
+            "font_weight": "400"
+          }
+        },
         "text_H4BQYy": {
           "type": "text",
           "settings": {
@@ -320,6 +332,7 @@
         }
       },
       "block_order": [
+        "textarea_XKL64g",
         "text_H4BQYy",
         "textarea_zQJBeh",
         "button_BabQzR"
