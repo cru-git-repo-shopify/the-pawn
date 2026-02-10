@@ -1462,7 +1462,7 @@ p.weather_txt {
 }
 
 .cta-block a.btn:hover{
-    background: none!important;
+    background-color: none!important;
 }
 
 
