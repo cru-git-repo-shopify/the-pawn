@@ -34,7 +34,8 @@
         "subheading_margin_top": 40,
         "subheading_margin_bot": 0,
         "subheading_font_weight": "300",
-        "fix_content": true
+        "fix_content": true,
+        "scroll_down_btn": "<i class=\"fa-solid fa-circle-chevron-down\"></i>"
       }
     }
   },
