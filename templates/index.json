@@ -202,9 +202,10 @@
           "settings": {
             "id": "",
             "class": "",
+            "txt_width": 790,
             "text": "OUR HOME, OUR PLACE,OUR PATCH OF DIRT",
             "text_align": "center",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "font_weight": "400",
             "font_size": 55
           }
