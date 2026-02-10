@@ -23,7 +23,7 @@
         "background_type": "parallax",
         "image_content": "shopify://shop_images/center-logo2-e1698115868334-300x244.png",
         "background_overlay": "#ffffff",
-        "background_overlay_opacity": 0.3,
+        "background_overlay_opacity": 0.2,
         "heading": "",
         "font_size": 48,
         "font_color": "#000000",
