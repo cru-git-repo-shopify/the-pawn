@@ -20,7 +20,9 @@
       {% else %}
         {% if block.settings.type == 'single' %}
           <div class="image-column">
-            <img src="{{ block.settings.image_1 | img_url: 'original' }}" alt="{{ block.settings.image_alt }}">
+            {% if block.settings.image_1 %}
+              <img src="{{ block.settings.image_1 | img_url: 'original' }}" alt="{{ block.settings.image_alt }}">
+            {% endif %}
           </div>
         {% endif %}
         {% if block.settings.type == 'slider' %}
