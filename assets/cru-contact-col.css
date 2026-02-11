@@ -54,11 +54,12 @@ div#contact-section {
 .cru-contact-section h2.section-header {
     width: 100%;
     font-family: 'calibri', serif;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
     font-size: 45px;
     color: #000;
     line-height: 60px;
     font-weight: 300;
+    margin-top: 0;
 }
 
 .cru-contact-section p.content-txt {
