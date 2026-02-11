@@ -202,6 +202,12 @@
         "margin_bottom": 0,
         "is_reversed": true
       }
+    },
+    "1770779252ebb065a9": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
+      }
     }
   },
   "order": [
@@ -209,6 +215,7 @@
     "cru_page_header_ppdXTj",
     "cru_2_col_Rz4zXE",
     "cru_2_col_LFr4rX",
-    "cru_2_col_p94XFz"
+    "cru_2_col_p94XFz",
+    "1770779252ebb065a9"
   ]
 }
