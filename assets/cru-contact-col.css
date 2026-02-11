@@ -29,6 +29,20 @@ div#contact-section {
 
 .cru-contact-col input[type=submit] {
     margin: 0;
+    width: fit-content !important;
+    color: #fff;
+    font-family: 'Poppins' !important;
+    border-color: #000;
+    font-size: 20px;
+    height: 45px;
+    font-style: normal;
+    font-weight: 500;
+    background-color: #000;
+    letter-spacing: 0;
+    text-transform: none;
+    border-width: 2px;
+    border: 3px solid #000 !important;
+    padding: 0 23px;
 }
 
 .cru-contact-section h2.section-header {
