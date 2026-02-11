@@ -19,22 +19,29 @@
       "name": "CRU Page Header",
       "settings": {
         "class": "",
-        "desktop_height": 480,
+        "desktop_height": 380,
         "desktop_height_unit": "px",
-        "mobile_height": 480,
+        "mobile_height": 380,
         "mobile_height_unit": "px",
-        "desktop_background_image": "shopify://shop_images/IMG_2342.jpg",
-        "mobile_background_image": "shopify://shop_images/IMG_2342.jpg",
+        "desktop_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "mobile_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "background_type": "normal",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center",
         "background_overlay": "#000000",
         "background_overlay_opacity": 0.1,
-        "heading": "Contact Us",
-        "font_size": 48,
+        "heading": "CONTACT ME",
+        "font_size": 47,
         "font_color": "#ffffff",
-        "font-weight": "400",
+        "font-weight": "600",
         "subheading": "",
         "subheading_size": 15,
         "subheading_color": "#ffffff",
-        "subheading_font_weight": "400"
+        "subheading_margin_top": 0,
+        "subheading_margin_bot": 0,
+        "subheading_font_weight": "400",
+        "fix_content": false,
+        "scroll_down_btn": ""
       }
     },
     "cru_stack_KNTp7C": {
@@ -46,6 +53,7 @@
             "id": "",
             "class": "",
             "textarea": "Open daily from 10.30 am to 4.30 pm and often later on weekends.\n\n(closed Good Friday, Christmas Day and Boxing Day)\n\nGift Vouchers available on request.\n\n(03) 6257 8298\n\nwine@miltonvineyard.com.au",
+            "textarea_style": "normal",
             "text_align": "center",
             "text_color": "",
             "font_weight": "100",
@@ -62,7 +70,10 @@
         "class": "",
         "max_width": 90,
         "max_width_unit": "%",
-        "bg_color": ""
+        "bg_color": "",
+        "background_type": "normal",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center"
       }
     },
     "cru_contact_col_YDBGze": {
@@ -93,7 +104,6 @@
         "large_img_ggYgEy": {
           "type": "largeImg",
           "settings": {
-            "image": "shopify://shop_images/IMG_2858adj.jpg",
             "enable_max_width_image": false,
             "custom_width_image": 1170,
             "border_radius": 0,
