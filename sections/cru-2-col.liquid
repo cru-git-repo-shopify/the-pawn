@@ -1,7 +1,9 @@
 <style>
   #{{ section.id }}{
     background-color: {{ section.settings.column_bg_color }};
-    background-image: url({{ section.settings.bg_image | img_url: '1920x1080' }});
+    {% if section.settings.bg_image %}
+      background-image: url({{ section.settings.bg_image | img_url: '1920x1080' }});
+    {% endif %}
     max-width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }};
     margin: {{ section.settings.margin_top }}px auto {{ section.settings.margin_bottom }}px;
   }
