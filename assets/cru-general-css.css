@@ -1496,6 +1496,36 @@ p.weather_txt {
     text-align: center;
 }
 
+h2.cru-pawn-distributors__title {
+    text-align: center;
+    margin: 30px;
+}
+
+article.cru-pawn-distributors__card * {
+    text-align: center;
+}
+
+.cru-pawn-distributors__state {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.cru-pawn-distributors__store {
+    margin: 20px 0;
+    line-height: 1.5em;
+    font-size: 18px;
+    font-weight: 300;
+    color: #993366;
+}
+
+.cru-pawn-distributors__contact {
+    line-height: 1.5em;
+    font-size: 18px;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
