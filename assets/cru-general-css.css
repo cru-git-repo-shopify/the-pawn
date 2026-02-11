@@ -1526,6 +1526,41 @@ article.cru-pawn-distributors__card * {
     font-weight: 300;
 }
 
+.contact_social ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.contact_social a {
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: #000;
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    display: inline-block;
+    font-size: 15px;
+    padding: 20px 0 20px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    line-height: 1;
+    width: 60px;
+}
+
+.contact_social a i {
+    font-size: inherit;
+    line-height: 1;
+}
+
+.contact_social a:hover {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
