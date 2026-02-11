@@ -46,7 +46,7 @@
     "cru_2_col_Rz4zXE": {
       "type": "cru-2-col",
       "blocks": {
-        "image_column_TNwWWz": {
+        "image_column_LATbae": {
           "type": "image_column",
           "settings": {
             "type": "single",
@@ -79,7 +79,7 @@
         }
       },
       "block_order": [
-        "image_column_TNwWWz",
+        "image_column_LATbae",
         "text_column_p9GEMj"
       ],
       "name": "CRU 2 Column",
