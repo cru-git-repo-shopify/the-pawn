@@ -26,7 +26,7 @@
         "desktop_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
         "mobile_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
         "background_type": "normal",
-        "bg_pos_y": "center",
+        "bg_pos_y": "top",
         "bg_pos_x": "center",
         "background_overlay": "#000000",
         "background_overlay_opacity": 0.1,
