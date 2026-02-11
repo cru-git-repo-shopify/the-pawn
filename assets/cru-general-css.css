@@ -1125,10 +1125,18 @@ a.open_submenu i {
     color: #000;
 }
 
+.header-container.left_logo_right_menu.header--home a.to_account, a.open-cart {
+    color: #000;
+}
+
 .header-container.left_logo_right_menu {
     width: 100%;
     padding: 10px 45px;
     background-color: #000;
+}
+
+a.to_account, a.open-cart {
+    color: #fff;
 }
 
 .left_logo_right_menu .logo {
