@@ -140,8 +140,8 @@
         "id": "",
         "column_bg_color": "rgba(0,0,0,0)",
         "bg_image": "shopify://shop_images/AboutUs_Row3_V2.jpg",
-        "max_width": 1030,
-        "max_width_unit": "px",
+        "max_width": 100,
+        "max_width_unit": "%",
         "margin_top": 100,
         "margin_bottom": 0,
         "is_reversed": false
@@ -192,8 +192,8 @@
         "id": "",
         "column_bg_color": "rgba(0,0,0,0)",
         "bg_image": "shopify://shop_images/AboutUs_Row4_V2.jpg",
-        "max_width": 1030,
-        "max_width_unit": "px",
+        "max_width": 100,
+        "max_width_unit": "%",
         "margin_top": 100,
         "margin_bottom": 100,
         "is_reversed": true
