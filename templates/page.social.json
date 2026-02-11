@@ -44,6 +44,38 @@
         "scroll_down_btn": ""
       }
     },
+    "cru_stack_TexLkh": {
+      "type": "cru-stack",
+      "blocks": {
+        "text_CEDjkD": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "@thepawnwineco",
+            "text_align": "center",
+            "text_color": "#000000",
+            "font_weight": "800",
+            "font_size": 30,
+            "margin_top": 75,
+            "margin_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "text_CEDjkD"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width_unit": "px",
+        "bg_color": "",
+        "background_type": "normal",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center"
+      }
+    },
     "17707792721c209e31": {
       "type": "apps",
       "blocks": {
@@ -58,7 +90,7 @@
             "instafeed_margin_bottom": 0,
             "instafeed_margin_sides": 0,
             "show_instagram_link": true,
-            "link_alignment": "left",
+            "link_alignment": "center",
             "link_color": "#000000",
             "background_color": "",
             "feed_id": "",
@@ -77,6 +109,7 @@
   "order": [
     "main",
     "cru_page_header_ppdXTj",
+    "cru_stack_TexLkh",
     "17707792721c209e31"
   ]
 }
