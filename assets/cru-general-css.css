@@ -1113,6 +1113,18 @@ a.open_submenu i {
 }
 
 /* header */
+.header-container.left_logo_right_menu.header--home {
+    background-color: transparent;
+}
+
+.header-container.left_logo_right_menu.header--home a.header-menu__link {
+    color: #000!important;
+}
+
+.header-container.left_logo_right_menu.header--home a.social_url {
+    color: #000;
+}
+
 .header-container.left_logo_right_menu {
     width: 100%;
     padding: 10px 45px;
