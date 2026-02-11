@@ -1380,9 +1380,14 @@ form#contact_form * {
     width: 100%;
 }
 
+.contact-form input:not([type=submit]), .contact-form textarea {
+    border: 2px solid #000;
+}
+
 form#contact_form .first-name, form#contact_form .last-name {
     width: 100%;
     display: inline-block;
+    margin-bottom: 0;
 }
 
 #contact_bot img, #contact_bot .img-box.img-box--mobile {
