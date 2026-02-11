@@ -8,7 +8,7 @@
     text-align: center;
     min-height: {{ section.settings.desktop_height }}{{ section.settings.desktop_height_unit }};
     background-size: cover;
-    background-position: center;
+    background-position: {{ section.settings.bg_pos_x }} {{ section.settings.bg_pos_y }};
     background-image: url({{ section.settings.desktop_background_image | img_url: '1920x1080' }});
     background-size: cover;
     background-position: center;
@@ -152,6 +152,46 @@
             "label": "Parallax"
           }
         ]
+    },
+    {
+      "type": "select",
+      "id": "bg_pos_y",
+      "label": "Background Postion (y)",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "bg_pos_x",
+      "label": "Background Postion (x)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
     },
     {
       "type": "image_picker",
