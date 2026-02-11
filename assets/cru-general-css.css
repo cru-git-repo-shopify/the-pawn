@@ -1381,7 +1381,7 @@ form#contact_form * {
 }
 
 form#contact_form .first-name, form#contact_form .last-name {
-    width: calc(50% - 7px);
+    width: 100%;
     display: inline-block;
 }
 
