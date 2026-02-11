@@ -60,10 +60,24 @@
             "margin_top": 75,
             "margin_bottom": 20
           }
+        },
+        "text_qJHBUH": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Check out our latest social activities…",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "300",
+            "font_size": 18,
+            "margin_bottom": 25
+          }
         }
       },
       "block_order": [
-        "text_CEDjkD"
+        "text_CEDjkD",
+        "text_qJHBUH"
       ],
       "name": "CRU Stack",
       "settings": {
