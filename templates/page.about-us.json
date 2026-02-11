@@ -19,22 +19,26 @@
       "name": "CRU Page Header",
       "settings": {
         "class": "",
-        "desktop_height": 480,
+        "desktop_height": 380,
         "desktop_height_unit": "px",
-        "mobile_height": 480,
+        "mobile_height": 380,
         "mobile_height_unit": "px",
-        "desktop_background_image": "shopify://shop_images/IMG_2910adj-scaled.jpg",
-        "mobile_background_image": "shopify://shop_images/IMG_2910adj-scaled.jpg",
+        "desktop_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "background_type": "normal",
         "background_overlay": "#000000",
         "background_overlay_opacity": 0,
-        "heading": "About Milton Vineyard",
+        "heading": "About Us",
         "font_size": 37,
         "font_color": "#ffffff",
         "font-weight": "300",
-        "subheading": "Milton Vineyard was first farmed in 1826 initially for extra fine Tasmanian wool but is now producing fine cool climate wines.",
+        "subheading": "",
         "subheading_size": 16,
         "subheading_color": "#ffffff",
-        "subheading_font_weight": "300"
+        "subheading_margin_top": 0,
+        "subheading_margin_bot": 0,
+        "subheading_font_weight": "300",
+        "fix_content": false,
+        "scroll_down_btn": ""
       }
     },
     "cru_2_col_Rz4zXE": {
@@ -44,7 +48,6 @@
           "type": "image_column",
           "settings": {
             "type": "single",
-            "image_1": "shopify://shop_images/Milton-Vineyard_TIFF-404183.jpg",
             "image_alt": "Image"
           }
         },
@@ -96,7 +99,6 @@
           "type": "image_column",
           "settings": {
             "type": "single",
-            "image_1": "shopify://shop_images/Milton-Vineyard_TIFF-404183.jpg",
             "image_alt": "Image"
           }
         },
@@ -148,7 +150,6 @@
           "type": "image_column",
           "settings": {
             "type": "single",
-            "image_1": "shopify://shop_images/Pinot-Noir-Harvest-003-IMG_7941-jpeg-sat-contrast-up-scaled.jpg",
             "image_alt": "Image"
           }
         },
