@@ -199,22 +199,22 @@
       "type": "cru-contact-col",
       "name": "CRU Contact Section",
       "settings": {
-        "heading": "Do you have any questions?",
-        "description": "If so, please enter your details below and we’ll do our best to assist.",
+        "heading": "Send me a message",
+        "description": "",
         "section_id": "contact-section",
         "section_class": "cru-contact-col",
         "show_first_name": true,
-        "first_name_placeholder": "First Name",
-        "show_last_name": true,
+        "first_name_placeholder": "Full Name",
+        "show_last_name": false,
         "last_name_placeholder": "Last Name",
         "show_email": true,
         "show_phone": false,
         "phone_placeholder": "Enter your phone number",
         "email_placeholder": "Email",
         "show_message": true,
-        "message_placeholder": "Please leave us a detailed message here.",
+        "message_placeholder": "Write your message here",
         "show_submit_button": true,
-        "submit_button_text": "Submit"
+        "submit_button_text": "Contact Us"
       }
     },
     "177078465538562bd9": {
