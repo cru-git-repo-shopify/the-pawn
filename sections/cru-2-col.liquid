@@ -6,6 +6,11 @@
       Background-size: cover;
       background-position: center;
     {% endif %}
+    {% if section.settings.background_type == "parallax" %}
+      background-attachment: fixed;
+      background-size: cover;
+      overflow: hidden;
+    {%  endif %}
     max-width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }};
     margin: {{ section.settings.margin_top }}px auto {{ section.settings.margin_bottom }}px;
   }
@@ -89,6 +94,21 @@
       "type": "image_picker",
       "id": "bg_image",
       "label": "Background Image"
+    },
+    {
+        "type": "select",
+        "id": "background_type",
+        "label": "Background Type",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "parallax",
+            "label": "Parallax"
+          }
+        ]
     },
     {
         "type": "number",
