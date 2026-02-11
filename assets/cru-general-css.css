@@ -1139,7 +1139,7 @@ a.open_submenu i {
 }
 
 li.menu-item.menu-item-type-post_type.header-menu__item a {
-    color: #000 !important;
+    color: #fff !important;
     font-size: 14px;
     padding: 0;
     font-weight: 400;
