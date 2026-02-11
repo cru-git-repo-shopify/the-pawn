@@ -3,6 +3,8 @@
     background-color: {{ section.settings.column_bg_color }};
     {% if section.settings.bg_image %}
       background-image: url({{ section.settings.bg_image | img_url: '1920x1080' }});
+      Background-size: cover;
+      background-position: center;
     {% endif %}
     max-width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }};
     margin: {{ section.settings.margin_top }}px auto {{ section.settings.margin_bottom }}px;
