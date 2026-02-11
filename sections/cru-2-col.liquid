@@ -1,7 +1,7 @@
 {%  if section.settings.is_reversed %}
-    <div class="cru-2-col col-reversed {{ section.settings.class }}" id="{{ section.settings.id }}" style="background-color: {{ section.settings.column_bg_color }}; background-image: url({{ section.settings.bg_image }}); max-width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }}; margin: {{ section.settings.margin_top }}px auto {{ section.settings.margin_bottom }}px;">
+    <div class="cru-2-col col-reversed {{ section.settings.class }}" id="{{ section.settings.id }}" style="background-color: {{ section.settings.column_bg_color }}; background-image: url({{ section.settings.bg_image | image_url: '1920x1080' }}); max-width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }}; margin: {{ section.settings.margin_top }}px auto {{ section.settings.margin_bottom }}px;">
 {% else %}
-    <div class="cru-2-col {{ section.settings.class }}" id="{{ section.settings.id }}" style="background-color: {{ section.settings.column_bg_color }}; background-image: url({{ section.settings.bg_image }}); max-width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }}; margin: {{ section.settings.margin_top }}px auto {{ section.settings.margin_bottom }}px;">
+    <div class="cru-2-col {{ section.settings.class }}" id="{{ section.settings.id }}" style="background-color: {{ section.settings.column_bg_color }}; background-image: url({{ section.settings.bg_image | image_url: '1920x1080' }}); max-width: {{ section.settings.max_width }}{{ section.settings.max_width_unit }}; margin: {{ section.settings.margin_top }}px auto {{ section.settings.margin_bottom }}px;">
 {% endif %}
     {% for block in section.blocks %}
       {% if block.type == 'text_column' %}
