@@ -44,171 +44,27 @@
         "scroll_down_btn": ""
       }
     },
-    "cru_2_col_Rz4zXE": {
-      "type": "cru-2-col",
+    "1770778689023b3d55": {
+      "type": "apps",
       "blocks": {
-        "image_column_LATbae": {
-          "type": "image_column",
+        "gsc_instagram_feed_instafeed_jcRpEB": {
+          "type": "shopify://apps/gsc-instagram-feed/blocks/instafeed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
           "settings": {
-            "type": "single",
-            "image_alt": "Image"
-          }
-        },
-        "text_column_p9GEMj": {
-          "type": "text_column",
-          "settings": {
-            "heading": "THE STORY SO FAR,<br>FAR AWAY…",
-            "heading_font_size": 40,
-            "heading_color": "#000000",
-            "column_content": "<p>The Pawn had its beginning in 2002 out of necessity when vignerons and winemakers Tom Keelan and his wife Rebecca Willson had a small parcel of fruit deemed ‘not good enough’ by a particular nameless, soulless wine monolith. They had now become mere Pawns in the global wine game, doomed to be played and moved around, and ultimately sacrificed.</p><p>So the 2 rolled up their sleeves and decided to show the corporate colossals what can be made from the right varieties grown in the right location. They set out to make small hand selected parcels of wine from alternative varieties grown in the Adelaide Hills and Langhorne Creek. They had seen that alternative grape varieties were being used as blending tools by the bigger corporate wine companies and that the potential of “old world” wine styles was not being allowed to shine.</p><p>Like Pawns, these varieties were ignored or sacrificed by the dominating wine corporates and not being used as stand alone artisinal Adelaide Hills and Langhorne Creek wines of provenance.</p><p>This first vintage of The Pawn received so many accolades, that it only seemed fair to start the crusade and take on the global wine giants, stand up for the little guy and  rebel against the corporate players of the wine industry.</p><p>Tom has set out to identify other idyllic viticultural sites and hand selected parcels of fruit within the Adelaide Hills and Langhorne Creek to produce wines that are not only a bit unconventional, but enjoyable to drink, incredibly food friendly, and made in a style that reflects their true origins – the ultimate in hand crafted Artisinal wine.</p>",
-            "content_font_size": 18,
-            "content_color": "#000000",
-            "show_button": false,
-            "button_link": "https://example.com",
-            "button_text": "Learn More",
-            "btn_font_size": 16,
-            "button_bg_color": "rgba(0,0,0,0)",
-            "border_type": "solid",
-            "btn_border_width": 1,
-            "button_border_radius": 0,
-            "button_text_color": "#000000",
-            "button_border_color": "#000000",
-            "button_hover_bg_color": "rgba(0,0,0,0)",
-            "button_hover_text_color": "#ffffff",
-            "button_hover_border_color": "#000000"
+            "widget_id": "GSC-pfcLrQARaqPySxV"
           }
         }
       },
       "block_order": [
-        "image_column_LATbae",
-        "text_column_p9GEMj"
+        "gsc_instagram_feed_instafeed_jcRpEB"
       ],
-      "name": "CRU 2 Column",
       "settings": {
-        "class": "",
-        "id": "",
-        "column_bg_color": "rgba(0,0,0,0)",
-        "bg_image": "shopify://shop_images/AboutUs_Row2_V2.jpg",
-        "background_type": "parallax",
-        "max_width": 100,
-        "max_width_unit": "%",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "is_reversed": true
-      }
-    },
-    "cru_2_col_LFr4rX": {
-      "type": "cru-2-col",
-      "blocks": {
-        "image_column_EHBbP7": {
-          "type": "image_column",
-          "settings": {
-            "type": "single",
-            "image_alt": "Image"
-          }
-        },
-        "text_column_4VEnCR": {
-          "type": "text_column",
-          "settings": {
-            "heading": "THE MISSION STATEMENT THAT HANGS ABOVE MY FRONT DOOR",
-            "heading_font_size": 40,
-            "heading_color": "#ffffff",
-            "column_content": "<p><em><strong>With the ever increasing centralisation of the wine industry, I, like you, could be forgiven for thinking we were all just pawns in the big wine company game. The release of the Pawn is a manifestation of my resolve to amend this situation by releasing wines hand crafted from small parcels of premium fruit from the coolest regions of Langhorne Creek and the Adelaide Hills.</strong></em></p><p>With this philosophy as my goal, I have embarked on a crusade to produce Artisinal, hand crafted wines from varieties such as Tempranillo, Sangiovese, Fiano, Gruner Veltliner, Pinot Grigio, Shiraz, Montepulciano and Sauvignon Blanc.</p><p>Wines created to be consumed young and fresh and with food as their ultimate cohort.</p><p>TK</p>",
-            "content_font_size": 18,
-            "content_color": "#ffffff",
-            "show_button": false,
-            "button_link": "https://example.com",
-            "button_text": "Learn More",
-            "btn_font_size": 16,
-            "button_bg_color": "rgba(0,0,0,0)",
-            "border_type": "solid",
-            "btn_border_width": 1,
-            "button_border_radius": 0,
-            "button_text_color": "#000000",
-            "button_border_color": "#000000",
-            "button_hover_bg_color": "rgba(0,0,0,0)",
-            "button_hover_text_color": "#ffffff",
-            "button_hover_border_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_column_EHBbP7",
-        "text_column_4VEnCR"
-      ],
-      "name": "CRU 2 Column",
-      "settings": {
-        "class": "",
-        "id": "",
-        "column_bg_color": "rgba(0,0,0,0)",
-        "bg_image": "shopify://shop_images/AboutUs_Row3_V2.jpg",
-        "background_type": "parallax",
-        "max_width": 100,
-        "max_width_unit": "%",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "is_reversed": false
-      }
-    },
-    "cru_2_col_p94XFz": {
-      "type": "cru-2-col",
-      "blocks": {
-        "image_column_9YKqAC": {
-          "type": "image_column",
-          "settings": {
-            "type": "single",
-            "image_alt": "Image"
-          }
-        },
-        "text_column_cbRtyL": {
-          "type": "text_column",
-          "settings": {
-            "heading": "The Pawn<br>Blending in",
-            "heading_font_size": 40,
-            "heading_color": "#000000",
-            "column_content": "<p>Blending In – It’s about being able to see the grapes from the vines.</p><p>Blending is a term more commonly associated with the winery. But the art of blending is just as at home in the vineyard. Once vintage is completed and the resultant wines begin their journey to your palate in the vineyard I will look back over the events of the season past.</p><p>What I turn my attention to most is the outcome of all the inputs that go into producing fruit worthy of inclusion in a Pawn wine. These inputs are as carefully considered as those in the winery.</p><p>They are the result of not just well made plans and good timing but also the bringing together of years of grapegrowing experience, a fair measure of local knowledge and due consideration to daily observations of vineyard occurrences.</p><p>These observations range from the close attention paid to the vineyards while I’m on my morning constitutional around the ‘block’ with Holly Dog, to the array of scientific data gathered by the assortment of hi-tech monitoring ‘gadgets’ and the meticulous measurements taken during the season.</p><p>From all this and the discussions that follow come the decisions on what needs to go into the vineyard so that at the end of the season the bunches of grapes that arrive at the winery are assured of a place in a bottle of The Pawn.</p><p>To put it all in a grape skin (the vinous equivalent of the ‘in a nutshell’ cliché), if I get the blend right in vineyard and Mother Nature doesn’t bowl me too many bouncers, then we can all rest assured that the quality we expect in every bottle of Pawn is there waiting for us under every cork or screw.</p><p>At Pawn HQ, I had some definite highlights during vintage 2024, one in particular was the white varieties, with the Fiano and Pinot Grigio all being harvested during the cool nights and requiring no additions in the winery – gorgeous balance of acid, sugar and flavour which will see some amaze-ball wines for spring release.</p><p>TK</p>",
-            "content_font_size": 18,
-            "content_color": "#000000",
-            "show_button": false,
-            "button_link": "https://example.com",
-            "button_text": "Learn More",
-            "btn_font_size": 16,
-            "button_bg_color": "rgba(0,0,0,0)",
-            "border_type": "solid",
-            "btn_border_width": 1,
-            "button_border_radius": 0,
-            "button_text_color": "#000000",
-            "button_border_color": "#000000",
-            "button_hover_bg_color": "rgba(0,0,0,0)",
-            "button_hover_text_color": "#ffffff",
-            "button_hover_border_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_column_9YKqAC",
-        "text_column_cbRtyL"
-      ],
-      "name": "CRU 2 Column",
-      "settings": {
-        "class": "",
-        "id": "",
-        "column_bg_color": "rgba(0,0,0,0)",
-        "bg_image": "shopify://shop_images/AboutUs_Row4_V2.jpg",
-        "background_type": "parallax",
-        "max_width": 100,
-        "max_width_unit": "%",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "is_reversed": true
+        "include_margins": false
       }
     }
   },
   "order": [
     "main",
     "cru_page_header_ppdXTj",
-    "cru_2_col_Rz4zXE",
-    "cru_2_col_LFr4rX",
-    "cru_2_col_p94XFz"
+    "1770778689023b3d55"
   ]
 }
