@@ -1378,6 +1378,7 @@ form#contact_form * {
     padding: 0;
     max-width: 1300px;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .contact-form input:not([type=submit]), .contact-form textarea {
