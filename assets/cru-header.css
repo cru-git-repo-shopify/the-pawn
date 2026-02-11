@@ -275,7 +275,7 @@ a.login_right {
 }
 
 .scrolled .header-container.left_logo_right_menu {
-    background: #000;
+    background: #000!important;
 }
 
 #header_cart_info a {
