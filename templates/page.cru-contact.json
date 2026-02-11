@@ -101,6 +101,39 @@
     "177078465538562bd9": {
       "type": "_blocks",
       "settings": {}
+    },
+    "cru_pawn_distributors_jrjrr3": {
+      "type": "cru-pawn-distributors",
+      "blocks": {
+        "distributor_P9wnUF": {
+          "type": "distributor",
+          "settings": {
+            "state": "SA",
+            "store": "Mezzanine Fine Wines",
+            "contact_person": "Nick Kay 0419 026 620",
+            "content": "<p>1300 555 821</p><p>customerservicesa@joval.com.au<br/>www.mezzaninewine.com.au<br/>www.winesource.com.au</p>"
+          }
+        },
+        "distributor_fYYi7q": {
+          "type": "distributor",
+          "settings": {
+            "state": "",
+            "store": "",
+            "contact_person": "",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "distributor_P9wnUF",
+        "distributor_fYYi7q"
+      ],
+      "name": "CRU Pawn Distributors",
+      "settings": {
+        "title": "Distributors",
+        "title_size": 35,
+        "title-font-weight": "300"
+      }
     }
   },
   "order": [
@@ -108,6 +141,7 @@
     "cru_page_header_EYmWRx",
     "cru_stack_KNTp7C",
     "cru_contact_col_YDBGze",
-    "177078465538562bd9"
+    "177078465538562bd9",
+    "cru_pawn_distributors_jrjrr3"
   ]
 }
