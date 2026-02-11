@@ -583,7 +583,7 @@ i.fa-solid.fa-user {
 }
 
 .scrolled .header_right_area a {
-    color: #fff;
+    color: #fff!important;
 }
 
 @media only screen and (max-width: 1000px){
