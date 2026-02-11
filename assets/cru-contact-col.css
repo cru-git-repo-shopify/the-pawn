@@ -45,6 +45,11 @@ div#contact-section {
     padding: 0 23px;
 }
 
+.cru-contact-col input[type=submit]:hover{
+    background-color: #fff;
+    color: #000;
+}
+
 .cru-contact-section h2.section-header {
     width: 100%;
     font-family: 'calibri', serif;
