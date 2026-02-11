@@ -1,6 +1,6 @@
 <div id="{{ section.settings.section_id }}" class="{{ section.settings.section_class }} cru-contact-section {% if section.settings.right_background_image != blank %} with-image{% endif %}">
     <div class="form_column">
-        {% if section.settings.heading != blank and section.settings.description != blank %}
+        {% if section.settings.heading != blank or section.settings.description != blank %}
             <div class="newsletter-heading-content">
                 {% if section.settings.heading != blank %}
                     <h2 class="section-header">{{ section.settings.heading }}</h2>
