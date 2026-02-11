@@ -1,5 +1,5 @@
 {% if section.settings.menu_style == 'LHCL' %}
-    <div class="header-container logo_centered_left_hamb">
+    <div class="header-container logo_centered_left_hamb {% if request.page_type == 'index' %} header--home{% endif %}">
     <div class="logo">
         <a href="{{ routes.root_url }}">
             {%  if section.settings.svg_logo %}
@@ -42,7 +42,7 @@
     </div>
     </div>
 {% elsif section.settings.menu_style == 'CLCM' %}
-    <div class="header-container centered_logo_centered_menu">
+    <div class="header-container centered_logo_centered_menu {% if request.page_type == 'index' %}header--home{% endif %}">
         {% if section.settings.show_cart_icon or section.settings.show_login_icon %}
             {% comment %} <div class="upper_links">
                 <div class="upper_links_inner">
@@ -146,7 +146,7 @@
         </div>
     </div>
 {% elsif section.settings.menu_style == 'LLRM' %}
-    <div class="header-container left_logo_right_menu">
+    <div class="header-container left_logo_right_menu {% if request.page_type == 'index' %} header--home{% endif %}">
     <div class="logo">
         <a href="{{ routes.root_url }}">
             {%  if section.settings.svg_logo != blank %}
