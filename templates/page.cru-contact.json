@@ -76,32 +76,6 @@
         "bg_pos_x": "center"
       }
     },
-    "cru_contact_col_YDBGze": {
-      "type": "cru-contact-col",
-      "name": "CRU Contact Section",
-      "settings": {
-        "heading": "Do you have any questions?",
-        "description": "If so, please enter your details below and we’ll do our best to assist.",
-        "section_id": "contact-section",
-        "section_class": "cru-contact-col",
-        "show_first_name": true,
-        "first_name_placeholder": "First Name",
-        "show_last_name": true,
-        "last_name_placeholder": "Last Name",
-        "show_email": true,
-        "show_phone": false,
-        "phone_placeholder": "Enter your phone number",
-        "email_placeholder": "Email",
-        "show_message": true,
-        "message_placeholder": "Please leave us a detailed message here.",
-        "show_submit_button": true,
-        "submit_button_text": "Submit"
-      }
-    },
-    "177078465538562bd9": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "cru_pawn_distributors_jrjrr3": {
       "type": "cru-pawn-distributors",
       "blocks": {
@@ -190,10 +164,37 @@
       ],
       "name": "CRU Pawn Distributors",
       "settings": {
+        "max_width": 1300,
         "title": "Distributors",
         "title_size": 35,
         "title-font-weight": "300"
       }
+    },
+    "cru_contact_col_YDBGze": {
+      "type": "cru-contact-col",
+      "name": "CRU Contact Section",
+      "settings": {
+        "heading": "Do you have any questions?",
+        "description": "If so, please enter your details below and we’ll do our best to assist.",
+        "section_id": "contact-section",
+        "section_class": "cru-contact-col",
+        "show_first_name": true,
+        "first_name_placeholder": "First Name",
+        "show_last_name": true,
+        "last_name_placeholder": "Last Name",
+        "show_email": true,
+        "show_phone": false,
+        "phone_placeholder": "Enter your phone number",
+        "email_placeholder": "Email",
+        "show_message": true,
+        "message_placeholder": "Please leave us a detailed message here.",
+        "show_submit_button": true,
+        "submit_button_text": "Submit"
+      }
+    },
+    "177078465538562bd9": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
