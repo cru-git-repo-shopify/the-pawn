@@ -108,12 +108,12 @@
         "text_column_4VEnCR": {
           "type": "text_column",
           "settings": {
-            "heading": "",
+            "heading": "THE MISSION STATEMENT THAT HANGS ABOVE MY FRONT DOOR",
             "heading_font_size": 37,
-            "heading_color": "#000000",
-            "column_content": "<p>From this, we have had great success with our unique micro-climate that suits the ancient grape Pinot Noir and lately, Syrah has proven very popular.    We have plantings of the aromatics, Pinot Gris, Riesling, and Gewurztraminer as well as Chardonnay.</p><p>And if this is not enough Michael has now planted a couple of hectares of Tempranillo.  If you cannot holiday in Spain you can try and grow their famous wine variety.  This planting will not be in bottle for a few years yet.  All in all, we have 26 Hectares of vines in the ground and further plantings of Chardonnay planned.</p><p> The cellar door is open 7 days a week.  Our focus is on producing small quantities of handmade wine.  Close attention is paid to every detail in the vineyard and the wines represent this exacting work.</p><p>Come and visit us in the Cellar Door and experience our East Coast hospitality and delicious wines.  We look forward to meeting you.</p>",
+            "heading_color": "#ffffff",
+            "column_content": "<p><em><strong>With the ever increasing centralisation of the wine industry, I, like you, could be forgiven for thinking we were all just pawns in the big wine company game. The release of the Pawn is a manifestation of my resolve to amend this situation by releasing wines hand crafted from small parcels of premium fruit from the coolest regions of Langhorne Creek and the Adelaide Hills.</strong></em></p><p>With this philosophy as my goal, I have embarked on a crusade to produce Artisinal, hand crafted wines from varieties such as Tempranillo, Sangiovese, Fiano, Gruner Veltliner, Pinot Grigio, Shiraz, Montepulciano and Sauvignon Blanc.</p><p>Wines created to be consumed young and fresh and with food as their ultimate cohort.</p><p>TK</p>",
             "content_font_size": 17,
-            "content_color": "#000000",
+            "content_color": "#ffffff",
             "show_button": false,
             "button_link": "https://example.com",
             "button_text": "Learn More",
@@ -160,10 +160,10 @@
         "text_column_cbRtyL": {
           "type": "text_column",
           "settings": {
-            "heading": "",
+            "heading": "The Pawn<br>Blending in",
             "heading_font_size": 37,
             "heading_color": "#000000",
-            "column_content": "<p>Milton Vineyard is excited to announce our new winery is completed.  We have welcomed Jacqui Dolan to the Milton team as our winemaker.  Her experience and knowledge are greatly welcomed.<br/><br/></p>",
+            "column_content": "<p>Blending In – It’s about being able to see the grapes from the vines.</p><p>Blending is a term more commonly associated with the winery. But the art of blending is just as at home in the vineyard. Once vintage is completed and the resultant wines begin their journey to your palate in the vineyard I will look back over the events of the season past.</p><p>What I turn my attention to most is the outcome of all the inputs that go into producing fruit worthy of inclusion in a Pawn wine. These inputs are as carefully considered as those in the winery.</p><p>They are the result of not just well made plans and good timing but also the bringing together of years of grapegrowing experience, a fair measure of local knowledge and due consideration to daily observations of vineyard occurrences.</p><p>These observations range from the close attention paid to the vineyards while I’m on my morning constitutional around the ‘block’ with Holly Dog, to the array of scientific data gathered by the assortment of hi-tech monitoring ‘gadgets’ and the meticulous measurements taken during the season.</p><p>From all this and the discussions that follow come the decisions on what needs to go into the vineyard so that at the end of the season the bunches of grapes that arrive at the winery are assured of a place in a bottle of The Pawn.</p><p>To put it all in a grape skin (the vinous equivalent of the ‘in a nutshell’ cliché), if I get the blend right in vineyard and Mother Nature doesn’t bowl me too many bouncers, then we can all rest assured that the quality we expect in every bottle of Pawn is there waiting for us under every cork or screw.</p><p>At Pawn HQ, I had some definite highlights during vintage 2024, one in particular was the white varieties, with the Fiano and Pinot Grigio all being harvested during the cool nights and requiring no additions in the winery – gorgeous balance of acid, sugar and flavour which will see some amaze-ball wines for spring release.</p><p>TK</p>",
             "content_font_size": 17,
             "content_color": "#000000",
             "show_button": false,
