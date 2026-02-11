@@ -1,110 +1,193 @@
+{% comment %}
+  Section: CRU Pawn Distributors
+  - Displays distributor blocks in a 3-column grid
+  - Uses section settings for max width + title styling
+{% endcomment %}
+
+<section id="cru-pawn-distributors-{{ section.id }}" class="cru-pawn-distributors">
+  <div class="cru-pawn-distributors__inner"
+       style="
+         max-width: {{ section.settings.max_width | default: 1200 }}px;
+       ">
+    {% if section.settings.title != blank %}
+      <h2 class="cru-pawn-distributors__title"
+          style="
+            font-size: {{ section.settings.title_size | default: 28 }}px;
+            font-weight: {{ section.settings['title-font-weight'] | default: 400 }};
+          ">
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="cru-pawn-distributors__grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'distributor' %}
+            <article class="cru-pawn-distributors__card" {{ block.shopify_attributes }}>
+              <div class="cru-pawn-distributors__meta">
+                {% if block.settings.state != blank %}
+                  <div class="cru-pawn-distributors__state">{{ block.settings.state }}</div>
+                {% endif %}
+
+                {% if block.settings.store != blank %}
+                  <div class="cru-pawn-distributors__store">{{ block.settings.store }}</div>
+                {% endif %}
+
+                {% if block.settings.contact_person != blank %}
+                  <div class="cru-pawn-distributors__contact">
+                    <span class="cru-pawn-distributors__label">Contact:</span>
+                    <span>{{ block.settings.contact_person }}</span>
+                  </div>
+                {% endif %}
+              </div>
+
+              {% if block.settings.content != blank %}
+                <div class="cru-pawn-distributors__content rte">
+                  {{ block.settings.content }}
+                </div>
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="cru-pawn-distributors__empty">No distributors added yet.</p>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  /* Container */
+  #cru-pawn-distributors-{{ section.id }}{
+    padding: 48px 16px;
+  }
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__inner{
+    margin: 0 auto;
+  }
+
+  /* Title */
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__title{
+    margin: 0 0 24px;
+    line-height: 1.2;
+  }
+
+  /* Grid: 3 columns */
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  /* Card */
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__card{
+    border: 1px solid rgba(0,0,0,.10);
+    border-radius: 12px;
+    padding: 18px;
+    background: #fff;
+  }
+
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__state{
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    opacity: .75;
+    margin-bottom: 6px;
+  }
+
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__store{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__contact{
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__label{
+    font-weight: 600;
+    margin-right: 6px;
+  }
+
+  /* Richtext */
+  #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__content{
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 990px){
+    #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__grid{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 640px){
+    #cru-pawn-distributors-{{ section.id }} .cru-pawn-distributors__grid{
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 {% schema %}
 {
-    "name": "CRU Pawn Distributors",
-    "settings": [
-        {
-            "type": "number",
-            "id": "max_width",
-            "label": "Max Width"
-        },
-        {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
-        },
-        {
-            "type": "number",
-            "id": "title_size",
-            "label": "Title Font Size"
-        },
-        {
-        "type": "select",
-        "id": "title-font-weight",
-        "label": "Title Font Weight",
-        "options": [
-            {
-              "value": "100",
-              "label": "100"
-            },
-            {
-              "value": "200",
-              "label": "200"
-            },
-            {
-              "value": "300",
-              "label": "300"
-            },
-            {
-              "value": "400",
-              "label": "400"
-            },
-            {
-              "value": "500",
-              "label": "500"
-            },
-            {
-              "value": "600",
-              "label": "600"
-            },
-            {
-              "value": "700",
-              "label": "700"
-            },
-            {
-              "value": "800",
-              "label": "800"
-            },
-            {
-              "value": "900",
-              "label": "900"
-            },
-            {
-              "value": "normal",
-              "label": "Normal"
-            },
-            {
-              "value": "bold",
-              "label": "Bold"
-            },
-            {
-              "value": "bolder",
-              "label": "Bolder"
-            },
-            {
-              "value": "lighter",
-              "label": "Lighter"
-            }
-          ],
-          "default": "400"
-        },
-    ],
-    "blocks": [
-        {
-            "type": "distributor",
-            "name": "Distributor",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "state",
-                    "label": "State"
-                },
-                {
-                    "type": "text",
-                    "id": "store",
-                    "label": "Store"
-                },
-                {
-                    "type": "text",
-                    "id": "contact_person",
-                    "label": "Contact Person"
-                },
-                {
-                    "type": "richtext",
-                    "id": "content",
-                    "label": "Content"
-                }
-            ]
-        }
-    ]
+  "name": "CRU Pawn Distributors",
+  "settings": [
+    {
+      "type": "number",
+      "id": "max_width",
+      "label": "Max Width"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "number",
+      "id": "title_size",
+      "label": "Title Font Size"
+    },
+    {
+      "type": "select",
+      "id": "title-font-weight",
+      "label": "Title Font Weight",
+      "options": [
+        { "value": "100", "label": "100" },
+        { "value": "200", "label": "200" },
+        { "value": "300", "label": "300" },
+        { "value": "400", "label": "400" },
+        { "value": "500", "label": "500" },
+        { "value": "600", "label": "600" },
+        { "value": "700", "label": "700" },
+        { "value": "800", "label": "800" },
+        { "value": "900", "label": "900" },
+        { "value": "normal", "label": "Normal" },
+        { "value": "bold", "label": "Bold" },
+        { "value": "bolder", "label": "Bolder" },
+        { "value": "lighter", "label": "Lighter" }
+      ],
+      "default": "400"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "distributor",
+      "name": "Distributor",
+      "settings": [
+        { "type": "text", "id": "state", "label": "State" },
+        { "type": "text", "id": "store", "label": "Store" },
+        { "type": "text", "id": "contact_person", "label": "Contact Person" },
+        { "type": "richtext", "id": "content", "label": "Content" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CRU Pawn Distributors",
+      "category": "Custom"
+    }
+  ]
 }
 {% endschema %}
