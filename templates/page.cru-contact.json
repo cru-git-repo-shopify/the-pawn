@@ -47,21 +47,35 @@
     "cru_stack_KNTp7C": {
       "type": "cru-stack",
       "blocks": {
+        "text_Xinzpc": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "The Pawn Wine Co.",
+            "text_align": "center",
+            "text_color": "#000000",
+            "font_weight": "800",
+            "font_size": 30
+          }
+        },
         "textarea_rR3aDe": {
           "type": "textarea",
           "settings": {
             "id": "",
             "class": "",
-            "textarea": "Open daily from 10.30 am to 4.30 pm and often later on weekends.\n\n(closed Good Friday, Christmas Day and Boxing Day)\n\nGift Vouchers available on request.\n\n(03) 6257 8298\n\nwine@miltonvineyard.com.au",
+            "textarea": "PO Box 139\nLanghorne Creek\nSouth Australia 5255\nT 0438 373 247\n\nLiquor License SA 50810544\n\ninfo@thepawn.com.au",
             "textarea_style": "normal",
             "text_align": "center",
             "text_color": "",
-            "font_weight": "100",
-            "margin_top": 150
+            "font_size": 18,
+            "font_weight": "300",
+            "margin_top": 0
           }
         }
       },
       "block_order": [
+        "text_Xinzpc",
         "textarea_rR3aDe"
       ],
       "name": "CRU Stack",
@@ -73,7 +87,9 @@
         "bg_color": "",
         "background_type": "normal",
         "bg_pos_y": "center",
-        "bg_pos_x": "center"
+        "bg_pos_x": "center",
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     },
     "cru_pawn_distributors_jrjrr3": {
