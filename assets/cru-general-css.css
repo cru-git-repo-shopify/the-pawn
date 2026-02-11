@@ -1113,10 +1113,14 @@ a.open_submenu i {
 }
 
 /* header */
+.hide_compare_homepage .header-container.left_logo_right_menu {
+    background-color: #fff;
+}
+
 .header-container.left_logo_right_menu {
     width: 100%;
     padding: 10px 45px;
-    background-color: #fff;
+    background-color: #000;
 }
 
 .left_logo_right_menu .logo {
