@@ -1376,6 +1376,8 @@ form#contact_form * {
 
 .form_column {
     padding: 0;
+    max-width: 1300px;
+    width: 100%;
 }
 
 form#contact_form .first-name, form#contact_form .last-name {
