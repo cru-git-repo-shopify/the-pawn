@@ -42,13 +42,14 @@
 
 .text-col-inner h2 {
     text-align: left;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     width: fit-content;
     font-size: 45px;
     color: #5f412d;
     line-height: 60px;
     font-weight: 300;
     font-family: Muli;
+    margin-top: 75px;
 }
 
 .image-column .slider i.fa-solid.slick-arrow {
