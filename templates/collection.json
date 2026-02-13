@@ -231,35 +231,56 @@
         "border_color_card": "#f0f1f4"
       }
     },
+    "cru_page_header_KDNPdY": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 380,
+        "desktop_height_unit": "px",
+        "mobile_height": 380,
+        "mobile_height_unit": "px",
+        "desktop_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "mobile_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "background_type": "normal",
+        "bg_pos_y": "top",
+        "bg_pos_x": "center",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0,
+        "heading": "WINES",
+        "font_size": 47,
+        "font_color": "#FFFFFF",
+        "font-weight": "700",
+        "subheading": "",
+        "subheading_size": 24,
+        "subheading_color": "#000000",
+        "subheading_margin_top": 0,
+        "subheading_margin_bot": 0,
+        "subheading_font_weight": "400",
+        "fix_content": false,
+        "scroll_down_btn": ""
+      }
+    },
     "cru_stack_h4UBK9": {
       "type": "cru-stack",
       "blocks": {
-        "text_mfKH4x": {
-          "type": "text",
+        "textarea_TYBiML": {
+          "type": "textarea",
           "settings": {
             "id": "",
-            "class": "page_title",
-            "text": "Online Shop",
-            "text_align": "left",
-            "text_color": "",
-            "font_weight": "100"
-          }
-        },
-        "custom_pzEbAb": {
-          "type": "custom",
-          "settings": {
-            "subheading": "Welcome to the Milton Vineyard online shop. Wine Club members, ensure you log in to the website to receive your member discount",
-            "section_id": "",
-            "section_class": "",
-            "has_button": true,
-            "button_text": "Mailing List Signup",
-            "button_link": "/"
+            "class": "",
+            "txtarea_width": 1300,
+            "textarea": "For me, wine growing is also a life long opportunity to indulge, close-up, my fascination with the wonderful complexity of Old World grape varieties, planted in the Adelaide Hills and Langhorne Creek in some of the oldest soils in the world. Likewise, my winemaking is about a return from modern, large-scale methods to classic, hands-on viticulture and oenology: traditional production methods, the careful use of indigenous wild yeast fermentations, minimal intervention and fine European & American oak barrels for aging.   I hope you will enjoy     TK",
+            "textarea_style": "normal",
+            "text_align": "center",
+            "text_color": "#000000",
+            "font_size": 18,
+            "font_weight": "300"
           }
         }
       },
       "block_order": [
-        "text_mfKH4x",
-        "custom_pzEbAb"
+        "textarea_TYBiML"
       ],
       "name": "CRU Stack",
       "settings": {
@@ -267,7 +288,10 @@
         "class": "page_header",
         "max_width_unit": "px",
         "bg_color": "",
-        "padding_top": 100,
+        "background_type": "normal",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center",
+        "padding_top": 50,
         "padding_bottom": 24
       }
     },
@@ -275,11 +299,11 @@
       "type": "cru-main-collectio-product-grid",
       "name": "CRU Product Collection",
       "settings": {
-        "products_per_page": 12,
-        "products_container_width": 90,
-        "container_width_unit": "%",
+        "products_per_page": 50,
+        "products_container_width": 1300,
+        "container_width_unit": "px",
         "products_per_row": 4,
-        "show_quantity_selector": true,
+        "show_quantity_selector": false,
         "filter_background_color": "#eeeeee",
         "filter_text_color": "#000000",
         "filter_hover_bg_color": "#e2e2e2",
@@ -305,6 +329,7 @@
     "banner",
     "product-grid",
     "product-recently-viewed",
+    "cru_page_header_KDNPdY",
     "cru_stack_h4UBK9",
     "cru_main_collectio_product_grid_HYfDQk"
   ]
