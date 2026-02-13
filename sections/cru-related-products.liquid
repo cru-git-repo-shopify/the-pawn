@@ -121,10 +121,6 @@
 
                                     <a class="img_link" href="{{ related_product.url }}">
                                         <img src="{{ related_product.featured_image | img_url: 'large' }}" alt="{{ related_product.title }}" class="product-image ">
-                                    </a>
-                                    <div class="product-info">
-                                        <p class="product-title"><a href="{{ related_product.url }}">{{ related_product.title }}</a></p>
-                                        <p class="product-price"><span>RRP: </span>{{ related_product.price | money }}</p>
                                         {% if related_product.available %}
                                             <div class="ajax-add-to-cart" data-variant-id="{{ related_product.variants.first.id }}">
                                                 {% if section.settings.show_quantity_selector %}
@@ -150,6 +146,10 @@
                                             {% else %}
                                             <p class="sold-out">Sold<br/>Out</p>
                                         {% endif %}
+                                    </a>
+                                    <div class="product-info">
+                                        <p class="product-title"><a href="{{ related_product.url }}">{{ related_product.title }}</a></p>
+                                        <p class="product-price"><span>RRP: </span>{{ related_product.price | money }}</p>
                                     </div>
                                 </div>
                             {% assign shown = shown | plus: 1 %}
