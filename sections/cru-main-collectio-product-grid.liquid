@@ -123,8 +123,7 @@
           
             <a class="img_link" href="{{ product.url }}">
                 <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="product-image ">
-            </a>
-            {% if product.available %}
+                {% if product.available %}
                   <div class="ajax-add-to-cart" data-variant-id="{{ product.variants.first.id }}">
                       {% comment %} {% if section.settings.show_quantity_selector %} {% endcomment %}
                       <div class="quantity-wrapper {% if section.settings.show_quantity_selector == false%} hidden {% endif %}">
@@ -149,6 +148,7 @@
                   {% else %}
                   <p class="sold-out">Sold<br/>Out</p>
               {% endif %}
+            </a>
             <div class="product-info">
                 <p class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></p>
                 <p class="product-price"><span>RRP: </span>{{ product.price | money }}</p>
