@@ -998,10 +998,12 @@ p.sold-out {
 }
 
 .quantity-wrapper button.qty-btn {
-    color: #000;
+    color: #fff;
     height: 22px;
     font-size: 17px;
     line-height: 17px;
+    background-color: #c2c2c2;
+    border-radius: 50px;
 }
 
 .quantity-wrapper input.quantity-input {
