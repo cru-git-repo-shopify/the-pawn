@@ -1581,7 +1581,7 @@ div#additional-info {
     display: none;
 }
 
-div#additional-info-inner {
+div.addtional-info-inner {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
