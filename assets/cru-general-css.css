@@ -1582,6 +1582,7 @@ div#additional-info {
     flex-wrap: wrap;
     gap: 2%;
     padding: 15px;
+    display: none;
 }
 
 p.info_title {
