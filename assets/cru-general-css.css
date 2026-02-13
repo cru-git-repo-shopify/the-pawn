@@ -1025,8 +1025,9 @@ p.sold-out {
     border: none;
 }
 
-.product-page .quantity-wrapper{
+.product-page .quantity-wrapper {
     align-items: center;
+    margin-right: 20px;
 }
 
 .product-info p.product-price {
