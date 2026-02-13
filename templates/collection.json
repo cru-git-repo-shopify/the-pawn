@@ -249,7 +249,7 @@
         "background_overlay_opacity": 0,
         "heading": "WINES",
         "font_size": 47,
-        "font_color": "#FFFFFF",
+        "font_color": "#ffffff",
         "font-weight": "700",
         "subheading": "",
         "subheading_size": 24,
@@ -304,6 +304,7 @@
         "container_width_unit": "px",
         "products_per_row": 4,
         "show_quantity_selector": false,
+        "show_filter": false,
         "filter_background_color": "#eeeeee",
         "filter_text_color": "#000000",
         "filter_hover_bg_color": "#e2e2e2",
@@ -316,12 +317,12 @@
         "product_img_bg_color": "rgba(0,0,0,0)",
         "product_title_color": "#303030",
         "product_price_color": "#777777",
-        "button_background_color": "rgba(0,0,0,0)",
-        "button_text_color": "#303030",
-        "button_hover_bg_color": "#404f24",
+        "button_background_color": "#000000",
+        "button_text_color": "#FFFFFF",
+        "button_hover_bg_color": "#202020",
         "button_hover_text_color": "#ffffff",
         "hover_overlay": "#ffffff",
-        "overlay_opacity": 0.5
+        "overlay_opacity": 0
       }
     }
   },
