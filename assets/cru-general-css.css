@@ -1756,6 +1756,10 @@ a.accordion_link {
 }
 
 @media only screen and (max-width: 600px) {
+    .elavation_digits {
+        flex-direction: column;
+        gap: 20px;
+    }
     .cru-page-header .header-content h1 {
         font-size: 24px !important;
     }
