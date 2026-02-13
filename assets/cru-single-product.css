@@ -1,15 +1,15 @@
 section.product-page {
     max-width: 90%;
     margin: 115px auto 0;
-    padding-top: 200px;
+    padding-top: 50px;
 }
 
 .product-image {
-    width: 40%;
+    width: 49%;
 }
 
 .product-details {
-    width: 60%;
+    width: 49%;
 }
 
 .quantity-wrapper input#quantity {
