@@ -587,6 +587,9 @@ i.fa-solid.fa-user {
 }
 
 @media only screen and (max-width: 1000px){
+    .header-container.left_logo_right_menu {
+        padding: 20px 5%!important;
+    }
     .weater{ display: none!important; }
     .upper_link_left, .upper_link_right {
         width: unset;
