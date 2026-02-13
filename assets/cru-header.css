@@ -399,8 +399,8 @@ a.header-button {
 .hamb_line {
     width: 35px;
     display: block;
-    height: 4px;
-    background-color: #303030;
+    height: 2px;
+    background-color: #fff;
 }
 
 span.hamb_line2.hamb_line {
