@@ -587,6 +587,7 @@ i.fa-solid.fa-user {
 }
 
 @media only screen and (max-width: 1000px){
+    .weater{ display: none; }
     .upper_link_left, .upper_link_right {
         width: unset;
         gap: 10px;
