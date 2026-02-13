@@ -530,6 +530,36 @@
         "border_color_card": "#f0f1f4"
       }
     },
+    "cru_page_header_VcLHnw": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 380,
+        "desktop_height_unit": "px",
+        "mobile_height": 380,
+        "mobile_height_unit": "px",
+        "desktop_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "mobile_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "background_type": "normal",
+        "bg_pos_y": "top",
+        "bg_pos_x": "center",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0,
+        "heading": "WINES",
+        "font_size": 47,
+        "font_color": "#ffffff",
+        "font-weight": "700",
+        "subheading": "",
+        "subheading_size": 24,
+        "subheading_color": "#000000",
+        "subheading_margin_top": 0,
+        "subheading_margin_bot": 0,
+        "subheading_font_weight": "400",
+        "fix_content": false,
+        "scroll_down_btn": ""
+      }
+    },
     "cru_single_product_QbbXq4": {
       "type": "cru-single-product",
       "name": "Cru Single Produc",
@@ -564,21 +594,21 @@
         "title_font_size": 19,
         "title_color": "#000000",
         "title_font_weight": "700",
-        "layout_style": "slider",
+        "layout_style": "grid",
         "products_per_row": 4,
-        "show_quantity_selector": true,
-        "product_name_font_size": 17,
-        "product_price_font_size": 17,
+        "show_quantity_selector": false,
+        "product_name_font_size": 13,
+        "product_price_font_size": 13,
         "product_background_color": "rgba(0,0,0,0)",
         "product_img_bg_color": "rgba(0,0,0,0)",
-        "product_title_color": "#303030",
+        "product_title_color": "#000000",
         "product_price_color": "#777777",
-        "button_background_color": "rgba(0,0,0,0)",
-        "button_text_color": "#303030",
-        "button_hover_bg_color": "#404f24",
+        "button_background_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_hover_bg_color": "#232323",
         "button_hover_text_color": "#ffffff",
         "hover_overlay": "#ffffff",
-        "overlay_opacity": 0.5
+        "overlay_opacity": 0
       }
     }
   },
@@ -586,6 +616,7 @@
     "main",
     "product-recommendations",
     "product-recently-viewed",
+    "cru_page_header_VcLHnw",
     "cru_single_product_QbbXq4",
     "cru_related_products_LhLqzR"
   ]
