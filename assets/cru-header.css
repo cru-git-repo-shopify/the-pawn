@@ -196,13 +196,13 @@ a.hamburger_close:after {
     font-size: 16px;
     content: "Close";
     margin-left: 0;
-    color: #000 !important;
+    color: #fff !important;
 }
 
 .hamburger_close i.fa-solid.fa-xmark {
     display: inline-block;
     vertical-align: middle;
-    color: #000 !important
+    color: #fff !important
 }
 
 .sub-menu li {
