@@ -71,23 +71,25 @@
   }
 </style>
 
-<div class="shop_filter" style="padding-bottom: 50px;">
-  <h2 class="filter-title">Filter by <i class="fa-solid fa-sliders"></i> <span>Category:</span></h2>
-  <ul>
-    <li><a class="term-item active" href="*">All Products</a></li>
-      {% for tag in all_tags %}
-          <li><a class="term-item" href=".product_cat-{{ tag | handle }}">{{ tag }}</a></li>
-      {% endfor %}
-  </ul>
-</div>
-<div class="filter_mobile">
-  <select class="filters_select">
-    <option value="*">All Wines</option>
-      {% for tag in all_tags %}
-        <option value=".product_cat-{{ tag | handle }}">{{ tag }}</option>
-      {% endfor %}
-  </select>
-</div>
+{% if section.settings.show_filter %}
+  <div class="shop_filter" style="padding-bottom: 50px;">
+    <h2 class="filter-title">Filter by <i class="fa-solid fa-sliders"></i> <span>Category:</span></h2>
+    <ul>
+      <li><a class="term-item active" href="*">All Products</a></li>
+        {% for tag in all_tags %}
+            <li><a class="term-item" href=".product_cat-{{ tag | handle }}">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+  </div>
+  <div class="filter_mobile">
+    <select class="filters_select">
+      <option value="*">All Wines</option>
+        {% for tag in all_tags %}
+          <option value=".product_cat-{{ tag | handle }}">{{ tag }}</option>
+        {% endfor %}
+    </select>
+  </div>
+{% endif %}
 
 {% paginate collections.all.products by section.settings.products_per_page %}
 <div id="{{ section.id }}_collection" class="cru-product-collection">
