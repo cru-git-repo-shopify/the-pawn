@@ -81,8 +81,8 @@
     product.metafields.custom.ph or product.metafields.custom.t_a %}
         <div class="accordion_container">
             <a class="accordion_link" targets="additional-info" href="#">Addtional Info</a>
-            <div id="additional-info">
-              <div class="addtional-info-inner">
+            <div id="additional-info" class="accordion_main">
+              <div class="addtional-info-inner accordion_inner">
                 <p class="info_title">Variety Trivia</p><p class="info_content">{{ product.metafields.custom.variety_trivia }}</p>
                 <p class="info_title">Chess Trivia</p><p class="info_content">{{ product.metafields.custom.chess_trivia }}</p>
                 <p class="info_title">Goes Best With</p><p class="info_content">{{ product.metafields.custom.goes_best_with }}</p>
@@ -94,7 +94,21 @@
               </div>
             </div>
             {% if product.metafields.custom.tools_of_trade != blank %}
-              <a data-fancybox data-src="#tasting_note_video" href="javascript:;"><i class="fa-solid fa-arrow-right-long"></i> Video</a>
+              {% assign files = product.metafields.custom.tools_of_trade.value %}
+              <a class="accordion_link" targets="tools_of_trade" href="#">Tools of Trade</a>
+              <div id="tools_of_trade" class="accordion_main">
+              <div class="addtional-info-inner accordion_inner">
+                <ul>
+                  {% for f in files %}
+                    <li>
+                      <a href="{{ f.url }}" target="_blank" rel="noopener">
+                        {{ f.alt | default: f.filename }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
             {% endif %}
         </div>
     {% endif %}
