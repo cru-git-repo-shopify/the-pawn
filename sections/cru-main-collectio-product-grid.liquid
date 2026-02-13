@@ -124,34 +124,34 @@
             <a class="img_link" href="{{ product.url }}">
                 <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="product-image ">
             </a>
+            {% if product.available %}
+                  <div class="ajax-add-to-cart" data-variant-id="{{ product.variants.first.id }}">
+                      {% comment %} {% if section.settings.show_quantity_selector %} {% endcomment %}
+                      <div class="quantity-wrapper {% if section.settings.show_quantity_selector == false%} hidden {% endif %}">
+                        <div class="quantity-wrapper-inner">
+                          <button type="button" class="qty-btn minus">−</button>
+                          <input
+                              type="number"
+                              name="quantity"
+                              min="1"
+                              value="1"
+                              class="quantity-input"
+                          >
+                          <button type="button" class="qty-btn plus">+</button>
+                        </div>
+                      </div>
+                      {% comment %} {% endif %} {% endcomment %}
+                      <div class="add-to-cart-wrapper">
+                          <button class="add-to-cart-button">Add to Cart</button>
+                          {% comment %} <span class="add-status"></span> {% endcomment %}
+                      </div>
+                  </div>
+                  {% else %}
+                  <p class="sold-out">Sold<br/>Out</p>
+              {% endif %}
             <div class="product-info">
                 <p class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></p>
                 <p class="product-price"><span>RRP: </span>{{ product.price | money }}</p>
-                {% if product.available %}
-                    <div class="ajax-add-to-cart" data-variant-id="{{ product.variants.first.id }}">
-                        {% comment %} {% if section.settings.show_quantity_selector %} {% endcomment %}
-                        <div class="quantity-wrapper {% if section.settings.show_quantity_selector == false%} hidden {% endif %}">
-                          <div class="quantity-wrapper-inner">
-                            <button type="button" class="qty-btn minus">−</button>
-                            <input
-                                type="number"
-                                name="quantity"
-                                min="1"
-                                value="1"
-                                class="quantity-input"
-                            >
-                            <button type="button" class="qty-btn plus">+</button>
-                          </div>
-                        </div>
-                        {% comment %} {% endif %} {% endcomment %}
-                        <div class="add-to-cart-wrapper">
-                            <button class="add-to-cart-button">Add to Cart</button>
-                            {% comment %} <span class="add-status"></span> {% endcomment %}
-                        </div>
-                    </div>
-                    {% else %}
-                    <p class="sold-out">Sold<br/>Out</p>
-                {% endif %}
             </div>
         </div>
     {% endfor %}
