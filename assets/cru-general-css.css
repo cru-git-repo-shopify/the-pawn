@@ -1696,8 +1696,8 @@ a.accordion_link {
         grid-template-columns: repeat(1, 1fr) !important;
     }
     .cru-cta-grid a.btn {
-        position: relative;
-        bottom: unset;
+        /* position: relative;
+        bottom: unset; */
     }
     .cru-cta-grid {
         display: block;
