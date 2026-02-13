@@ -82,14 +82,16 @@
         <div class="accordion_container">
             <a class="accordion_link" targets="additional-info" href="#">Addtional Info</a>
             <div id="additional-info">
-            <p class="info_title">Variety Trivia</p><p class="info_content">{{ product.metafields.custom.variety_trivia }}</p>
-            <p class="info_title">Chess Trivia</p><p class="info_content">{{ product.metafields.custom.chess_trivia }}</p>
-            <p class="info_title">Goes Best With</p><p class="info_content">{{ product.metafields.custom.goes_best_with }}</p>
-            <p class="info_title">Label Trivia</p><p class="info_content">{{ product.metafields.custom.label_trivia }}</p>
-            <p class="info_title">Vineyard Location</p><p class="info_content">{{ product.metafields.custom.vineyard_location }}</p>
-            <p class="info_title">Alcohol</p><p class="info_content">{{ product.metafields.custom.alcohol }}</p>
-            <p class="info_title">pH</p><p class="info_content">{{ product.metafields.custom.ph }}</p>
-            <p class="info_title">T.A</p><p class="info_content">{{ product.metafields.custom.t_a }}</p>
+              <div class="addtional-info-inner">
+                <p class="info_title">Variety Trivia</p><p class="info_content">{{ product.metafields.custom.variety_trivia }}</p>
+                <p class="info_title">Chess Trivia</p><p class="info_content">{{ product.metafields.custom.chess_trivia }}</p>
+                <p class="info_title">Goes Best With</p><p class="info_content">{{ product.metafields.custom.goes_best_with }}</p>
+                <p class="info_title">Label Trivia</p><p class="info_content">{{ product.metafields.custom.label_trivia }}</p>
+                <p class="info_title">Vineyard Location</p><p class="info_content">{{ product.metafields.custom.vineyard_location }}</p>
+                <p class="info_title">Alcohol</p><p class="info_content">{{ product.metafields.custom.alcohol }}</p>
+                <p class="info_title">pH</p><p class="info_content">{{ product.metafields.custom.ph }}</p>
+                <p class="info_title">T.A</p><p class="info_content">{{ product.metafields.custom.t_a }}</p>
+              </div>
             </div>
             {% if product.metafields.custom.video_tasting_note != blank %}
               <a data-fancybox data-src="#tasting_note_video" href="javascript:;"><i class="fa-solid fa-arrow-right-long"></i> Video</a>
