@@ -38,6 +38,10 @@ form.product-form {
     display: flex;
 }
 
+section.product-page{
+    width: 90%;
+}
+
 .product-page .quantity-wrapper {
     max-width: 150px;
     gap: 5px;
