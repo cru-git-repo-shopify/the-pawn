@@ -564,8 +564,8 @@
       "type": "cru-single-product",
       "name": "Cru Single Produc",
       "settings": {
-        "container_width": 90,
-        "container_width_unit": "%",
+        "container_width": 1300,
+        "container_width_unit": "px",
         "product_title_size": 42,
         "product_title_color": "#303030",
         "product_price_size": 15,
