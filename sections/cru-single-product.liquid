@@ -103,7 +103,7 @@
     <div class="lifestyle-image" style="background-image: url('{{ product.metafields.custom.lifestyle_image | img_url: 'original' }}');">
     </div>
 {% endif %}
-{% if product.metafields.custom.region or product.metafields.custom.winemaking or product.metafields.custom.winemaker or product.metafields.custom.history or product.metafields.custom.production or product.metafields.custom.grape_variety or
+{% comment %} {% if product.metafields.custom.region or product.metafields.custom.winemaking or product.metafields.custom.winemaker or product.metafields.custom.history or product.metafields.custom.production or product.metafields.custom.grape_variety or
     product.metafields.custom.aroma or product.metafields.custom.wine_vintage or product.metafields.custom.palate or product.metafields.custom.best_drinking or product.metafields.custom.colour or product.metafields.custom.alcohol %}
     <div id="product-specifications">
         <div class="product-specifications-inner">
@@ -183,7 +183,7 @@
             {% endif %}
         </div>
     </div>
-{% endif %}
+{% endif %} {% endcomment %}
 {% if product.metafields.custom.product_big_image %}
     <div class="big-image" style="background-image: url('{{ product.metafields.custom.product_big_image | img_url: 'original' }}');">
     </div>

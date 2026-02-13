@@ -1576,6 +1576,41 @@ div#shopify-section-sections--25978596196719__cru_side_cart_Uw3z7t {
     z-index: 999;
 }
 
+
+div#additional-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    padding: 15px;
+}
+
+p.info_title {
+    width: 29%;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+p.info_content {
+    width: 69%;
+    font-size: 14px;
+}
+
+a.accordion_link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #e3e3e3;
+    padding: 15px 0;
+}
+
+.product-page form.product-form {
+    margin-bottom: 49px;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
