@@ -418,7 +418,7 @@ span.hamb_line2.hamb_line {
 } */
 
 .scrolled span.hamb_line, .light span.hamb_line {
-    background-color: #000;
+    background-color: #fff;
 }
 
 .scrolled a.header-button{
