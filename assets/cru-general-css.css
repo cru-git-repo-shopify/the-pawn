@@ -1577,11 +1577,11 @@ div#shopify-section-sections--25978596196719__cru_side_cart_Uw3z7t {
 }
 
 
-div#additional-info {
+div.accordion_main {
     display: none;
 }
 
-div.addtional-info-inner {
+div.accordion_inner {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
