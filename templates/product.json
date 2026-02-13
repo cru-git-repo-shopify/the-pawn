@@ -570,7 +570,7 @@
         "product_title_color": "#000000",
         "product_price_size": 21,
         "product_price_color": "#bcbcbc",
-        "product_description_size": 15,
+        "product_description_size": 14,
         "product_description_color": "#000000",
         "show_continue_shopping": false,
         "button_text": "Add to cart",
