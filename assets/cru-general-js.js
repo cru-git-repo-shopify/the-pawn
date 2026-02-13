@@ -97,4 +97,10 @@ jQuery(document).ready(function($) {
 			jQuery(this).siblings('.cta-overlay').slideToggle();
 		}
 	});
+
+	jQuery('a.accordion_link').on('click', function(e){
+		e.preventDefault();
+		var targ = jQuery(this).attr('targets');
+		jQuery('#'+targ).slideToggle();
+	});
 });
