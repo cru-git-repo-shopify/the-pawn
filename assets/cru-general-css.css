@@ -1045,7 +1045,7 @@ p.sold-out {
 .mobile_header {
     width: 100%;
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: none;
 }
 
