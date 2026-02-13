@@ -12,6 +12,10 @@ section.product-page {
     width: 49%;
 }
 
+section.product-page p.product-price {
+    text-align: left;
+}
+
 .quantity-wrapper input#quantity {
     max-width: 45px;
     text-align: center;
