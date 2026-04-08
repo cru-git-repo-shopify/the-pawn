@@ -76,7 +76,7 @@
         "html_LRMdRd": {
           "type": "html",
           "settings": {
-            "html": "<div class=\"contact_social\">\n\t<ul>\n\t\t<li><a href=\"https://www.facebook.com/The-Pawn-Wine-Co-131277803574070\"><i class=\"fa-brands fa-facebook-f\"></i></a></li>\n\t\t<li><a href=\"https://twitter.com/ThePawnWineCo\"><i class=\"fa-brands fa-twitter\"></i></a></li>\n<li><a href=\"https://www.instagram.com/thepawnwineco/\"><i class=\"fa-brands fa-instagram\"></i></a></li>\n\t</ul>\n</div>",
+            "html": "<div class=\"contact_social\">\n\t<ul>\n\t\t<li><a href=\"https://www.facebook.com/The-Pawn-Wine-Co-131277803574070\"><i class=\"fa-brands fa-facebook-f\"></i></a></li>\n\t\t<li><a href=\"https://twitter.com/ThePawnWineCo\"><i class=\"fa-brands fa-x-twitter\"></i></a></li>\n<li><a href=\"https://www.instagram.com/thepawnwineco/\"><i class=\"fa-brands fa-instagram\"></i></a></li>\n\t</ul>\n</div>",
             "id": "",
             "class": ""
           }
