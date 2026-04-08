@@ -101,6 +101,28 @@
         "padding_bottom": 50
       }
     },
+    "cru_contact_col_YDBGze": {
+      "type": "cru-contact-col",
+      "name": "CRU Contact Section",
+      "settings": {
+        "heading": "Send me a message",
+        "description": "",
+        "section_id": "contact-section",
+        "section_class": "cru-contact-col",
+        "show_first_name": true,
+        "first_name_placeholder": "Full Name",
+        "show_last_name": false,
+        "last_name_placeholder": "Last Name",
+        "show_email": true,
+        "show_phone": false,
+        "phone_placeholder": "Enter your phone number",
+        "email_placeholder": "Email",
+        "show_message": true,
+        "message_placeholder": "Write your message here",
+        "show_submit_button": true,
+        "submit_button_text": "Contact Us"
+      }
+    },
     "cru_pawn_distributors_jrjrr3": {
       "type": "cru-pawn-distributors",
       "blocks": {
@@ -187,34 +209,15 @@
         "distributor_R6F8Nm",
         "distributor_UQCWeg"
       ],
+      "custom_css": [
+        ".cru-pawn-distributors__grid {margin-bottom: 100px;}"
+      ],
       "name": "CRU Pawn Distributors",
       "settings": {
         "max_width": 1300,
         "title": "Distributors",
         "title_size": 35,
         "title-font-weight": "300"
-      }
-    },
-    "cru_contact_col_YDBGze": {
-      "type": "cru-contact-col",
-      "name": "CRU Contact Section",
-      "settings": {
-        "heading": "Send me a message",
-        "description": "",
-        "section_id": "contact-section",
-        "section_class": "cru-contact-col",
-        "show_first_name": true,
-        "first_name_placeholder": "Full Name",
-        "show_last_name": false,
-        "last_name_placeholder": "Last Name",
-        "show_email": true,
-        "show_phone": false,
-        "phone_placeholder": "Enter your phone number",
-        "email_placeholder": "Email",
-        "show_message": true,
-        "message_placeholder": "Write your message here",
-        "show_submit_button": true,
-        "submit_button_text": "Contact Us"
       }
     },
     "177078465538562bd9": {
