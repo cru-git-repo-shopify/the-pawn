@@ -64,7 +64,7 @@
           "settings": {
             "id": "",
             "class": "",
-            "textarea": "PO Box 139\nLanghorne Creek\nSouth Australia 5255\nT 0438 373 247\n\nLiquor License SA 50810544\n\ninfo@thepawn.com.au",
+            "textarea": "9 Scott Road\nLanghorne Creek\nSouth Australia 5255\nT 0438 373 247\n\nLiquor License SA 50810544",
             "textarea_style": "normal",
             "text_align": "center",
             "text_color": "",
@@ -226,8 +226,8 @@
     "main",
     "cru_page_header_EYmWRx",
     "cru_stack_KNTp7C",
-    "cru_pawn_distributors_jrjrr3",
     "cru_contact_col_YDBGze",
+    "cru_pawn_distributors_jrjrr3",
     "177078465538562bd9"
   ]
 }
