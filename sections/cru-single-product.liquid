@@ -19,87 +19,54 @@
     font-size: {{ section.settings.product_price_size | default: 20 }}px;
     color: {{ section.settings.product_price_color | default: '#000000' }};
   }
-  #{{section.id }}_product .product-description p,
-  #{{section.id }}_product .product-price span {
+  #{{section.id }}_product .product-description p, #{{section.id }}_product .product-price span {
     color: {{ section.settings.product_description_color | default: '#000000' }};
     font-size: {{ section.settings.product_description_size | default: 16 }}px;
   }
-  #{{section.id }}_product .add-to-cart,
-  #{{section.id }}_product .continue-shopping {
+  #{{section.id }}_product .add-to-cart, #{{section.id }}_product .continue-shopping {
     border: 1px solid {{ section.settings.border_color | default: '#000000' }};
     background-color: {{ section.settings.button_color | default: '#000000' }};
     color: {{ section.settings.button_text_color | default: '#ffffff' }};
   }
-  #{{section.id }}_product .add-to-cart:hover,
-  #{{section.id }}_product .continue-shopping:hover {
+  #{{section.id }}_product .add-to-cart:hover, #{{section.id }}_product .continue-shopping:hover {
     border: 1px solid {{ section.settings.border_hover | default: '#000000' }};
     background-color: {{ section.settings.add_to_cart_hover | default: '#000000' }};
     color: {{ section.settings.add_to_cart_text_hover | default: '#ffffff' }};
   }
-
-  #{{section.id }}_product .variant-picker {
-    margin: 20px 0;
-  }
-
-  #{{section.id }}_product .variant-option {
-    margin-bottom: 12px;
-  }
-
-  #{{section.id }}_product .variant-option label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-  }
-
-  #{{section.id }}_product .variant-option select {
-    width: 100%;
-    padding: 10px;
-  }
-
-  #{{section.id }}_product .add-to-cart[disabled] {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
 </style>
-
 <section id="{{section.id }}_product" class="product-page">
   <div class="product-wrapper">
     <div class="product-image">
-      {% assign points = product.metafields.custom.award_points %}
-      {% assign badges = product.metafields.custom.award_badge %}
-      {% assign index = 0 %}
-
-      {% if points != blank or badges != blank %}
-        <div class="product_awards">
-          {% if points != blank %}
-            {% for award in points.value %}
-              <p class="award award_accolade" style="z-index: {{ index }};">
-                <span class="points">{{ award }}</span>
-                <span class="type">PTS</span>
-              </p>
-              {% assign index = index | plus: 1 %}
-            {% endfor %}
-          {% endif %}
-
-          {% for badge in badges.value %}
-            <img src="{{ badge | img_url: 'large' }}" alt="Award Badge" class="badge award_accolade" style="z-index: {{ index }};">
-            {% assign index = index | plus: 1 %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
+        {% assign points = product.metafields.custom.award_points %}
+          {% assign badges = product.metafields.custom.award_badge %}
+          {%  assign index = 0 %}
+          {% if points != blank or badges != blank %}
+            <div class="product_awards">
+              {% if points != blank %}
+                {% for award in points.value %}
+                  <p class="award award_accolade" style="z-index: {{ index }};"><span class="points">{{ award }}</span><span class="type">PTS</span></p>
+                  {% assign index = index | plus: 1 %}
+                {% endfor %}
+              {% endif %}
+              {% for badge in badges.value %}
+                <img src="{{ badge | img_url: 'large' }}" alt="Award Badge" class="badge award_accolade" style="z-index: {{ index }};">
+                {% assign index = index | plus: 1 %}
+              {% endfor %}
+            </div>
+            {% endif %}
       <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}">
     </div>
 
     <div class="product-details">
       <h1>{{ product.title }}</h1>
-      <p class="product-price">{{ product.selected_or_first_available_variant.price | money }}</p>
-
+      <p class="product-price">{{ product.price | money }}</p>
       <div class="product-description">
         {{ product.description }}
       </div>
 
-      <form method="post" action="/cart/add" class="product-form">
+
+
+        <form method="post" action="/cart/add" class="product-form">
         {% unless product.has_only_default_variant %}
           <div class="variant-picker">
             {% for option in product.options_with_values %}
@@ -153,27 +120,27 @@
           <a href="/collections/all" class="continue-shopping">{{ section.settings.continue_shopping_text | default: 'Continue Shopping' }}</a>
         {% endif %}
       </form>
-
-      {% if product.metafields.custom.variety_trivia or product.metafields.custom.chess_trivia or product.metafields.custom.goes_best_with or product.metafields.custom.label_trivia or product.metafields.custom.vineyard_location or product.metafields.custom.alcohol or product.metafields.custom.ph or product.metafields.custom.t_a %}
+      
+        {% if product.metafields.custom.variety_trivia or product.metafields.custom.chess_trivia or product.metafields.custom.goes_best_with or product.metafields.custom.label_trivia or product.metafields.custom.vineyard_location or product.metafields.custom.alcohol or
+    product.metafields.custom.ph or product.metafields.custom.t_a %}
         <div class="accordion_container">
-          <a class="accordion_link" targets="additional-info" href="#">Addtional Info</a>
-          <div id="additional-info" class="accordion_main">
-            <div class="addtional-info-inner accordion_inner">
-              <p class="info_title">Variety Trivia</p><p class="info_content">{{ product.metafields.custom.variety_trivia }}</p>
-              <p class="info_title">Chess Trivia</p><p class="info_content">{{ product.metafields.custom.chess_trivia }}</p>
-              <p class="info_title">Goes Best With</p><p class="info_content">{{ product.metafields.custom.goes_best_with }}</p>
-              <p class="info_title">Label Trivia</p><p class="info_content">{{ product.metafields.custom.label_trivia }}</p>
-              <p class="info_title">Vineyard Location</p><p class="info_content">{{ product.metafields.custom.vineyard_location }}</p>
-              <p class="info_title">Alcohol</p><p class="info_content">{{ product.metafields.custom.alcohol }}</p>
-              <p class="info_title">pH</p><p class="info_content">{{ product.metafields.custom.ph }}</p>
-              <p class="info_title">T.A</p><p class="info_content">{{ product.metafields.custom.t_a }}</p>
+            <a class="accordion_link" targets="additional-info" href="#">Addtional Info</a>
+            <div id="additional-info" class="accordion_main">
+              <div class="addtional-info-inner accordion_inner">
+                <p class="info_title">Variety Trivia</p><p class="info_content">{{ product.metafields.custom.variety_trivia }}</p>
+                <p class="info_title">Chess Trivia</p><p class="info_content">{{ product.metafields.custom.chess_trivia }}</p>
+                <p class="info_title">Goes Best With</p><p class="info_content">{{ product.metafields.custom.goes_best_with }}</p>
+                <p class="info_title">Label Trivia</p><p class="info_content">{{ product.metafields.custom.label_trivia }}</p>
+                <p class="info_title">Vineyard Location</p><p class="info_content">{{ product.metafields.custom.vineyard_location }}</p>
+                <p class="info_title">Alcohol</p><p class="info_content">{{ product.metafields.custom.alcohol }}</p>
+                <p class="info_title">pH</p><p class="info_content">{{ product.metafields.custom.ph }}</p>
+                <p class="info_title">T.A</p><p class="info_content">{{ product.metafields.custom.t_a }}</p>
+              </div>
             </div>
-          </div>
-
-          {% if product.metafields.custom.tools_of_trade != blank %}
-            {% assign files = product.metafields.custom.tools_of_trade.value %}
-            <a class="accordion_link" targets="tools_of_trade" href="#">Tools of Trade</a>
-            <div id="tools_of_trade" class="accordion_main">
+            {% if product.metafields.custom.tools_of_trade != blank %}
+              {% assign files = product.metafields.custom.tools_of_trade.value %}
+              <a class="accordion_link" targets="tools_of_trade" href="#">Tools of Trade</a>
+              <div id="tools_of_trade" class="accordion_main">
               <div class="addtional-info-inner accordion_inner">
                 <ul>
                   {% for f in files %}
@@ -186,123 +153,116 @@
                 </ul>
               </div>
             </div>
-          {% endif %}
+            {% endif %}
         </div>
-      {% endif %}
+    {% endif %}
     </div>
   </div>
 </section>
-
 {% if product.metafields.custom.lifestyle_image %}
-  <div class="lifestyle-image" style="background-image: url('{{ product.metafields.custom.lifestyle_image | img_url: 'original' }}');">
-  </div>
-{% endif %}
-
-{% comment %}
-{% if product.metafields.custom.region or product.metafields.custom.winemaking or product.metafields.custom.winemaker or product.metafields.custom.history or product.metafields.custom.production or product.metafields.custom.grape_variety or
-  product.metafields.custom.aroma or product.metafields.custom.wine_vintage or product.metafields.custom.palate or product.metafields.custom.best_drinking or product.metafields.custom.colour or product.metafields.custom.alcohol %}
-  <div id="product-specifications">
-    <div class="product-specifications-inner">
-      <h3 class="specs_header">Specifications</h3>
-      {% if product.metafields.custom.region %}
-        <a href="#" class="collapse_specs" target="region">Region</a>
-        <div id="region" class="meta-item">
-          <p class="specs_title">Region</p> <p class="specs_details">{{ product.metafields.custom.region }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.winemaking %}
-        <a href="#" class="collapse_specs" target="winemaking">Winemaking</a>
-        <div id="winemaking" class="meta-item">
-          <p class="specs_title">Winemaking</p> <p class="specs_details">{{ product.metafields.custom.winemaking }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.winemaker %}
-        <a href="#" class="collapse_specs" target="winemaker">Winemaker</a>
-        <div id="winemaker" class="meta-item">
-          <p class="specs_title">Winemaker</p> <p class="specs_details">{{ product.metafields.custom.winemaker }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.history %}
-        <a href="#" class="collapse_specs" target="history">History</a>
-        <div id="history" class="meta-item">
-          <p class="specs_title">History</p> <p class="specs_details">{{ product.metafields.custom.history }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.production %}
-        <a href="#" class="collapse_specs" target="production">Production</a>
-        <div id="production" class="meta-item">
-          <p class="specs_title">Production</p> <p class="specs_details">{{ product.metafields.custom.production }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.grape_variety %}
-        <a href="#" class="collapse_specs" target="grape_variety">Grape Variety</a>
-        <div id="grape_variety" class="meta-item">
-          <p class="specs_title">Grape Variety</p> <p class="specs_details">{{ product.metafields.custom.grape_variety }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.aroma %}
-        <a href="#" class="collapse_specs" target="aroma">Aroma</a>
-        <div id="aroma" class="meta-item">
-          <p class="specs_title">Aroma</p> <p class="specs_details">{{ product.metafields.custom.aroma }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.wine_vintage %}
-        <a href="#" class="collapse_specs" target="wine_vintage">Wine Vintage</a>
-        <div id="wine_vintage" class="meta-item">
-          <p class="specs_title">Wine Vintage</p> <p class="specs_details">{{ product.metafields.custom.wine_vintage }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.palate %}
-        <a href="#" class="collapse_specs" target="palate">Palate</a>
-        <div id="palate" class="meta-item">
-          <p class="specs_title">Palate</p> <p class="specs_details">{{ product.metafields.custom.palate }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.best_drinking %}
-        <a href="#" class="collapse_specs" target="best_drinking">Best Drinking</a>
-        <div id="best_drinking" class="meta-item">
-          <p class="specs_title">Best Drinking</p> <p class="specs_details">{{ product.metafields.custom.best_drinking }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.colour %}
-        <a href="#" class="collapse_specs" target="colour">Colour</a>
-        <div id="colour" class="meta-item">
-          <p class="specs_title">Colour</p> <p class="specs_details">{{ product.metafields.custom.colour }}</p>
-        </div>
-      {% endif %}
-      {% if product.metafields.custom.alcohol %}
-        <a href="#" class="collapse_specs" target="alcohol">Alcohol</a>
-        <div id="alcohol" class="meta-item">
-          <p class="specs_title">Alcohol</p> <p class="specs_details">{{ product.metafields.custom.alcohol }}</p>
-        </div>
-      {% endif %}
+    <div class="lifestyle-image" style="background-image: url('{{ product.metafields.custom.lifestyle_image | img_url: 'original' }}');">
     </div>
-  </div>
 {% endif %}
-{% endcomment %}
+{% comment %} {% if product.metafields.custom.region or product.metafields.custom.winemaking or product.metafields.custom.winemaker or product.metafields.custom.history or product.metafields.custom.production or product.metafields.custom.grape_variety or
+    product.metafields.custom.aroma or product.metafields.custom.wine_vintage or product.metafields.custom.palate or product.metafields.custom.best_drinking or product.metafields.custom.colour or product.metafields.custom.alcohol %}
+    <div id="product-specifications">
+        <div class="product-specifications-inner">
+          <h3 class="specs_header">Specifications</h3>
+            {% if product.metafields.custom.region %}
 
+              <a href="#" class="collapse_specs" target="region">Region</a>
+                <div id="region" class="meta-item">
+                    <p class="specs_title">Region</p> <p class="specs_details">{{ product.metafields.custom.region }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.winemaking %}
+                <a href="#" class="collapse_specs" target="winemaking">Winemaking</a>
+                <div id="winemaking" class="meta-item">
+                    <p class="specs_title">Winemaking</p> <p class="specs_details">{{ product.metafields.custom.winemaking }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.winemaker %}
+                <a href="#" class="collapse_specs" target="winemaker">Winemaker</a>
+                <div id="winemaker" class="meta-item">
+                    <p class="specs_title">Winemaker</p> <p class="specs_details">{{ product.metafields.custom.winemaker }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.history %}
+                <a href="#" class="collapse_specs" target="history">History</a>
+                <div id="history" class="meta-item">
+                    <p class="specs_title">History</p> <p class="specs_details">{{ product.metafields.custom.history }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.production %}
+                <a href="#" class="collapse_specs" target="production">Production</a>
+                <div id="production" class="meta-item">
+                    <p class="specs_title">Production</p> <p class="specs_details">{{ product.metafields.custom.production }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.grape_variety %}
+                <a href="#" class="collapse_specs" target="grape_variety">Grape Variety</a>
+                <div id="grape_variety" class="meta-item">
+                    <p class="specs_title">Grape Variety</p> <p class="specs_details">{{ product.metafields.custom.grape_variety }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.aroma %}
+                <a href="#" class="collapse_specs" target="aroma">Aroma</a>
+                <div id="aroma" class="meta-item">
+                    <p class="specs_title">Aroma</p> <p class="specs_details">{{ product.metafields.custom.aroma }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.wine_vintage %}
+                <a href="#" class="collapse_specs" target="wine_vintage">Wine Vintage</a>
+                <div id="wine_vintage" class="meta-item">
+                    <p class="specs_title">Wine Vintage</p> <p class="specs_details">{{ product.metafields.custom.wine_vintage }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.palate %}
+                <a href="#" class="collapse_specs" target="palate">Palate</a>
+                <div id="palate" class="meta-item">
+                    <p class="specs_title">Palate</p> <p class="specs_details">{{ product.metafields.custom.palate }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.best_drinking %}
+                <a href="#" class="collapse_specs" target="best_drinking">Best Drinking</a>
+                <div id="best_drinking" class="meta-item">
+                    <p class="specs_title">Best Drinking</p> <p class="specs_details">{{ product.metafields.custom.best_drinking }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.colour %}
+                <a href="#" class="collapse_specs" target="colour">Colour</a>
+                <div id="colour" class="meta-item">
+                    <p class="specs_title">Colour</p> <p class="specs_details">{{ product.metafields.custom.colour }}</p>
+                </div>
+            {% endif %}
+            {% if product.metafields.custom.alcohol %}
+                <a href="#" class="collapse_specs" target="alcohol">Alcohol</a>
+                <div id="alcohol" class="meta-item">
+                    <p class="specs_title">Alcohol</p> <p class="specs_details">{{ product.metafields.custom.alcohol }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %} {% endcomment %}
 {% if product.metafields.custom.product_big_image %}
-  <div class="big-image" style="background-image: url('{{ product.metafields.custom.product_big_image | img_url: 'original' }}');">
-  </div>
+    <div class="big-image" style="background-image: url('{{ product.metafields.custom.product_big_image | img_url: 'original' }}');">
+    </div>
 {% endif %}
 
 {% if product.metafields.custom.video_tasting_note != blank %}
-  <div id="tasting_note_video" style="display: none;">
-    <div class='embed-container'>
-      <iframe src="{{ product.metafields.custom.video_tasting_note }}" frameborder='0' allowfullscreen></iframe>
-    </div>
+<div id="tasting_note_video" style="display: none;">
+  <div class='embed-container'>
+    <iframe src="{{ product.metafields.custom.video_tasting_note }}" frameborder='0' allowfullscreen></iframe>
   </div>
+</div>
 {% endif %}
-
-<script type="application/json" id="ProductJson-{{ section.id }}">
-  {{ product.variants | json }}
-</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const productSection = document.querySelector('#{{ section.id }}_product');
     if (!productSection) return;
 
+    // Quantity buttons
     const qtyWrappers = productSection.querySelectorAll('.quantity-wrapper');
 
     qtyWrappers.forEach(wrapper => {
@@ -325,6 +285,7 @@
       }
     });
 
+    // Variant picker
     const variantSelects = productSection.querySelectorAll('.variant-select');
     const variantIdInput = productSection.querySelector('.variant-id-input');
     const addToCartBtn = productSection.querySelector('.add-to-cart');
@@ -346,10 +307,7 @@
     }
 
     function formatMoney(cents) {
-      if (window.Shopify && typeof Shopify.formatMoney === 'function') {
-        return Shopify.formatMoney(cents, "{{ shop.money_format | escape }}");
-      }
-      return (cents / 100).toFixed(2);
+      return Shopify.formatMoney(cents, "{{ shop.money_format | escape }}");
     }
 
     function updateVariant() {
