@@ -36,6 +36,18 @@ section.product-page p.product-price {
 
 form.product-form {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.variant-picker {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.variant-picker label {
+    font-size: inherit;
 }
 
 section.product-page{
