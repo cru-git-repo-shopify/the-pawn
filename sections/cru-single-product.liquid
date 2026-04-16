@@ -66,20 +66,22 @@
 
 
 
-        <form method="post" action="/cart/add" class="product-form">
+       <form method="post" action="/cart/add" class="product-form">
         {% unless product.has_only_default_variant %}
           <div class="variant-picker">
             {% for option in product.options_with_values %}
               <div class="variant-option">
-                <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                <label for="Option-{{ section.id }}-{{ forloop.index }}">
+                  {{ option.name }}
+                </label>
                 <select
-                  id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                  id="Option-{{ section.id }}-{{ forloop.index }}"
                   class="variant-select"
-                  data-option-index="{{ forloop.index0 }}"
+                  data-option-position="{{ forloop.index }}"
                 >
                   {% for value in option.values %}
                     <option
-                      value="{{ value | escape }}"
+                      value="{{ value }}"
                       {% if option.selected_value == value %}selected{% endif %}
                     >
                       {{ value }}
@@ -117,7 +119,9 @@
         </button>
 
         {% if section.settings.show_continue_shopping %}
-          <a href="/collections/all" class="continue-shopping">{{ section.settings.continue_shopping_text | default: 'Continue Shopping' }}</a>
+          <a href="/collections/all" class="continue-shopping">
+            {{ section.settings.continue_shopping_text | default: 'Continue Shopping' }}
+          </a>
         {% endif %}
       </form>
       
@@ -257,12 +261,16 @@
 </div>
 {% endif %}
 
+<script type="application/json" id="ProductJson-{{ section.id }}">
+  {{ product.variants | json }}
+</script>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const productSection = document.querySelector('#{{ section.id }}_product');
     if (!productSection) return;
 
-    // Quantity buttons
+    // Quantity controls
     const qtyWrappers = productSection.querySelectorAll('.quantity-wrapper');
 
     qtyWrappers.forEach(wrapper => {
@@ -285,64 +293,94 @@
       }
     });
 
-    // Variant picker
+    const form = productSection.querySelector('.product-form');
     const variantSelects = productSection.querySelectorAll('.variant-select');
     const variantIdInput = productSection.querySelector('.variant-id-input');
     const addToCartBtn = productSection.querySelector('.add-to-cart');
     const priceEl = productSection.querySelector('.product-price');
     const variantJsonEl = document.getElementById('ProductJson-{{ section.id }}');
 
-    if (!variantJsonEl || !variantIdInput || !variantSelects.length) return;
+    if (!form || !variantJsonEl || !variantIdInput) return;
 
     const variants = JSON.parse(variantJsonEl.textContent);
 
     function getSelectedOptions() {
-      return Array.from(variantSelects).map(select => select.value);
+      const selected = [];
+      variantSelects.forEach((select) => {
+        selected.push(select.value);
+      });
+      return selected;
     }
 
-    function findMatchingVariant(selectedOptions) {
-      return variants.find(variant => {
-        return variant.options.every((option, index) => option === selectedOptions[index]);
-      });
+    function getMatchedVariant() {
+      if (!variantSelects.length) {
+        return variants[0] || null;
+      }
+
+      const selectedOptions = getSelectedOptions();
+
+      return variants.find((variant) => {
+        return (
+          (selectedOptions[0] === undefined || variant.option1 === selectedOptions[0]) &&
+          (selectedOptions[1] === undefined || variant.option2 === selectedOptions[1]) &&
+          (selectedOptions[2] === undefined || variant.option3 === selectedOptions[2])
+        );
+      }) || null;
     }
 
     function formatMoney(cents) {
-      return Shopify.formatMoney(cents, "{{ shop.money_format | escape }}");
+      if (window.Shopify && typeof Shopify.formatMoney === 'function') {
+        return Shopify.formatMoney(cents, "{{ shop.money_format | escape }}");
+      }
+      return (cents / 100).toFixed(2);
     }
 
-    function updateVariant() {
-      const selectedOptions = getSelectedOptions();
-      const matchedVariant = findMatchingVariant(selectedOptions);
+    function updateVariantUI() {
+      const matchedVariant = getMatchedVariant();
 
-      if (matchedVariant) {
-        variantIdInput.value = matchedVariant.id;
+      if (!matchedVariant) {
+        variantIdInput.value = '';
 
-        if (priceEl) {
-          priceEl.innerHTML = formatMoney(matchedVariant.price);
-        }
-
-        if (addToCartBtn) {
-          if (matchedVariant.available) {
-            addToCartBtn.disabled = false;
-            addToCartBtn.textContent = "{{ section.settings.button_text | default: 'Add to Cart' }}";
-          } else {
-            addToCartBtn.disabled = true;
-            addToCartBtn.textContent = "Sold Out";
-          }
-        }
-      } else {
         if (addToCartBtn) {
           addToCartBtn.disabled = true;
-          addToCartBtn.textContent = "Unavailable";
+          addToCartBtn.textContent = 'Unavailable';
+        }
+        return;
+      }
+
+      variantIdInput.value = matchedVariant.id;
+
+      if (priceEl) {
+        priceEl.innerHTML = formatMoney(matchedVariant.price);
+      }
+
+      if (addToCartBtn) {
+        if (matchedVariant.available) {
+          addToCartBtn.disabled = false;
+          addToCartBtn.textContent = "{{ section.settings.button_text | default: 'Add to Cart' }}";
+        } else {
+          addToCartBtn.disabled = true;
+          addToCartBtn.textContent = 'Sold Out';
         }
       }
     }
 
-    variantSelects.forEach(select => {
-      select.addEventListener('change', updateVariant);
+    variantSelects.forEach((select) => {
+      select.addEventListener('change', updateVariantUI);
     });
 
-    updateVariant();
+    form.addEventListener('submit', function (e) {
+      const matchedVariant = getMatchedVariant();
+
+      if (!matchedVariant || !matchedVariant.id) {
+        e.preventDefault();
+        return;
+      }
+
+      variantIdInput.value = matchedVariant.id;
+    });
+
+    updateVariantUI();
   });
 </script>
 
