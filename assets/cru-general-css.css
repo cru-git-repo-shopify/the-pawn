@@ -1827,6 +1827,10 @@ button.winepik-subscribe {
     .club_works .block-richtext {
         width: 100%;
     }
+    .winepik-pack-card, .winepik-freq-card {
+        max-width: 500px;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 781px) {
