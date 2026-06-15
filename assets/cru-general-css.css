@@ -1629,6 +1629,134 @@ a.accordion_link {
     margin-bottom: 49px;
 }
 
+/* winepik */
+.winepik-hero--placeholder, .winepik-freq-card__img-wrap.winepik-freq-card__img-placeholder, p.winepik-freq-card__savings, .winepik-freq-card__footer, .winepik-pack-card__check {
+    display: none!important;
+}
+
+h2.winepik-name {
+    font-size: 23px!important;
+    letter-spacing: 0!important;
+}
+
+.winepik-content {
+    max-width: 1300px;
+    margin: 0 auto!important;
+}
+
+.winepik-step-header {
+    text-align: center;
+}
+
+.winepik-step-header h3 {
+    font-size: 23px!important;
+}
+
+.winepik-step-header p {
+    font-size: 16px!important;
+    font-style: normal!important;
+    margin: 20px 0!important;
+}
+
+.winepik-pack-card__img-wrap.winepik-pack-card__img-placeholder {
+    display: none!important;
+}
+
+h4.winepik-pack-card__name, p.winepik-freq-card__interval {
+    text-align: center;
+    font-size: 17px!important;
+}
+
+.winepik-pack-card__body, .winepik-freq-card__body {
+    padding: 20px 0!important;
+}
+
+.winepik-pack-card, .winepik-freq-card {width: calc(25% - 10px);}
+
+.winepik-pack-grid, .winepik-freq-list {
+    display: flex!important;
+    justify-content: center;
+}
+
+.winepik-freq-card__row {width: 100%;}
+
+.winepik-freq-card__row {
+    margin-bottom: 0!important;
+    justify-content: center!important;
+    width: 100%;
+}
+
+.winepik-section.winepik-step {
+    padding: 75px 0!important;
+}
+
+.winepik-product-card__img-wrap img {
+    object-fit: contain!important;
+    z-index: 1;
+}
+
+.winepik-selection-counter span {
+    font-size: 16px!important;
+}
+
+.winepik-selection-counter {
+    background: none!important;
+    border: none!important;
+}
+
+.winepik-product-card__img-wrap, .winepik-product-card {
+    background: transparent!important;
+    border: none!important;
+}
+
+.winepik-product-card__body {
+    text-align: center;
+}
+
+.winepik-qty-ctrl {
+    justify-content: center;
+}
+
+h5.winepik-product-card__name {
+    font-size: 14px!important;
+    margin: 15px 0!important;
+}
+
+button.winepik-qty-ctrl__btn {
+    background: rgba(0,0,0,0.5)!important;
+    color: #fff!important;
+    width: 40px!important;
+    height: 40px!important;
+    font-size: 14px!important;
+    font-weight: 600;
+}
+
+span.winepik-qty-ctrl__val {
+    font-size: 14px!important;
+}
+
+button.winepik-qty-ctrl__btn:hover {
+    background-color: rgba(0,0,0,1)!important;
+}
+
+span.winepik-product-card__oos.winepik-product-card__oos--overlay {
+    z-index: 99!important;
+}
+
+.winepik-product-card__img-overlay-bottom {
+    z-index: 99!important;
+}
+
+.winepik-bar__info {
+    font-size: 16px!important;
+}
+
+button.winepik-subscribe {
+    font-size: 16px!important;
+    padding: 24px 30px!important;
+    height: unset!important;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
