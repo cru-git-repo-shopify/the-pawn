@@ -30,8 +30,8 @@
         "button_text": "Book Now",
         "button_link": "#",
         "slider_bottom": "",
-        "season_img": "shopify://shop_images/2_1.png",
-        "season_txt": "Summer"
+        "season_img": "shopify://shop_images/winter.png",
+        "season_txt": "Winter"
       }
     },
     "header-mobile": {
