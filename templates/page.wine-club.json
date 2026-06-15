@@ -1,0 +1,117 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cru_page_header_ppdXTj": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 380,
+        "desktop_height_unit": "px",
+        "mobile_height": 380,
+        "mobile_height_unit": "px",
+        "desktop_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "mobile_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "background_type": "normal",
+        "bg_pos_y": "top",
+        "bg_pos_x": "center",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0,
+        "heading": "About Us",
+        "font_size": 37,
+        "font_color": "#ffffff",
+        "font-weight": "300",
+        "subheading": "",
+        "subheading_size": 16,
+        "subheading_color": "#ffffff",
+        "subheading_margin_top": 0,
+        "subheading_margin_bot": 0,
+        "subheading_font_weight": "300",
+        "fix_content": false,
+        "scroll_down_btn": ""
+      }
+    },
+    "cru_stack_TexLkh": {
+      "type": "cru-stack",
+      "blocks": {
+        "text_CEDjkD": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "@thepawnwineco",
+            "text_align": "center",
+            "text_color": "#000000",
+            "font_weight": "800",
+            "font_size": 30,
+            "margin_top": 75,
+            "margin_bottom": 20
+          }
+        },
+        "text_qJHBUH": {
+          "type": "text",
+          "settings": {
+            "id": "",
+            "class": "",
+            "text": "Check out our latest social activities…",
+            "text_align": "center",
+            "text_color": "",
+            "font_weight": "300",
+            "font_size": 18,
+            "margin_bottom": 25
+          }
+        }
+      },
+      "block_order": [
+        "text_CEDjkD",
+        "text_qJHBUH"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width_unit": "px",
+        "bg_color": "",
+        "background_type": "normal",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center"
+      }
+    },
+    "1770780535d5dfac29": {
+      "type": "apps",
+      "blocks": {
+        "gsc_instagram_feed_instafeed_fqWGEN": {
+          "type": "shopify://apps/gsc-instagram-feed/blocks/instafeed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
+          "settings": {
+            "widget_id": "GSC-KLemnOThcZkjNWb"
+          }
+        }
+      },
+      "block_order": [
+        "gsc_instagram_feed_instafeed_fqWGEN"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cru_page_header_ppdXTj",
+    "cru_stack_TexLkh",
+    "1770780535d5dfac29"
+  ]
+}
