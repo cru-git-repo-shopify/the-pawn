@@ -30,7 +30,7 @@
         "bg_pos_x": "center",
         "background_overlay": "#000000",
         "background_overlay_opacity": 0,
-        "heading": "Check Mates Wine Club",
+        "heading": "FAQS",
         "font_size": 37,
         "font_color": "#ffffff",
         "font-weight": "bold",
@@ -44,73 +44,41 @@
         "scroll_down_btn": ""
       }
     },
-    "cru_stack_TexLkh": {
+    "cru_stack_ThMgPR": {
       "type": "cru-stack",
       "blocks": {
-        "richtext_7kELNP": {
+        "richtext_zXwXRR": {
           "type": "richtext",
           "settings": {
             "class": "",
-            "richtext": "<p>Unlike other ‘clubs’, The Check Mates membership allows you to select your own curated pack or as I like to call it ‘choose your own adventure’. Here at Pawn HQ I don’t mind that you might think some of my children are ugly and you want to personally select your wine itinerary. Like all well thought-of moves, you can change your selection at anytime, or if you don’t like drinking wine anymore (WTF), you can exit whenever you wish.</p><p>All the wines are delivered by Australia Post with love to your door, or window, or office, or car or wherever you like.</p><p>It’s a wine club for those who (sometimes) break the rules and don’t necessarily follow the leader, support the little guys who are battling against the corporate giants. Here at Pawn HQ      ( population 1 + dog) I like to make moves  on my own terms, here’s your chance to join me, become a mate and enjoy some smashable booze.    TK</p><h3>Here’s how it works</h3><p>Choose Your own Adventure with options to customise how many bottles and how often you receive them.</p><p>Simply click on your Pawnfolio selection, choose how often you want to have Pawn delivered to your door, and away you go.</p><p><strong>Choose Your Own Adventure</strong> – Pick and choose what you want – when you want</p>",
+            "richtext": "<h4>Can I choose my own wines?</h4><p>Yes, select the Choose Your Own Adventure Pack, your frequency of delivery and then select the wines that are available.</p><h4>Can I update my own details?</h4><p>Yes, you can manage the following in your My-Account/Wine Club page.</p><ul><li>Billing and Shipping Details</li><li>Payment Details including updating expired Credit Cards</li><li>Edit Wines for Choose Your Own Adventure Pack</li><li>Switch between Packs and/or frequency of delivery</li><li>View Orders and Invoices</li></ul><p>Click <a href=\"https://thepawn.com.au/my-account/\"><strong>here</strong></a> to access your account if you already have created one. If not, go through the signup process and upon checking out you will create an account with a password.</p><h4>Can I change my wines for Choose Your Own Adventure Pack?</h4><p>Yes, please log in to your Account page <a href=\"https://thepawn.com.au/my-account/\"><strong>here</strong></a>, and select your wine club order. On your Wine Club page select the button “View/Edit Wines”, here you can update your selection and press “Save” to finish.</p><h4>Can I change the frequency of delivery?</h4><p>Yes, navigate to your Wine Club page from My Account and Select the button “Switch Wine Club”. It will take you back to the signup process. Here you can switch your packs and/or switch your delivery frequency.</p><p><em>Please note, after switching, The Pawn Wine Co. will be in touch with you to confirm when you would like to receive your next pack.</em></p><h4>What discounts are available?</h4><p>Discounts are based on the amount of bottles and/or frequency of delivery.</p><ul><li>Receive 6 bottles every 6 months – 10% Discount on wine club wines as well as all other online purchases.</li><li>Receive 6 bottles every 3 months – 15% Discount on wine club wines as well as all other online purchases.</li><li>Receive 12 bottles every 6 months – 15% Discount on wine club wines as well as all other online purchases.</li><li>Receive 12 bottles every 3 months – 20% Discount on wine club wines as well as all other online purchases.</li></ul><h4>How do I receive my discount on purchases other than wine club?</h4><p>Make sure you log into your account. You can access your account by clicking <a href=\"https://thepawn.com.au/my-account/\"><strong>here</strong></a>. Once logged in you will receive the discount based on your bottle amount/frequency of delivery.</p><h4>If I upgrade my frequency of delivery will I get a better discount on my purchases?</h4><p>Yes. you will receive discounts based on the discounts available above.</p><h4>If I downgrade my frequency of delivery will I lose my ongoing discount from my previous delivery schedule?</h4><p>Yes. Your discounts are based on your bottle amount/delivery schedule.</p><h4>Are my Credit Card details stored on the site?</h4><p>No. We use Stripe payment gateway as well as a SSL certificate to protect your privacy. To read more about our payment gateway and the way it handles your credit card details read <a href=\"https://stripe.com/au/privacy\" target=\"_blank\"><strong>here</strong></a>.</p><h4>I have forgotten my password how do I retrieve it?</h4><p>Please navigate to the My Account page by clicking <a href=\"https://thepawn.com.au/my-account/\"><strong>here</strong></a>. On this page you can click on “Lost Password”</p>",
             "text_align": "left",
-            "text_color": ""
-          }
-        },
-        "richtext_q4Kh6K": {
-          "type": "richtext",
-          "settings": {
-            "class": "",
-            "richtext": "<h3>Privileges of joining The Pawnfolio</h3><p>Every new member receives:</p><ul><li>A pawn Baseball Cap which must be worn at all time</li><li>Stickers, who does not love stickers</li><li>Random acts of kindness from me – like museum release wines</li><li>Up to 20% discount on online purchases‡.</li><li>Free shipping Australia wide.</li><li>Click <a href=\"https://thepawn.com.au/faqs/\"><strong>here</strong></a> to view our FAQ page</li></ul><p><em>‡ Discount is dependent on the pack and frequency selected on sign-up<br/>* Member have the option to cancel or suspend their subscription at any time</em></p>",
-            "text_align": "left",
-            "text_color": ""
+            "h4_font_size": 20,
+            "text_color": "",
+            "p_font_size": 16
           }
         }
       },
       "block_order": [
-        "richtext_7kELNP",
-        "richtext_q4Kh6K"
+        "richtext_zXwXRR"
       ],
       "name": "CRU Stack",
       "settings": {
         "id": "",
-        "class": "club_works",
-        "max_width": 1300,
+        "class": "",
         "max_width_unit": "px",
         "bg_color": "",
         "background_type": "normal",
         "bg_pos_y": "center",
         "bg_pos_x": "center",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
-    },
-    "1770780535d5dfac29": {
-      "type": "apps",
-      "blocks": {
-        "winepik_bocs_widget_tDFy4Q": {
-          "type": "shopify://apps/winepik/blocks/bocs-widget/019e19ee-becf-738c-83e5-a808d00e10a3",
-          "settings": {
-            "selector_title": "Check Mates Wineclub",
-            "selector_subtitle": "",
-            "selector_columns": 2,
-            "selector_rows": 2,
-            "auto_select_first": false,
-            "custom_css": ""
-          }
-        }
-      },
-      "block_order": [
-        "winepik_bocs_widget_tDFy4Q"
-      ],
-      "settings": {
-        "include_margins": false
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
     "main",
     "cru_page_header_ppdXTj",
-    "cru_stack_TexLkh",
-    "1770780535d5dfac29"
+    "cru_stack_ThMgPR"
   ]
 }
