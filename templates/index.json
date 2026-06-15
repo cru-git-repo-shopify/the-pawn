@@ -334,7 +334,7 @@
         "button_BabQzR": {
           "type": "button",
           "settings": {
-            "link": "",
+            "link": "shopify://collections/all",
             "label": "El Desperado Wine Button",
             "id": "",
             "class": "",
