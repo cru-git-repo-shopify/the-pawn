@@ -1,0 +1,84 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "cru_page_header_ppdXTj": {
+      "type": "cru-page-header",
+      "name": "CRU Page Header",
+      "settings": {
+        "class": "",
+        "desktop_height": 380,
+        "desktop_height_unit": "px",
+        "mobile_height": 380,
+        "mobile_height_unit": "px",
+        "desktop_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "mobile_background_image": "shopify://shop_images/Inside_Page_Header_2.jpg",
+        "background_type": "normal",
+        "bg_pos_y": "top",
+        "bg_pos_x": "center",
+        "background_overlay": "#000000",
+        "background_overlay_opacity": 0,
+        "heading": "FAQS",
+        "font_size": 37,
+        "font_color": "#ffffff",
+        "font-weight": "bold",
+        "subheading": "",
+        "subheading_size": 16,
+        "subheading_color": "#ffffff",
+        "subheading_margin_top": 0,
+        "subheading_margin_bot": 0,
+        "subheading_font_weight": "300",
+        "fix_content": false,
+        "scroll_down_btn": ""
+      }
+    },
+    "cru_stack_ThMgPR": {
+      "type": "cru-stack",
+      "blocks": {
+        "richtext_zXwXRR": {
+          "type": "richtext",
+          "settings": {
+            "class": "",
+            "richtext": "<h4>Can I choose my own wines?</h4><p>Yes, select the Choose Your Own Adventure Pack, your frequency of delivery and then select the wines that are available.</p><h4>Can I update my own details?</h4><p>Yes, you can manage the following in your My-Account/Wine Club page.</p><ul><li>Billing and Shipping Details</li><li>Payment Details including updating expired Credit Cards</li><li>Edit Wines for Choose Your Own Adventure Pack</li><li>Switch between Packs and/or frequency of delivery</li><li>View Orders and Invoices</li></ul><p>Click <a href=\"https://thepawn.com.au/my-account/\"><strong>here</strong></a> to access your account if you already have created one. If not, go through the signup process and upon checking out you will create an account with a password.</p><h4>Can I change my wines for Choose Your Own Adventure Pack?</h4><p>Yes, please log in to your Account page <a href=\"https://thepawn.com.au/my-account/\"><strong>here</strong></a>, and select your wine club order. On your Wine Club page select the button “View/Edit Wines”, here you can update your selection and press “Save” to finish.</p><h4>Can I change the frequency of delivery?</h4><p>Yes, navigate to your Wine Club page from My Account and Select the button “Switch Wine Club”. It will take you back to the signup process. Here you can switch your packs and/or switch your delivery frequency.</p><p><em>Please note, after switching, The Pawn Wine Co. will be in touch with you to confirm when you would like to receive your next pack.</em></p><h4>What discounts are available?</h4><p>Discounts are based on the amount of bottles and/or frequency of delivery.</p><ul><li>Receive 6 bottles every 6 months – 10% Discount on wine club wines as well as all other online purchases.</li><li>Receive 6 bottles every 3 months – 15% Discount on wine club wines as well as all other online purchases.</li><li>Receive 12 bottles every 6 months – 15% Discount on wine club wines as well as all other online purchases.</li><li>Receive 12 bottles every 3 months – 20% Discount on wine club wines as well as all other online purchases.</li></ul><h4>How do I receive my discount on purchases other than wine club?</h4><p>Make sure you log into your account. You can access your account by clicking <a href=\"https://thepawn.com.au/my-account/\"><strong>here</strong></a>. Once logged in you will receive the discount based on your bottle amount/frequency of delivery.</p><h4>If I upgrade my frequency of delivery will I get a better discount on my purchases?</h4><p>Yes. you will receive discounts based on the discounts available above.</p><h4>If I downgrade my frequency of delivery will I lose my ongoing discount from my previous delivery schedule?</h4><p>Yes. Your discounts are based on your bottle amount/delivery schedule.</p><h4>Are my Credit Card details stored on the site?</h4><p>No. We use Stripe payment gateway as well as a SSL certificate to protect your privacy. To read more about our payment gateway and the way it handles your credit card details read <a href=\"https://stripe.com/au/privacy\" target=\"_blank\"><strong>here</strong></a>.</p><h4>I have forgotten my password how do I retrieve it?</h4><p>Please navigate to the My Account page by clicking <a href=\"https://thepawn.com.au/my-account/\"><strong>here</strong></a>. On this page you can click on “Lost Password”</p>",
+            "text_align": "left",
+            "h4_font_size": 20,
+            "text_color": "",
+            "p_font_size": 16
+          }
+        }
+      },
+      "block_order": [
+        "richtext_zXwXRR"
+      ],
+      "name": "CRU Stack",
+      "settings": {
+        "id": "",
+        "class": "",
+        "max_width_unit": "px",
+        "bg_color": "",
+        "background_type": "normal",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cru_page_header_ppdXTj",
+    "cru_stack_ThMgPR"
+  ]
+}
