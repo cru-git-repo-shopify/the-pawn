@@ -21,6 +21,8 @@
         "desktop_background_image": "shopify://shop_images/Spring_Header_bg.jpg",
         "mobile_background_image": "shopify://shop_images/Spring_Header_bg.jpg",
         "background_type": "parallax",
+        "bg_pos_y": "center",
+        "bg_pos_x": "center",
         "image_content": "shopify://shop_images/center-logo2-e1698115868334-300x244.png",
         "background_overlay": "#ffffff",
         "background_overlay_opacity": 0.2,
@@ -69,7 +71,7 @@
         "button_QmBwVt": {
           "type": "button",
           "settings": {
-            "link": "#",
+            "link": "shopify://pages/about-us",
             "label": "MORE STUFF THIS WAY",
             "id": "",
             "class": "",
@@ -127,7 +129,7 @@
         "button_eACtrk": {
           "type": "button",
           "settings": {
-            "link": "#",
+            "link": "shopify://collections/all",
             "label": "BUY WINE BUTTON - press anytime",
             "id": "",
             "class": "",
