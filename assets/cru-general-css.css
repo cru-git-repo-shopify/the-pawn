@@ -1630,6 +1630,20 @@ a.accordion_link {
 }
 
 /* winepik */
+.club_works .block-richtext {
+    width: 66.666667%;
+}
+
+.club_works .block-richtext .block-richtext {
+    width: 100%;
+}
+
+.club_works .block-richtext ul li {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
 .winepik-hero--placeholder, .winepik-freq-card__img-wrap.winepik-freq-card__img-placeholder, p.winepik-freq-card__savings, .winepik-freq-card__footer, .winepik-pack-card__check {
     display: none!important;
 }
