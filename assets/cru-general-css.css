@@ -1630,6 +1630,8 @@ a.accordion_link {
 }
 
 /* winepik */
+.club_works .stack_inner {width: 90%;max-width: 1300px;}
+
 .club_works .block-richtext {
     width: 66.666667%;
 }
@@ -1821,6 +1823,9 @@ button.winepik-subscribe {
     img.footer_logo {
         display: block;
         margin: 0 auto 50px;
+    }
+    .club_works .block-richtext {
+        width: 100%;
     }
 }
 
