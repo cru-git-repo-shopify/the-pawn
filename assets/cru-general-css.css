@@ -1954,4 +1954,13 @@ button.winepik-subscribe {
         justify-content: center;
         margin-top: 25px;
     }
+
+    .winepik-pack-grid, .winepik-freq-list {
+        flex-direction: column;
+        gap: 30px!important;
+    }
+
+    .winepik-products-grid {
+        gap: 25px!important;
+    }
 }
