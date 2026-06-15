@@ -1783,7 +1783,7 @@ div#template--25978596458863__cru_2_col_Rz4zXE {
 
 .cru-page-header .header-content h1 {
     text-transform: uppercase;
-    font-weight: 900;
+    line-height: 1;
 }
 
 @media only screen and (max-width: 1000px){
