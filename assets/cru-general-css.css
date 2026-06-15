@@ -1630,7 +1630,7 @@ a.accordion_link {
 }
 
 /* winepik */
-.club_works .stack_inner {width: 90%;max-width: 1300px;}
+.club_works .stack_inner {width: 90%!important;max-width: 1300px;}
 
 .club_works .block-richtext {
     width: 66.666667%;
