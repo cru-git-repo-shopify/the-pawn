@@ -849,6 +849,11 @@
         "type": "shopify://apps/gsc-instagram-feed/blocks/embed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
         "disabled": false,
         "settings": {}
+      },
+      "10560697916000961394": {
+        "type": "shopify://apps/blockify-age-verification/blocks/omg-app-age/92f920f4-d437-4eb4-9aab-e091741a3ce4",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
