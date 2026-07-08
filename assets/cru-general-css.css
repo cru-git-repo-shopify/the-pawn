@@ -1786,6 +1786,52 @@ div#template--25978596458863__cru_2_col_Rz4zXE {
     line-height: 1;
 }
 
+/* age gate */
+a#av_submit_form, .av_date_cancel a {
+    background-color: #000!important;
+    border: 1px solid #fff!important;
+    opacity: 1!important;
+    padding: 15px 15px!important;
+}
+
+a#av_submit_form:hover, .av_date_cancel a:hover {
+    background-color: #fff!important;
+    color: #000!important;
+}
+
+a#av_submit_form:hover span font, .av_date_cancel a:hover span {
+    color: #000!important;
+}
+
+div#av-overlay-form:before {
+    content: '';
+    display: block;
+    height: 200px;
+    width: 200px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0946/8605/2719/files/footer-logo.png?v=1770608263);
+    background-size: contain;
+    position: relative;
+    z-index: 9999;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+div#av-overlay-form {}
+
+.otAgeVerifier .headline_text {
+    display: none;
+}
+
+.age-verification-root .subhead_text span {
+    font-size: 20px!important;
+    margin: 12px 0!important;
+}
+
+.age-verification-root .subhead_text {
+    margin: 32px 0!important;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
