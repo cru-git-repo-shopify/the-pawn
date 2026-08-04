@@ -120,7 +120,7 @@
       "settings": {
         "id": "",
         "class": "contact_form",
-        "max_width": 90,
+        "max_width": 1300,
         "max_width_unit": "%",
         "bg_color": "",
         "background_type": "normal",
