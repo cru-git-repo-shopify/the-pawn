@@ -1832,6 +1832,59 @@ div#av-overlay-form {}
     margin: 32px 0!important;
 }
 
+.mailing_list_section .klaviyo-form {
+    margin: 0 auto;
+    padding: 0!important;
+}
+
+.mailing_list_section label {
+    color: #fff!important;
+    font-weight: 400!important;
+}
+
+.mailing_list_section input {
+    width: 100%!important;
+    border-radius: 0!important;
+    height: 70px!important;
+    margin-bottom: 0!important;
+}
+
+.mailing_list_section button {
+    margin: 0 auto!important;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px!important;
+    font-size: 18px!important;
+    padding: 0 5px;
+    cursor: pointer;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    width: 230px!important;
+    height: 60px!important;
+    line-height: 60px!important;
+    border: 2px solid #ffffff!important;
+    text-align: center!important;
+    margin: 25px auto 0!important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-family: 'Poppins', sans-serif !important;
+    color: #fff!important;
+    background-color: transparent!important;
+    transition: all 0.3s ease;
+}
+
+.needsclick.go1280694100.kl-private-reset-css-Xuajs1 {
+    width: 100%;
+}
+
+.mailing_list_section button:hover {
+    background-color: #fff!important;
+    color: #000!important;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
