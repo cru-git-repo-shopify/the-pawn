@@ -121,7 +121,7 @@
         "id": "",
         "class": "contact_form",
         "max_width": 1300,
-        "max_width_unit": "%",
+        "max_width_unit": "px",
         "bg_color": "",
         "background_type": "normal",
         "bg_pos_y": "center",
