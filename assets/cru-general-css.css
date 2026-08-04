@@ -1964,6 +1964,10 @@ div#av-overlay-form {}
     width: 50%;
 }
 
+.contact_social ul {
+    padding: 0;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
