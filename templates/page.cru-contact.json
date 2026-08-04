@@ -71,7 +71,7 @@
       "name": "CRU Stack",
       "settings": {
         "id": "",
-        "class": "",
+        "class": "contact_info",
         "max_width": 90,
         "max_width_unit": "%",
         "bg_color": "",
