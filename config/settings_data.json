@@ -854,6 +854,11 @@
         "type": "shopify://apps/blockify-age-verification/blocks/omg-app-age/92f920f4-d437-4eb4-9aab-e091741a3ce4",
         "disabled": false,
         "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
