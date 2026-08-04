@@ -1955,6 +1955,15 @@ div#av-overlay-form {}
     background-color: #fff!important;
 }
 
+.contact_info .stack_inner {
+    display: flex;
+    justify-content: center;
+}
+
+.contact_info .stack_inner .block-html {
+    width: 50%;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;

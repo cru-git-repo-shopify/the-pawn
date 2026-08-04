@@ -72,8 +72,8 @@
       "settings": {
         "id": "",
         "class": "contact_info",
-        "max_width": 90,
-        "max_width_unit": "%",
+        "max_width": 1300,
+        "max_width_unit": "px",
         "bg_color": "",
         "background_type": "normal",
         "bg_pos_y": "center",
