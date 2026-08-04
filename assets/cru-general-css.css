@@ -1149,6 +1149,7 @@ a.to_account, a.open-cart {
 
 .left_logo_right_menu .header_right_area {
     width: 70%;
+    gap: 15px;
 }
 
 .left_logo_right_menu img {
