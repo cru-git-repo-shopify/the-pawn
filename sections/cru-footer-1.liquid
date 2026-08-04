@@ -15,7 +15,7 @@
     <div class="col-full columns_{{col_numbers}}">
         {% if section.settings.show_mailing_list %}
         <div class="mailing_list_section">
-            {% if section.settings.mailing_list_heading %}
+            {% comment %} {% if section.settings.mailing_list_heading %}
                 <h3>{{ section.settings.mailing_list_heading }}</h3>
             {% endif %}
             {% form 'customer', class: 'contact-form' %}
@@ -29,7 +29,8 @@
                 <input type="text" class="" name="contact[last_name]" placeholder="" aria-label="Last Name" required>
                 {% comment %} <input type="phone" name="contact[phone]" placeholder="Your Phone Number" aria-label="Phone Number" pattern="[0-9\-]*" required> {% endcomment %}
                 <button type="submit">Join Now</button>
-            {% endform %}
+            {% endform %} {% endcomment %}
+             <div class="klaviyo-form-VKV9WH"></div>
         </div>
     {% endif %}
         {% if section.settings.show_col_1 %}
