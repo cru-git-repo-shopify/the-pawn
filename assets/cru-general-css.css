@@ -1968,6 +1968,10 @@ div#av-overlay-form {}
     padding: 0;
 }
 
+.contact_info iframe {
+    filter: grayscale(1);
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
