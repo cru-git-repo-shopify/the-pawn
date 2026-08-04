@@ -47,44 +47,16 @@
     "cru_stack_KNTp7C": {
       "type": "cru-stack",
       "blocks": {
-        "text_Xinzpc": {
-          "type": "text",
-          "settings": {
-            "id": "",
-            "class": "",
-            "text": "The Pawn Wine Co.",
-            "text_align": "center",
-            "text_color": "#000000",
-            "font_weight": "800",
-            "font_size": 30
-          }
-        },
-        "textarea_rR3aDe": {
-          "type": "textarea",
-          "settings": {
-            "id": "",
-            "class": "",
-            "textarea": "9 Scott Road\nLanghorne Creek\nSouth Australia 5255\nT 0438 373 247\n\nLiquor License SA 50810544",
-            "textarea_style": "normal",
-            "text_align": "center",
-            "text_color": "",
-            "font_size": 18,
-            "font_weight": "300",
-            "margin_top": 0
-          }
-        },
         "html_LRMdRd": {
           "type": "html",
           "settings": {
-            "html": "<div class=\"contact_social\">\n\t<ul>\n\t\t<li><a href=\"https://www.facebook.com/The-Pawn-Wine-Co-131277803574070\" target=\"_blank\"><i class=\"fa-brands fa-facebook-f\"></i></a></li>\n\t\t<li><a href=\"https://twitter.com/ThePawnWineCo\" target=\"_blank\"><i class=\"fa-brands fa-x-twitter\"></i></a></li>\n<li><a href=\"https://www.instagram.com/thepawnwineco/\" target=\"_blank\"><i class=\"fa-brands fa-instagram\"></i></a></li>\n\t</ul>\n</div>",
+            "html": "<p style=\"font-weight: 800; text-align: center; color: #000000; font-size: 30px; margin-top: px; margin-bottom: px; margin-left: auto; margin-right: auto; max-width: px; line-height: px;\">The Pawn Wine Co.</p>\n\n<p style=\"font-weight: 300; text-align: center; color: ; font-size: 18px; margin-top: 0px; margin-bottom: px; margin-left: auto; margin-right: auto; max-width: px; font-style: normal;\">9 Scott Road<br>\nLanghorne Creek<br>\nSouth Australia 5255<br>\nT 0438 373 247<br>\n<br>\nLiquor License SA 50810544</p>\n\n<div class=\"contact_social\">\n\t<ul>\n\t\t<li><a href=\"https://www.facebook.com/The-Pawn-Wine-Co-131277803574070\" target=\"_blank\"><i class=\"fa-brands fa-facebook-f\"></i></a></li>\n\t\t<li><a href=\"https://twitter.com/ThePawnWineCo\" target=\"_blank\"><i class=\"fa-brands fa-x-twitter\"></i></a></li>\n<li><a href=\"https://www.instagram.com/thepawnwineco/\" target=\"_blank\"><i class=\"fa-brands fa-instagram\"></i></a></li>\n\t</ul>\n</div>",
             "id": "",
             "class": ""
           }
         }
       },
       "block_order": [
-        "text_Xinzpc",
-        "textarea_rR3aDe",
         "html_LRMdRd"
       ],
       "name": "CRU Stack",
