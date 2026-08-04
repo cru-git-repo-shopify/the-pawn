@@ -1182,6 +1182,10 @@ li.menu-item.menu-item-type-post_type.header-menu__item a {
     width: 25px;
 }
 
+.featured-product-inner img.product-image {
+    max-height: unset;
+}
+
 /* a.open-cart, a.to_account {
     background-color: #F6F6F6;
     border-radius: 50px;
