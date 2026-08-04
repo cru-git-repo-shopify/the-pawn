@@ -1885,6 +1885,12 @@ div#av-overlay-form {}
     color: #000!important;
 }
 
+.mailing_list_section h1 strong {
+    text-transform: uppercase;
+    font-weight: 500!important;
+    font-size: 20px;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
