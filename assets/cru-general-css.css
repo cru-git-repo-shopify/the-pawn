@@ -1795,6 +1795,10 @@ div#template--25978596458863__cru_2_col_Rz4zXE {
     line-height: 1;
 }
 
+.winepik-summary * {
+    font-size: 16px!important;
+}
+
 /* age gate */
 a#av_submit_form, .av_date_cancel a {
     background-color: #000!important;
