@@ -1958,6 +1958,7 @@ div#av-overlay-form {}
 .contact_info .stack_inner {
     display: flex;
     justify-content: center;
+    max-width: 90%;
 }
 
 .contact_info .stack_inner .block-html {
@@ -1970,6 +1971,7 @@ div#av-overlay-form {}
 
 .contact_info iframe {
     filter: grayscale(1);
+    width: 100%;
 }
 
 @media only screen and (max-width: 1000px){
