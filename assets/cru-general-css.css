@@ -2105,6 +2105,14 @@ div#av-overlay-form {}
   #restaurant_2 #halo-image-banner-template--21184691142745__image_banner_EihQJc .item--largeImg .banner-text br {
     display: block !important;
   }
+  .contact_info .stack_inner .block-html {
+        width: 100%!important;
+    }
+
+    .contact_info .stack_inner {
+        flex-direction: column;
+        gap: 50px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
