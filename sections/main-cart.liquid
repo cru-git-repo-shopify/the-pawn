@@ -582,18 +582,18 @@
                                         </div>
                                     {%- endif -%}
                                     <div class="action-group">
-                                        {%- if section.settings.enable_sticky_button_checkout_mb -%}
-                                            <a class="button button-1 button-checkout button-disable" href="javascript:void(0)">{{ 'sections.cart.proceed_to_checkout' | t }}</a>
-                                        {%- endif -%}
                                         <button class="button button-1 button-checkout button-enable" {% if settings.show_global_checkbox %} disabled="disabled" {% endif %} id="cart-checkout" data-href="{{ routes.cart_url | split: '/cart' | first }}/checkout">{{ 'sections.cart.proceed_to_checkout' | t }}</button>
-                                        {% if additional_checkout_buttons and settings.show_additional_checkout_buttons %}
-                                          {{ content_for_additional_checkout_buttons }}
-                                        {% endif %}
                                         {%- if continue_button_action == "1" -%}
                                             <a class="button button-2 button-continue"{% if custom_button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ custom_button_link }}"{% endif %} role="button">{{ 'general.continue_shopping' | t }}</a>
                                         {%- else -%}
                                             <a class="button button-2 button-continue" role="link" aria-disabled="true" onclick="window.history.back();" role="button" id="cart-previous-page-btn">{{ 'general.back_to_previous_page' | t }}</a>
                                         {%- endif -%}
+                                        {%- if section.settings.enable_sticky_button_checkout_mb -%}
+                                            <a class="button button-1 button-checkout button-disable" href="javascript:void(0)">{{ 'sections.cart.proceed_to_checkout' | t }}</a>
+                                        {%- endif -%}
+                                        {% if additional_checkout_buttons and settings.show_additional_checkout_buttons %}
+                                          {{ content_for_additional_checkout_buttons }}
+                                        {% endif %}
                                     </div>
                                 </div>
                             </form>
