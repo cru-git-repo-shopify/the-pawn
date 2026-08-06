@@ -1998,6 +1998,33 @@ div#el_desperado:before {
     z-index: 1;
 }
 
+li.cart-total.cart-total-shipping {
+    display: none !important;
+}
+
+.cart-actions .action-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+div#dynamic-checkout-cart {
+    position: relative;
+    width: 100%;
+}
+
+button#cart-checkout, a.button.button-2.button-continue {
+    width: calc(50% - 5px);
+    margin: 0 auto;
+    font-size: 9px!important;
+    max-width: unset;
+    text-overflow: unset;
+}
+
+.cart-securityImage {
+    display: none!important;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
