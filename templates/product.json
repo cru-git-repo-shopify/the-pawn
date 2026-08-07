@@ -424,7 +424,6 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
-      "disabled": true,
       "settings": {
         "display_product_block": true,
         "product_block_container": "container",
@@ -614,10 +613,10 @@
   },
   "order": [
     "main",
-    "product-recommendations",
     "product-recently-viewed",
     "cru_page_header_VcLHnw",
     "cru_single_product_QbbXq4",
+    "product-recommendations",
     "cru_related_products_LhLqzR"
   ]
 }
