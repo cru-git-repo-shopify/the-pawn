@@ -2248,4 +2248,8 @@ recipient-form.recipient-form {
     .winepik-products-grid {
         gap: 25px!important;
     }
+    .winepik-bar {
+        flex-direction: column;
+        gap: 25px!important;
+    }
 }
