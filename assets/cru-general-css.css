@@ -2033,6 +2033,19 @@ button#cart-checkout, a.button.button-2.button-continue {
     width: 100%;
 }
 
+recipient-form.recipient-form {
+    width: 100%;
+    display: block;
+}
+
+.customer {
+    width: 100%;
+}
+
+.recipient-form .field {
+    flex-direction: column;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
