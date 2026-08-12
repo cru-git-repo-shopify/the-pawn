@@ -903,6 +903,7 @@ a.view-all-button:hover {
 
 .featured-product-inner h2.section-heading {
     margin-bottom: 75px;
+    line-height: 1.5;
 }
 
 /* .cta-overlay {
