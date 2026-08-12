@@ -398,7 +398,6 @@ a.scroll_to:hover {
 input#get-rates-submit:hover, button#cart-checkout:hover, a.button.button-2.button-continue {
     color: #323232;
     background-color: transparent;
-    width: 100%;
     border-color: #323232;
     font-family: 'calibri';
 }
