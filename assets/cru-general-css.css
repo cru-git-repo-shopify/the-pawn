@@ -406,6 +406,10 @@ input#get-rates-submit:hover, button#cart-checkout:hover, a.button.button-2.butt
     font-size: 16px;
 }
 
+a.minus.btn-quantity {
+    z-index: 99;
+}
+
 input[type=checkbox]:checked+.form-label--checkbox:before {
     background-color: #323232;
     border-color: #323232;
