@@ -2162,6 +2162,10 @@ recipient-form.recipient-form {
     .cru-contact-map {
         flex-direction: column-reverse;
     }
+
+    .image-column {
+        display: none;
+    }
     
 }
 
