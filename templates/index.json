@@ -290,6 +290,7 @@
             "text_color": "#4693a6",
             "font_weight": "400",
             "font_size": 55,
+            "txt_line_height": 65,
             "margin_bottom": 75
           }
         },
