@@ -122,6 +122,7 @@
             "text_color": "#ffffff",
             "font_weight": "300",
             "font_size": 40,
+            "txt_line_height": 50,
             "margin_top": 131,
             "margin_bottom": 75
           }
