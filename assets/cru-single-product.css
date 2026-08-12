@@ -235,7 +235,7 @@ a.collapse_specs:after {
     }
     .quantity-wrapper {
         width: 100%;
-        margin: 0 auto 20px;
+        margin: 0 auto 20px!important;
         justify-content: center;
     }
 
