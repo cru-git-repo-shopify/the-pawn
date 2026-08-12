@@ -211,9 +211,9 @@ i.fa-solid.fa-sliders {
 }
 
 @media only screen and (max-width: 1400px) {
-    .quantity-wrapper button.qty-btn {
+    /* .quantity-wrapper button.qty-btn {
         padding: 10px 15px;
-    }
+    } */
 
     .cru-product-collection .cru-product-item {
         width: calc(34% - 75px)!important;
