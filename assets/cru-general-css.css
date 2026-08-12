@@ -2025,6 +2025,14 @@ button#cart-checkout, a.button.button-2.button-continue {
     display: none!important;
 }
 
+.with-variants form.product-form {
+    flex-wrap: wrap;
+}
+
+.product-variants {
+    width: 100%;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
