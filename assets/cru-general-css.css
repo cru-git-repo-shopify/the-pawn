@@ -421,7 +421,7 @@ h1.page-header.text-left {
     height: 6px;
     content: '';
     display: inline-block;
-    width: 190px;
+    width: 10vw;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     vertical-align: middle;
