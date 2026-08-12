@@ -2047,6 +2047,10 @@ recipient-form.recipient-form {
     flex-direction: column;
 }
 
+.left-popup-menu .social_media_icons {
+    text-align: center;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
