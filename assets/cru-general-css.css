@@ -1808,6 +1808,10 @@ div#template--25978596458863__cru_2_col_Rz4zXE {
 }
 
 /* age gate */
+.watermark-container-blockify {
+    display: none !important;
+    visibility: hidden !important;
+}
 a#av_submit_form, .av_date_cancel a {
     background-color: #000!important;
     border: 1px solid #fff!important;
