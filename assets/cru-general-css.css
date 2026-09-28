@@ -1948,6 +1948,14 @@ div#av-overlay-form {}
     height: 150px;
 }
 
+.contact_form label.flat-label.globo-label.gfb__label-v2 {
+    display: none;
+}
+
+.contact_form .header.gfb__page-header {
+    display: none;
+}
+
 .contact_form input#_01KZ5GRQGAS5F4QEA1EFHXEMKT {
     height: 160px;
     display: block!important;
