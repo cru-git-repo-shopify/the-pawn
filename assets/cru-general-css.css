@@ -2062,6 +2062,65 @@ recipient-form.recipient-form {
     text-align: center;
 }
 
+.mailing_form .header.gfb__page-header {
+    margin-bottom: 32px!important;
+}
+
+.contact_form .globo-form-app h2 {
+    color: #000000;
+    font-family: 'Poppins', sans-serif!important;
+    font-size: 35px!important;
+    line-height: 44px!important;
+    font-style: normal!important;
+    font-weight: 300!important;
+    letter-spacing: 0px!important;
+    text-transform: none!important;
+}
+
+.contact_form span {
+    display: none!important;
+}
+
+.contact_form input,.contact_form textarea {
+    border: 3px solid #000!important;
+    color: #000!important;
+    font-size: 17px!Important;
+    font-weight: normal!important;
+    display: block!important;
+    margin: 5px 0 0!important;
+    padding: 15px!important;
+    width: 100%!important;
+    font-family: Raleway!important;
+    box-sizing: content-box;
+    line-height: 1!important;
+    height: unset!important;
+}
+
+.contact_form textarea {
+    height: 100px!important;
+}
+
+.contact_form .globo-form-control.layout-1-column {
+    padding: 0!important;
+}
+
+.contact_form button.action.next.submit.classic-button.wizard__submit {
+    width: fit-content !important;
+    color: #fff!important;
+    background-color: #000!important;
+    border-color: #000!important;
+    border-radius: 0!important;
+    font-size: 18px!important;
+    padding: 0 23px!important;
+    height: 48px!important;
+    border: 2px solid #000!important;
+}
+
+.contact_form button.action.next.submit.classic-button.wizard__submit:hover {
+    background-color: #fff!important;
+    color: #000!important;
+}
+
 @media only screen and (max-width: 1000px){
     .desktop {
         display: none;
