@@ -1928,7 +1928,7 @@ div#av-overlay-form {}
     text-align: left;
 }
 
-.contact_form input {
+.contact_form input, .contact_form textarea {
     border: 3px solid #000!important;
     color: #000!important;
     font-size: 17px!important;
@@ -1942,6 +1942,10 @@ div#av-overlay-form {}
     resize: none!important;
     line-height: 17px!important;
     background-color: #fff!important;
+}
+
+.contact_form input {
+    height: 150px;
 }
 
 .contact_form input#_01KZ5GRQGAS5F4QEA1EFHXEMKT {
