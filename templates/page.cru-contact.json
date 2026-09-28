@@ -93,7 +93,8 @@
             "richtext": "<h2>Send me a message<br/></h2>",
             "text_align": "left",
             "h2_font_size": 45,
-            "text_color": "#000000"
+            "text_color": "#000000",
+            "margin_bottom": 0
           }
         },
         "html_hwP7M9": {
