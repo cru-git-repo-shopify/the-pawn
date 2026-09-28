@@ -85,6 +85,15 @@
     "cru_stack_rQ9Q8F": {
       "type": "cru-stack",
       "blocks": {
+        "richtext_8dpjmm": {
+          "type": "richtext",
+          "settings": {
+            "class": "",
+            "richtext": "<h2>Send me a message<br/></h2>",
+            "text_align": "left",
+            "text_color": ""
+          }
+        },
         "html_hwP7M9": {
           "type": "html",
           "settings": {
@@ -95,6 +104,7 @@
         }
       },
       "block_order": [
+        "richtext_8dpjmm",
         "html_hwP7M9"
       ],
       "name": "CRU Stack",
