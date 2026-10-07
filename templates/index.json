@@ -184,7 +184,7 @@
         "show_quantity_selector": false,
         "show_view_all_button": true,
         "view_all_button_text": "WINE THIS WAY",
-        "view_all_button_url": "shopify://collections/all",
+        "view_all_button_url": "shopify://collections/shop",
         "padding_top_bottom": 15,
         "padding_left_right": 29,
         "bg_color": "#000000",
@@ -337,7 +337,7 @@
         "button_BabQzR": {
           "type": "button",
           "settings": {
-            "link": "shopify://collections/all",
+            "link": "shopify://collections/shop",
             "label": "El Desperado Wine Button",
             "id": "",
             "class": "",
