@@ -1,4 +1,4 @@
-{% assign all_tags = collections.all.all_tags %}
+{% assign all_tags = collection.all_tags %}
 
 <style>
   #{{ section.id }}_filter, #{{ section.id }}_filter_mobile {
@@ -91,9 +91,9 @@
   </div>
 {% endif %}
 
-{% paginate collections.all.products by section.settings.products_per_page %}
+{% paginate collection.products by section.settings.products_per_page %}
 <div id="{{ section.id }}_collection" class="cru-product-collection">
-    {% for product in collections.all.products %}
+    {% for product in collection.products %}
         <div class="cru-product-item {% for tag in product.tags %}product_cat-{{ tag | handle }} {% endfor %}" style="background-color: {{ product.metafields.custom.product_background_color }};">
           {% assign points = product.metafields.custom.award_points %}
           {% assign badges = product.metafields.custom.award_badge %}
